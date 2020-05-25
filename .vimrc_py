@@ -1,0 +1,10 @@
+nnoremap <TAB> gt
+nnoremap // I#<Esc>
+nnoremap <C-d> I<DELETE><Esc>
+inoremap {<CR> {<CR>}<Esc>ko
+inoremap ( ()<Esc>i
+inoremap () ()
+inoremap {{ {}<Esc>i
+inoremap " ""<Esc>i
+inoremap [ []<Esc>i
+inoremap ### #################################################################

@@ -1,0 +1,15 @@
+colorscheme codedark
+hi Comment cterm=NONE
+hi nontext        ctermbg=232 ctermfg=232 term=none
+hi endofbuffer       ctermbg=232 ctermfg=232 term=none
+hi normal         ctermbg=232
+hi ALEWarningSign ctermbg=232 guibg=#1c1c1c ctermfg=228   guifg=#ffff87
+hi ALEErrorSign   ctermbg=232 guibg=#1c1c1c ctermfg=196   guifg=#ff0000
+hi SignColumn     ctermbg=232 guibg=#1c1c1c
+hi ClassMember    ctermfg=112 guifg=#87d7ff
+hi ObjectCtr      ctermfg=117 guifg=#87d7ff
+hi Todo           ctermfg=226 guifg=#ffff00
+hi Operator       ctermfg=206 guifg=#ff5fd7
+hi constant       ctermfg=50  guifg=#00ffd7
+hi cursorlinenr   ctermfg=226 guifg=#ffff00
+hi specialchar    ctermfg=220 guifg=#E3CF57
