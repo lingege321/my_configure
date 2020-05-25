@@ -3,5 +3,6 @@ export FZF_DEFAULT_OPTS='--height 40% --layout=reverse -m --border --ansi'
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 zstyle ':completion:*' matcher-list ''
 
+source ~/.alias
 umask 022
 cd
