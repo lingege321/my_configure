@@ -140,7 +140,8 @@ map <Leader>l  <Plug>(easymotion-lineforward)
 map <Leader>.  <Plug>(easymotion-repeat)
 "yank to clipbloar
 nnoremap <C-c> 0wv$<Left>"+y<Esc>0wv$<Left>"*y
-vnoremap <C-c> "+y<Esc>"*y 
+"vnoremap <C-c> '+y<Esc>'*y 
+vmap <C-c> :w! ~/.vimbuffer \| !cat ~/.vimbuffer \| clip.exe <CR><CR>
 nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 inoremap <C-h> <Left>
