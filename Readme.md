@@ -6,8 +6,15 @@
 * zsh
 	* [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)
 
-* ag
+* the-silver-search
 	* [ag](https://github.com/ggreer/the_silver_searcher)
 
 * vim-plug
 	* [vim-plug](https://github.com/junegunn/vim-plug)
+
+* rust
+   * [rust-install](https://www.cloudbooklet.com/install-rust-on-ubuntu-18-04-lts/)
+
+* ripgrep
+   * [ripgrep github](https://github.com/BurntSushi/ripgrep)
+   * rg
