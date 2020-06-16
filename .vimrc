@@ -19,6 +19,7 @@ Plug 'junegunn/gv.vim'    " gv.vim https://github.com/junegunn/gv.vim
 Plug 'terryma/vim-multiple-cursors'
 Plug 'w0rp/ale'  "need nerd font/ reference: https://github.com/ryanoasis/nerd-fonts
 Plug 'scrooloose/nerdcommenter'  " auto add comment
+Plug 'Yggdroot/indentLine'
 if v:version >= 704
    Plug 'SirVer/ultisnips'    "map functional
    Plug 'honza/vim-snippets'
@@ -261,6 +262,10 @@ hi VimwikiHeader6 ctermfg=6
 "*****************************************************************************************"
 map // <plug>NERDCommenterToggle
 
+"*****************************************************************************************"
+"  For indent line
+"*****************************************************************************************"
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 
 

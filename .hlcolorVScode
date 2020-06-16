@@ -12,4 +12,5 @@ hi Todo           ctermfg=226 guifg=#ffff00
 hi Operator       ctermfg=206 guifg=#ff5fd7
 hi constant       ctermfg=50  guifg=#00ffd7
 hi cursorlinenr   ctermfg=226 guifg=#ffff00
+hi CursorLine     term=underline ctermbg=234 guibg=#222222
 hi specialchar    ctermfg=220 guifg=#E3CF57
