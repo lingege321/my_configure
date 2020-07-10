@@ -1,0 +1,25 @@
+priority -50
+
+
+snippet time_gen "gen the code to test performance" b
+let start = Instant::now();
+let duration = start.elapsed();
+println!("$1 time: {}",duration.as_millis());
+endsnippet
+
+snippet *** "fnc and command" b
+${1}
+{
+	/*********************************************************
+	 * $1
+	 * ${2}
+	 *********************************************************/
+}
+
+endsnippet
+
+snippet ** "command" b
+/************************************************************
+ * ${1}
+ ************************************************************/
+endsnippet

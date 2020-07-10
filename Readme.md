@@ -18,3 +18,9 @@
 * ripgrep
    * [ripgrep github](https://github.com/BurntSushi/ripgrep)
    * rg
+   * use `cargo install ripgrep`
+* lsd
+   * [lsd](https://github.com/Peltoche/lsd)
+   * lsd
+   * use `cargo install lsd`
+

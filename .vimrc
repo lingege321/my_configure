@@ -88,7 +88,7 @@ au BufNewFile,BufRead *.cpp     set ft=cpp
 au BufNewFile,BufRead *.h       set ft=cpp
 au BufNewFile,BufRead *.hpp     set ft=cpp
 au BufNewFile,BufRead *.rs      set ft=rust
-au BufNewFile,BufRead *.toml      set ft=rust
+au BufNewFile,BufRead *.toml    set ft=rust
 au BufNewFile,BufRead *.cir     set ft=spice
 au BufNewFile,BufRead *cshrc    set ft=csh
 au BufNewFile,BufRead *.svg     set ft=svg
@@ -139,6 +139,7 @@ map <Leader>q  <Plug>(easymotion-w)
 map <Leader>h  <Plug>(easymotion-linebackward)
 map <Leader>l  <Plug>(easymotion-lineforward)
 map <Leader>.  <Plug>(easymotion-repeat)
+xmap <Leader>a <Plug>(EasyAlign))
 "yank to clipbloar
 nnoremap <C-c> 0wv$<Left>"+y<Esc>0wv$<Left>"*y
 "vnoremap <C-c> '+y<Esc>'*y 
@@ -267,6 +268,11 @@ map // <plug>NERDCommenterToggle
 "*****************************************************************************************"
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
+
+
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', ' ~/.vim/plugged/vim-snippets/UltiSnips', 'UltiSnips']
 
 
 source $HOME/.vim/.hlcolorVScode

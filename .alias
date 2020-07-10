@@ -1,7 +1,5 @@
 alias mk="make -j8"
 alias cls="clear"
-alias la="ls -a"
-alias lla="ll -a"
 alias g++="g++ -Wall -Wextra"
 alias grep="grep -n --color=auto "
 alias ssh='ssh -X'
@@ -17,6 +15,12 @@ alias psme='ps aux|ag lingege32'
 
 
 
+
+alias ls="lsd "
+alias la="ls -a"
+alias ll="ls -l"
+alias lla="ll -a"
+alias lt="ls --tree"
 
 
 
