@@ -24,3 +24,7 @@
    * lsd
    * use `cargo install lsd`
 
+* ytop
+   * [ytop](https://github.com/cjbassi/ytop)
+   * use `cargo install ytop`
+
