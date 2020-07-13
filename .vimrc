@@ -97,6 +97,7 @@ au BufNewFile,BufRead .hlcolor* set ft=vim
 au BufNewFile,BufRead *.svg     set ft=svg
 au BufNewFile,BufRead *.log     set ft=cerr
 au BufNewFile,BufRead .hlcolor* set ft=vim
+au BufNewFile,BufRead *.rs      :setlocal tags=./rusty-tags.vi;/
 augroup EditVim
    autocmd!
    autocmd FileType make setlocal noexpandtab
