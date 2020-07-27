@@ -21,6 +21,7 @@ Plug 'w0rp/ale'  "need nerd font/ reference: https://github.com/ryanoasis/nerd-f
 Plug 'scrooloose/nerdcommenter'  " auto add comment
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf.vim'
+Plug 'zxqfl/tabnine-vim'
 if v:version >= 704
    Plug 'SirVer/ultisnips'    "map functional
    Plug 'honza/vim-snippets'
