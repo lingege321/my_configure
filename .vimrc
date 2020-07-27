@@ -20,6 +20,7 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'w0rp/ale'  "need nerd font/ reference: https://github.com/ryanoasis/nerd-fonts
 Plug 'scrooloose/nerdcommenter'  " auto add comment
 Plug 'Yggdroot/indentLine'
+Plug 'junegunn/fzf.vim'
 if v:version >= 704
    Plug 'SirVer/ultisnips'    "map functional
    Plug 'honza/vim-snippets'
@@ -91,6 +92,7 @@ au BufNewFile,BufRead *.rs      set ft=rust
 au BufNewFile,BufRead *.toml    set ft=rust
 au BufNewFile,BufRead *.cir     set ft=spice
 au BufNewFile,BufRead *cshrc    set ft=csh
+au BufNewFile,BufRead *zshrc    set ft=zsh
 au BufNewFile,BufRead *.svg     set ft=svg
 au BufNewFile,BufRead *.log     set ft=cerr
 au BufNewFile,BufRead .hlcolor* set ft=vim
@@ -248,6 +250,7 @@ nmap <Leader>s :ALEToggle<CR>
 nmap <Leader>d :ALEDetail<CR>
 
 "ale linter
+"let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++'], 'rust': ['analyzer']}
 let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++']}
 let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++17'
 "*****************************************************************************************"

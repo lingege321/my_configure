@@ -8,3 +8,4 @@ export PATH=$HOME/.cargo/bin:$PATH
 source ~/.alias
 umask 022
 cd
+#eval "$(starship init zsh)"

@@ -1,5 +1,12 @@
 priority -50
 
+snippet unused "gen the unused block" b
+#[allow(unused)]
+endsnippet
+
+snippet dead_code "gen the dead_code block" b
+#[allow(dead_code)]
+endsnippet
 
 snippet time_gen "gen the code to test performance" b
 let start = Instant::now();
