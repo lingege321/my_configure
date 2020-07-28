@@ -23,6 +23,10 @@
    * [lsd](https://github.com/Peltoche/lsd)
    * lsd
    * use `cargo install lsd`
+* lsd
+   * [dust](https://github.com/bootandy/dust)
+   * dust
+   * use cargo install du-dust
 
 * ytop
    * [ytop](https://github.com/cjbassi/ytop)
