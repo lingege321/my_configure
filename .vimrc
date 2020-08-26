@@ -16,7 +16,8 @@ Plug 'easymotion/vim-easymotion'    "quick jump  syntax \w \b \jklh \s
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-fugitive' " gv.vim
 Plug 'junegunn/gv.vim'    " gv.vim https://github.com/junegunn/gv.vim
-Plug 'terryma/vim-multiple-cursors'
+"Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi'
 Plug 'w0rp/ale'  "need nerd font/ reference: https://github.com/ryanoasis/nerd-fonts
 Plug 'scrooloose/nerdcommenter'  " auto add comment
 Plug 'Yggdroot/indentLine'
@@ -279,6 +280,14 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', ' ~/.vim/plugged/vim-snippets/UltiSnips', 'UltiSnips']
 
+function! s:p(bang, ...)
+  let preview_window = get(g:, 'fzf_preview_window', a:bang && &columns >= 80 || &columns >= 120 ? 'right': '')
+  if len(preview_window)
+    return call('fzf#vim#with_preview', add(copy(a:000), preview_window))
+  endif
+  return {}
+endfunction
+command! -bang -nargs=* RG call fzf#vim#grep("rg -g !'*tags.vi' --column --line-number --no-heading --color=always --smart-case -- ".shellescape(<q-args>), 1, s:p(<bang>0), <bang>0)',
 
 source $HOME/.vim/.hlcolorVScode
 "source $HOME/.vim/.hlcolorOcean
