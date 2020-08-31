@@ -1,11 +1,11 @@
 call plug#begin('~/.vim/plugged')
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'morhetz/gruvbox'
-Plug 'majutsushi/tagbar' " awesome tags window
-Plug 'sickill/vim-monokai'
+"Plug 'morhetz/gruvbox'
+"Plug 'majutsushi/tagbar' " awesome tags window
+"Plug 'sickill/vim-monokai'
 Plug 'rust-lang/rust.vim' " rust lang
 Plug 'tomasiser/vim-code-dark'
-Plug 'scrooloose/nerdtree' "nerdtree
+"Plug 'scrooloose/nerdtree' "nerdtree
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'universal-ctags/ctags' "ctag -R *
 Plug 'vim-airline/vim-airline'
@@ -28,7 +28,7 @@ if v:version >= 704
    Plug 'honza/vim-snippets'
    Plug 'andymass/vim-matchup'
    "Plug 'myusuf3/numbers.vim'
-   Plug 'vimwiki/vimwiki'
+   "Plug 'vimwiki/vimwiki'
 endif
 Plug 'yonchu/accelerated-smooth-scroll'
 Plug 'gregsexton/gitv', {'on': ['Gitv']}
@@ -91,7 +91,7 @@ au BufNewFile,BufRead *.cpp     set ft=cpp
 au BufNewFile,BufRead *.h       set ft=cpp
 au BufNewFile,BufRead *.hpp     set ft=cpp
 au BufNewFile,BufRead *.rs      set ft=rust
-au BufNewFile,BufRead *.toml    set ft=rust
+au BufNewFile,BufRead *.toml    set ft=toml
 au BufNewFile,BufRead *.cir     set ft=spice
 au BufNewFile,BufRead *cshrc    set ft=csh
 au BufNewFile,BufRead *zshrc    set ft=zsh
@@ -167,7 +167,6 @@ nnoremap bp    :bp<CR>
 "let g:neodark#use_256color = 1
 
 "*****************************************************************************************"
-let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
    let g:airline_symbols={}
 endif
@@ -209,7 +208,7 @@ let g:airline_symbols.linenr = '☰'
 "let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.maxlinenr = " \ue75c"
 let g:airline_symbols.paste = 'ρ'
-let g:airline_theme='serene'
+let g:airline_theme='ayu_mirage'
 let g:airline#extensions#whitespace#mixed_indent_algo=1
 
 "*****************************************************************************************"

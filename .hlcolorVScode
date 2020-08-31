@@ -1,10 +1,10 @@
 colorscheme codedark
 hi Comment cterm=NONE
-hi nontext        ctermbg=232 ctermfg=232 term=none
-hi endofbuffer       ctermbg=232 ctermfg=232 term=none
-hi normal         ctermbg=232
-hi ALEWarningSign ctermbg=232 guibg=#1c1c1c ctermfg=228   guifg=#ffff87
-hi ALEErrorSign   ctermbg=232 guibg=#1c1c1c ctermfg=196   guifg=#ff0000
+hi nontext        ctermbg=none term=none
+hi endofbuffer       ctermbg=none  term=none
+hi normal         ctermbg=none 
+hi ALEWarningSign ctermbg=none guibg=#1c1c1c ctermfg=228   guifg=#ffff87
+hi ALEErrorSign   ctermbg=none guibg=#1c1c1c ctermfg=196   guifg=#ff0000
 hi SignColumn     ctermbg=232 guibg=#1c1c1c
 hi ClassMember    ctermfg=112 guifg=#87d7ff
 hi ObjectCtr      ctermfg=117 guifg=#87d7ff
