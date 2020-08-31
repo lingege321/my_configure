@@ -252,7 +252,10 @@ nmap <Leader>d :ALEDetail<CR>
 
 "ale linter
 "let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++'], 'rust': ['analyzer']}
-let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++']}
+let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++'], 'rust': ['rls']}
+"let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++']}
+let g:ale_rust_rls_executable = '/home/lingege32/.cargo/bin/rls'
+let g:ale_rust_rls_toolchain = ''
 let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++17'
 "*****************************************************************************************"
 "For vimWiki.vim
