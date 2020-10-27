@@ -2,7 +2,7 @@ alias mk="make -j8"
 alias cls="clear"
 alias g++="g++ -Wall -Wextra"
 alias grep="grep -n --color=auto "
-alias ssh='ssh -X'
+#alias ssh='ssh -X'
 alias ssh03='ssh -X lingege32@140.113.225.203'
 alias ssh04='ssh -X lingege32@140.113.225.204'
 alias ssh07='ssh -X lingege32@140.113.225.207'
