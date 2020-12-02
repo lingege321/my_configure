@@ -32,3 +32,9 @@
    * [ytop](https://github.com/cjbassi/ytop)
    * use `cargo install ytop`
 
+* rabbitmq
+   * [How to install](https://blog.csdn.net/hongge_smile/article/details/104049292)
+
+* boost
+   * [How to install](https://www.itread01.com/content/1550417226.html)
+
