@@ -14,6 +14,7 @@
 
 * rust
    * [rust-install](https://www.cloudbooklet.com/install-rust-on-ubuntu-18-04-lts/)
+   * how to update version: rustup update nightly/stable
 
 * ripgrep
    * [ripgrep github](https://github.com/BurntSushi/ripgrep)
