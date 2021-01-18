@@ -23,7 +23,8 @@
    * [lsd](https://github.com/Peltoche/lsd)
    * lsd
    * use `cargo install lsd`
-* lsd
+
+* dust
    * [dust](https://github.com/bootandy/dust)
    * dust
    * use cargo install du-dust
@@ -38,3 +39,5 @@
 * boost
    * [How to install](https://www.itread01.com/content/1550417226.html)
 
+* install gcc 10
+   * [how to install](https://www.ultralinux.org/post/how-to-install-gcc-compiler-on-ubuntu-18-04/)

@@ -28,4 +28,4 @@ alias rd="readlink -f"
 
 
 
-alias fvim='fzf | xargs -p vim'
+alias fvim='vim `fzf`'

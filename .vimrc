@@ -74,11 +74,11 @@ set cursorline
 set formatoptions+=r   "註解的下一行 "不要"自動註解
 set ruler
 set cindent
-set sw=3
+set sw=4
 set expandtab
-set tabstop=3
+set tabstop=4
 set incsearch
-set shiftwidth=3
+set shiftwidth=4
 set backspace=2
 set autoindent    " always set autoindenting on
 set smartindent
@@ -256,7 +256,8 @@ let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++'], 'rust': ['rls']}
 "let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++']}
 let g:ale_rust_rls_executable = '/home/lingege32/.cargo/bin/rls'
 let g:ale_rust_rls_toolchain = ''
-let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++17'
+let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++20'
+let g:ale_cpp_cc_options = '-Wall -O2 -std=c++20'
 "*****************************************************************************************"
 "For vimWiki.vim
 "*****************************************************************************************"
