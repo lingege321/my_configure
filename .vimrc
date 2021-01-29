@@ -62,6 +62,8 @@ call plug#end()
 
 
 
+set t_vb=
+set vb
 set nocompatible
 filetype plugin indent on
 set wildmode=list:longest
