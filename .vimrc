@@ -62,6 +62,7 @@ call plug#end()
 
 
 
+set signcolumn=yes
 set t_vb=
 set vb
 set nocompatible
