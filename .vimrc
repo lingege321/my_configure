@@ -255,6 +255,25 @@ nmap <Leader>d :ALEDetail<CR>
 "ale linter
 "let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++'], 'rust': ['analyzer']}
 let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++'], 'rust': ['rls']}
+"*****************************************************************************************"
+"  For clangd
+"*****************************************************************************************"
+if executable('clangd')
+    let g:ale_linters = {'c': ['clangd'], 'cpp': ['clangd'], 'rust': ['rls']}
+    nnoremap g] :ALEGoToDefinition<CR>
+    "augroup lsp_clangd
+        "autocmd!
+        "autocmd User lsp_setup call lsp#register_server({
+                    "\ 'name': 'clangd',
+                    "\ 'cmd': {server_info->['clangd']},
+                    "\ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+                    "\ })
+        "autocmd FileType c setlocal omnifunc=lsp#complete
+        "autocmd FileType cpp setlocal omnifunc=lsp#complete
+        "autocmd FileType objc setlocal omnifunc=lsp#complete
+        "autocmd FileType objcpp setlocal omnifunc=lsp#complete
+    "augroup end
+endif
 "let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++']}
 let g:ale_rust_rls_executable = '/home/lingege32/.cargo/bin/rls'
 let g:ale_rust_rls_toolchain = ''
@@ -273,6 +292,9 @@ hi VimwikiHeader6 ctermfg=6
 "  For nerd commenter
 "*****************************************************************************************"
 map // <plug>NERDCommenterToggle
+
+
+
 
 "*****************************************************************************************"
 "  For indent line
