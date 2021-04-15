@@ -261,6 +261,8 @@ let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++'], 'rust': ['rls']}
 if executable('clangd')
     let g:ale_linters = {'c': ['clangd'], 'cpp': ['clangd'], 'rust': ['rls']}
     nnoremap g] :ALEGoToDefinition<CR>
+    let g:ale_completion_enabled = 0
+    imap <C-n> <Plug>(ale_complete)
     "augroup lsp_clangd
         "autocmd!
         "autocmd User lsp_setup call lsp#register_server({
