@@ -255,12 +255,12 @@ nmap <Leader>d :ALEDetail<CR>
 
 "ale linter
 "let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++'], 'rust': ['analyzer']}
-let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++'], 'rust': ['rls']}
+let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++'], 'rust': ['rust-analyzer']}
 "*****************************************************************************************"
 "  For clangd
 "*****************************************************************************************"
 if executable('clangd')
-    let g:ale_linters = {'c': ['clangd'], 'cpp': ['clangd'], 'rust': ['rls']}
+    let g:ale_linters = {'c': ['clangd'], 'cpp': ['clangd'], 'rust': ['analyzer']}
     nnoremap g] :ALEGoToDefinition<CR>
     let g:ale_completion_enabled = 0
     imap <C-n> <Plug>(ale_complete)
@@ -278,8 +278,6 @@ if executable('clangd')
     "augroup end
 endif
 "let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++']}
-let g:ale_rust_rls_executable = '/home/lingege32/.cargo/bin/rls'
-let g:ale_rust_rls_toolchain = ''
 let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++20'
 let g:ale_cpp_cc_options = '-Wall -O2 -std=c++20'
 "*****************************************************************************************"
