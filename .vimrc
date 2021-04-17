@@ -259,24 +259,31 @@ let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++'], 'rust': ['rust-analyzer']}
 "*****************************************************************************************"
 "  For clangd
 "*****************************************************************************************"
-if executable('clangd')
-    let g:ale_linters = {'c': ['clangd'], 'cpp': ['clangd'], 'rust': ['analyzer']}
+if executable('ccls')
+    let g:ale_linters = {'c': ['ccls'], 'cpp': ['ccls'], 'rust': ['analyzer']}
     nnoremap g] :ALEGoToDefinition<CR>
     let g:ale_completion_enabled = 0
     imap <C-n> <Plug>(ale_complete)
-    "augroup lsp_clangd
-        "autocmd!
-        "autocmd User lsp_setup call lsp#register_server({
-                    "\ 'name': 'clangd',
-                    "\ 'cmd': {server_info->['clangd']},
-                    "\ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
-                    "\ })
-        "autocmd FileType c setlocal omnifunc=lsp#complete
-        "autocmd FileType cpp setlocal omnifunc=lsp#complete
-        "autocmd FileType objc setlocal omnifunc=lsp#complete
-        "autocmd FileType objcpp setlocal omnifunc=lsp#complete
-    "augroup end
+    let g:ale_cpp_ccls_init_options = {"--log-file":"ccls_debug.log"}
 endif
+"if executable('clangd')
+    "let g:ale_linters = {'c': ['clangd'], 'cpp': ['clangd'], 'rust': ['analyzer']}
+    "nnoremap g] :ALEGoToDefinition<CR>
+    "let g:ale_completion_enabled = 0
+    "imap <C-n> <Plug>(ale_complete)
+    ""augroup lsp_clangd
+        ""autocmd!
+        ""autocmd User lsp_setup call lsp#register_server({
+                    ""\ 'name': 'clangd',
+                    ""\ 'cmd': {server_info->['clangd']},
+                    ""\ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+                    ""\ })
+        ""autocmd FileType c setlocal omnifunc=lsp#complete
+        ""autocmd FileType cpp setlocal omnifunc=lsp#complete
+        ""autocmd FileType objc setlocal omnifunc=lsp#complete
+        ""autocmd FileType objcpp setlocal omnifunc=lsp#complete
+    ""augroup end
+"endif
 "let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++']}
 let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++20'
 let g:ale_cpp_cc_options = '-Wall -O2 -std=c++20'
