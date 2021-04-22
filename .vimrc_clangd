@@ -13,16 +13,17 @@ let g:lsp_log_file = expand('vim-lsp.log')
 nnoremap <leader>] :LspDefinition<CR>
 nnoremap <leader>[ :LspDeclaration<CR>
 
-argroup lsp_clangd
-autocmd!
-autocmd User lsp_setup call lsp#register_server({
-            \ 'name':'clangd',
-            \ 'cmd': ['clangd', '--pretty', '--log=info', '--background-index', '--compile-commands-dir='.$PWD],
-            \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
-            \ })
-autocmd FileType c setlocal omnifunc=lsp#complete
-autocmd FileType cpp setlocal omnifunc=lsp#complete
-autocmd FileType objc setlocal omnifunc=lsp#complete
-autocmd FileType objcpp setlocal omnifunc=lsp#complete
+augroup lsp_clangd
+    autocmd!
+    autocmd User lsp_setup call lsp#register_server({
+                \ 'name':'clangd',
+                \ 'cmd': ['clangd', '--pretty', '--log=info', '--background-index', '--compile-commands-dir='.$PWD],
+                \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+                \ })
+    autocmd FileType c setlocal omnifunc=lsp#complete
+    autocmd FileType cpp setlocal omnifunc=lsp#complete
+    autocmd FileType objc setlocal omnifunc=lsp#complete
+    autocmd FileType objcpp setlocal omnifunc=lsp#complete
+augroup end
 
 
