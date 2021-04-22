@@ -304,7 +304,7 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', ' ~/.vim/plugged/vim-snippets/UltiSnips', 'UltiSnips']
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips']
 
 function! s:p(bang, ...)
   let preview_window = get(g:, 'fzf_preview_window', a:bang && &columns >= 80 || &columns >= 120 ? 'right': '')
