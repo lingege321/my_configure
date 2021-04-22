@@ -18,7 +18,7 @@ Plug 'tpope/vim-fugitive' " gv.vim
 Plug 'junegunn/gv.vim'    " gv.vim https://github.com/junegunn/gv.vim
 "Plug 'terryma/vim-multiple-cursors'
 Plug 'mg979/vim-visual-multi'
-"Plug 'w0rp/ale'  "need nerd font/ reference: https://github.com/ryanoasis/nerd-fonts
+Plug 'w0rp/ale'  "need nerd font/ reference: https://github.com/ryanoasis/nerd-fonts
 Plug 'scrooloose/nerdcommenter'  " auto add comment
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf.vim'
@@ -33,10 +33,11 @@ endif
 Plug 'yonchu/accelerated-smooth-scroll'
 Plug 'gregsexton/gitv', {'on': ['Gitv']}
 "Plug 'ryanoasis/powerline-extra-symbols'
+Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
-Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 "Plug 'majutsushi/tagbar'  need 7.3.1058 version
 call plug#end()
 " nerd font reference : https://github.com/ryanoasis/nerd-fonts/blob/master/readme_tw.md#combinations
@@ -219,7 +220,7 @@ let g:airline#extensions#whitespace#mixed_indent_algo=1
 "*****************************************************************************************"
 " For YouCompleteMe
 "*****************************************************************************************"
-set completeopt=longest,menu                                 "補全方式與IDE一致(不會跳出上方預覽)
+"set completeopt=longest,menu                                 "補全方式與IDE一致(不會跳出上方預覽)
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif      "離開insert mode後自動關閉上方預覽視窗
 let g:ycm_collect_identifiers_from_tags_files = 0
 let g:ycm_global_ycm_extra_conf = 'uhome/home/lingege32/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
@@ -255,8 +256,10 @@ nmap <Leader>s :ALEToggle<CR>
 nmap <Leader>d :ALEDetail<CR>
 
 "ale linter
-"let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++'], 'rust': ['analyzer']}
-let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++'], 'rust': ['rust-analyzer']}
+"let g:lsp_diagnostics_signs_error = {'text': " \uf0e7"}
+"let g:lsp_diagnostics_signs_warning = {'text': " \uf0e7"} " icons require GUI
+"let g:lsp_diagnostics_signs_hint = {} " icons require GUI
+let g:ale_linters = {'c': ['clang', 'gcc'], 'cpp': ['clang++', 'g++'], 'rust': ['rls']}
 "*****************************************************************************************"
 "  For clangd
 "*****************************************************************************************"
@@ -267,6 +270,8 @@ let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++'], 'rust': ['rust-analyzer']}
     "imap <C-n> <Plug>(ale_complete)
     "let g:ale_cpp_ccls_init_options = {"--log-file":"ccls_debug.log"}
 "endif
+
+autocmd FileType rust source ~/.vim/.vimrc_rust_analyzer
 if executable('clangd')
     autocmd FileType cpp    source ~/.vim/.vimrc_clangd
 endif
@@ -314,4 +319,5 @@ source $HOME/.vim/.hlcolorVScode
 "source $HOME/.vim/.hlcolorOcean
 "source $HOME/.vim/.hlcolor2
 set formatoptions-=o   "註解的下一行 "不要"自動註解
+
 

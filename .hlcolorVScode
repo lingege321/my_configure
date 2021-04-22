@@ -5,6 +5,8 @@ hi endofbuffer       ctermbg=none  term=none
 hi normal         ctermbg=none 
 hi ALEWarningSign ctermbg=none guibg=#1c1c1c ctermfg=228   guifg=#ffff87
 hi ALEErrorSign   ctermbg=none guibg=#1c1c1c ctermfg=196   guifg=#ff0000
+hi LspWarningHighlight ctermbg=none guibg=#1c1c1c ctermfg=228   guifg=#ffff87
+hi LspErrorHighLight   ctermbg=none guibg=#1c1c1c ctermfg=196   guifg=#ff0000
 hi SignColumn     ctermbg=none guibg=#1c1c1c
 hi ClassMember    ctermfg=112 guifg=#87d7ff
 hi LineNr         ctermbg=none
