@@ -33,9 +33,9 @@ endif
 Plug 'yonchu/accelerated-smooth-scroll'
 Plug 'gregsexton/gitv', {'on': ['Gitv']}
 "Plug 'ryanoasis/powerline-extra-symbols'
-"Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/async.vim'
 "Plug 'prabirshrestha/vim-lsp'
-"Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete.vim'
 "Plug 'majutsushi/tagbar'  need 7.3.1058 version
 call plug#end()
 " nerd font reference : https://github.com/ryanoasis/nerd-fonts/blob/master/readme_tw.md#combinations
@@ -259,34 +259,25 @@ let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++'], 'rust': ['rust-analyzer']}
 "*****************************************************************************************"
 "  For clangd
 "*****************************************************************************************"
-if executable('ccls')
-    let g:ale_linters = {'c': ['ccls'], 'cpp': ['ccls'], 'rust': ['analyzer']}
-    nnoremap g] :ALEGoToDefinition<CR>
-    let g:ale_completion_enabled = 0
-    imap <C-n> <Plug>(ale_complete)
-    let g:ale_cpp_ccls_init_options = {"--log-file":"ccls_debug.log"}
-endif
-"if executable('clangd')
-    "let g:ale_linters = {'c': ['clangd'], 'cpp': ['clangd'], 'rust': ['analyzer']}
+"if executable('ccls')
+    "let g:ale_linters = {'c': ['ccls'], 'cpp': ['ccls'], 'rust': ['analyzer']}
     "nnoremap g] :ALEGoToDefinition<CR>
     "let g:ale_completion_enabled = 0
     "imap <C-n> <Plug>(ale_complete)
-    ""augroup lsp_clangd
-        ""autocmd!
-        ""autocmd User lsp_setup call lsp#register_server({
-                    ""\ 'name': 'clangd',
-                    ""\ 'cmd': {server_info->['clangd']},
-                    ""\ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
-                    ""\ })
-        ""autocmd FileType c setlocal omnifunc=lsp#complete
-        ""autocmd FileType cpp setlocal omnifunc=lsp#complete
-        ""autocmd FileType objc setlocal omnifunc=lsp#complete
-        ""autocmd FileType objcpp setlocal omnifunc=lsp#complete
-    ""augroup end
+    "let g:ale_cpp_ccls_init_options = {"--log-file":"ccls_debug.log"}
 "endif
+if executable('clangd')
+    let g:ale_linters = {'c': ['clangd'], 'cpp': ['clangd'], 'rust': ['analyzer']}
+    nnoremap <Leader>] :ALEGoToDefinition<CR>
+    let g:ale_cpp_clangd_options = '--background-index --log=info --header-insertion=iwyu '
+    call ale#Set('cpp_clangd_options', '')
+    set omnifunc=ale#completion#OmniFunc
+    "let g:ale_completion_enabled = 0
+    imap <C-n> <Plug>(ale_complete)
+endif
 "let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++']}
-let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++20'
-let g:ale_cpp_cc_options = '-Wall -O2 -std=c++20'
+"let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++20'
+"let g:ale_cpp_cc_options = '-Wall -O2 -std=c++20'
 "*****************************************************************************************"
 "For vimWiki.vim
 "*****************************************************************************************"
