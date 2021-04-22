@@ -18,7 +18,7 @@ Plug 'tpope/vim-fugitive' " gv.vim
 Plug 'junegunn/gv.vim'    " gv.vim https://github.com/junegunn/gv.vim
 "Plug 'terryma/vim-multiple-cursors'
 Plug 'mg979/vim-visual-multi'
-Plug 'w0rp/ale'  "need nerd font/ reference: https://github.com/ryanoasis/nerd-fonts
+"Plug 'w0rp/ale'  "need nerd font/ reference: https://github.com/ryanoasis/nerd-fonts
 Plug 'scrooloose/nerdcommenter'  " auto add comment
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf.vim'
@@ -34,7 +34,8 @@ Plug 'yonchu/accelerated-smooth-scroll'
 Plug 'gregsexton/gitv', {'on': ['Gitv']}
 "Plug 'ryanoasis/powerline-extra-symbols'
 Plug 'prabirshrestha/async.vim'
-"Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/asyncomplete.vim'
 "Plug 'majutsushi/tagbar'  need 7.3.1058 version
 call plug#end()
@@ -267,13 +268,7 @@ let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++'], 'rust': ['rust-analyzer']}
     "let g:ale_cpp_ccls_init_options = {"--log-file":"ccls_debug.log"}
 "endif
 if executable('clangd')
-    let g:ale_linters = {'c': ['clangd'], 'cpp': ['clangd'], 'rust': ['analyzer']}
-    nnoremap <Leader>] :ALEGoToDefinition<CR>
-    let g:ale_cpp_clangd_options = '--background-index --log=info --header-insertion=iwyu '
-    call ale#Set('cpp_clangd_options', '')
-    set omnifunc=ale#completion#OmniFunc
-    "let g:ale_completion_enabled = 0
-    imap <C-n> <Plug>(ale_complete)
+    autocmd FileType cpp    source ~/.vim/.vimrc_clangd
 endif
 "let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++']}
 "let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++20'

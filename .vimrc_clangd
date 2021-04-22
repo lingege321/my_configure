@@ -1,0 +1,28 @@
+
+    "let g:ale_linters = {'c': ['clangd'], 'cpp': ['clangd'], 'rust': ['analyzer']}
+    "nnoremap <Leader>] :ALEGoToDefinition<CR>
+    "let g:ale_cpp_clangd_options = '--background-index --log=info --header-insertion=iwyu '
+    "call ale#Set('cpp_clangd_options', '')
+    "set omnifunc=ale#completion#OmniFunc
+    "imap <C-n> <Plug>(ale_complete)
+
+
+
+let g:lsp_log_verbose=1
+let g:lsp_log_file = expand('vim-lsp.log')
+nnoremap <leader>] :LspDefinition<CR>
+nnoremap <leader>[ :LspDeclaration<CR>
+
+argroup lsp_clangd
+autocmd!
+autocmd User lsp_setup call lsp#register_server({
+            \ 'name':'clangd',
+            \ 'cmd': ['clangd', '--pretty', '--log=info', '--background-index', '--compile-commands-dir='.$PWD],
+            \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+            \ })
+autocmd FileType c setlocal omnifunc=lsp#complete
+autocmd FileType cpp setlocal omnifunc=lsp#complete
+autocmd FileType objc setlocal omnifunc=lsp#complete
+autocmd FileType objcpp setlocal omnifunc=lsp#complete
+
+
