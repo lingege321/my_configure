@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'octol/vim-cpp-enhanced-highlight'
+"Plug 'jackguo380/vim-lsp-cxx-highlight'
 "Plug 'morhetz/gruvbox'
 "Plug 'majutsushi/tagbar' " awesome tags window
 "Plug 'sickill/vim-monokai'
@@ -164,6 +165,12 @@ vnoremap //    I//<Esc>
 nnoremap be    bvey0/<C-r>0<CR>
 nnoremap bn    :bn<CR>
 nnoremap bp    :bp<CR>
+"*****************************************************************************************"
+" cpp-enhanced-highlight
+"*****************************************************************************************"
+let g:cpp_class_scope_highlight = 1
+let g:cpp_member_variable_highlight = 1
+let g:cpp_class_decl_highlight = 1
 
 "*****************************************************************************************"
 " neodark.vim
@@ -182,22 +189,10 @@ set laststatus=2
 let g:airline#extensions#tabline#buffer_nr_show = 1
 "enable tabline"
 let g:airline#extensions#tabline#enabled = 1
-"set left separator"
-"set left separator which are not editting"
 
 "show buffer number"
-"let g:airline#extensions#tabline#buffer_nr_show = 1
-"let g:airline_theme='codedark'
-"let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
-"let g:airline#extensions#tabline#left_sep = ''
-"let g:airline#extensions#tabline#left_alt_sep = ''
-"let g:airline#extensions#tabline#right_sep = ''
-"let g:airline#extensions#tabline#right_alt_sep = ''                                                                                                                                       "let g:airline_left_sep = ''
-"let g:airline_left_alt_sep = ''
-"let g:airline_right_sep = ''
-"let g:airline_right_alt_sep = ''
 let g:airline#extensions#tabline#left_sep = "\ue0b4"
 let g:airline#extensions#tabline#left_alt_sep = "\ue0b5"
 let g:airline#extensions#tabline#right_sep = "\ue0b6"
