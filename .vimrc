@@ -266,7 +266,7 @@ let g:ale_linters = {'c': ['clang', 'gcc'], 'cpp': ['clang++', 'g++'], 'rust': [
     "let g:ale_cpp_ccls_init_options = {"--log-file":"ccls_debug.log"}
 "endif
 
-autocmd FileType rust source ~/.vim/.vimrc_rust_analyzer
+autocmd FileType rust source ~/.vim/.vimrc_rust_rls
 if executable('clangd')
     autocmd FileType cpp    source ~/.vim/.vimrc_clangd
 endif
