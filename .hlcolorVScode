@@ -19,6 +19,9 @@ hi cursorlinenr   ctermfg=226 guifg=#ffff00
 hi CursorLine     term=underline ctermbg=234 guibg=#222222
 hi specialchar    ctermfg=220 guifg=#E3CF57
 
+hi macro ctermfg=203
+hi label ctermfg=8
+
 "*****************************************************************************************"
 "  For signify
 "*****************************************************************************************"
