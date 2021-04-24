@@ -1,28 +1,22 @@
 call plug#begin('~/.vim/plugged')
 Plug 'octol/vim-cpp-enhanced-highlight'
-"Plug 'jackguo380/vim-lsp-cxx-highlight'
-"Plug 'morhetz/gruvbox'
-"Plug 'majutsushi/tagbar' " awesome tags window
-"Plug 'sickill/vim-monokai'
 Plug 'rust-lang/rust.vim' " rust lang
 Plug 'tomasiser/vim-code-dark'
-"Plug 'scrooloose/nerdtree' "nerdtree
 Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'universal-ctags/ctags' "ctag -R *
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'mhartington/oceanic-next'
 Plug 'bronson/vim-trailing-whitespace' "highlight the whitespace at trail :FixWhiteSpace to remove the white space
 Plug 'easymotion/vim-easymotion'    "quick jump  syntax \w \b \jklh \s
 Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-fugitive' " gv.vim
 Plug 'junegunn/gv.vim'    " gv.vim https://github.com/junegunn/gv.vim
-"Plug 'terryma/vim-multiple-cursors'
 Plug 'mg979/vim-visual-multi'
 Plug 'w0rp/ale'  "need nerd font/ reference: https://github.com/ryanoasis/nerd-fonts
 Plug 'scrooloose/nerdcommenter'  " auto add comment
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-surround'
+Plug 'mhinz/vim-signify'
 "Plug 'zxqfl/tabnine-vim'
 if v:version >= 704
    Plug 'SirVer/ultisnips'    "map functional
@@ -33,14 +27,22 @@ if v:version >= 704
 endif
 Plug 'yonchu/accelerated-smooth-scroll'
 Plug 'gregsexton/gitv', {'on': ['Gitv']}
-"Plug 'ryanoasis/powerline-extra-symbols'
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
-"Plug 'majutsushi/tagbar'  need 7.3.1058 version
 call plug#end()
+"Plug 'universal-ctags/ctags' "ctag -R *
+"Plug 'mhartington/oceanic-next'
+"Plug 'ryanoasis/powerline-extra-symbols'
+"Plug 'majutsushi/tagbar'  need 7.3.1058 version
+"Plug 'jackguo380/vim-lsp-cxx-highlight'
+"Plug 'morhetz/gruvbox'
+"Plug 'majutsushi/tagbar' " awesome tags window
+"Plug 'sickill/vim-monokai'
+"Plug 'scrooloose/nerdtree' "nerdtree
+"Plug 'terryma/vim-multiple-cursors'
 " nerd font reference : https://github.com/ryanoasis/nerd-fonts/blob/master/readme_tw.md#combinations
 "Plug 'google/vim-colorscheme-primary'
 "Plug 'flazz/vim-colorschemes'
@@ -295,6 +297,11 @@ map // <plug>NERDCommenterToggle
 "*****************************************************************************************"
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
+"*****************************************************************************************"
+"  For signify
+"*****************************************************************************************"
+map <F6> <Esc>:SignifyRefresh<CR>
+map <F7> <Esc>:SignifyToggle<CR>
 
 
 
