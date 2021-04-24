@@ -1,27 +1,27 @@
 "colorscheme OceanicNext
 colorscheme codedark
 ""hi Comment cterm=NONE
-hi nontext         ctermbg=none term=none
-hi endofbuffer       ctermbg=none  term=none
+hi nontext        ctermbg=none   term=none
+hi endofbuffer    ctermbg=none   term=none
 hi normal         ctermbg=none
-hi ALEWarningSign ctermbg=none guibg=#1c1c1c ctermfg=228   guifg=#ffff87
-hi ALEErrorSign   ctermbg=none guibg=#1c1c1c ctermfg=196   guifg=#ff0000
-hi SignColumn     ctermbg=none guibg=#1c1c1c
-hi Todo           ctermfg=226 guifg=#ffff00
-hi LspWarningHighlight ctermfg=228 ctermbg=none
-hi LspErrorHighLight   ctermfg=196 ctermbg=none
-hi LspHintText         ctermfg=228 ctermbg=none
-hi ClassMember    ctermfg=112 guifg=#87d7ff
+hi ALEWarningSign ctermbg=none   guibg=#1c1c1c ctermfg=228 guifg=#ffff87
+hi ALEErrorSign   ctermbg=none   guibg=#1c1c1c ctermfg=196 guifg=#ff0000
+hi SignColumn     ctermbg=none   guibg=#1c1c1c
+hi Todo           ctermfg=226    guifg=#ffff00
+hi LspWarningText ctermfg=228    ctermbg=none
+hi LspErrorText   ctermfg=196    ctermbg=none
+hi LspHintText    ctermfg=228    ctermbg=none
+hi ClassMember    ctermfg=112    guifg=#87d7ff
 hi LineNr         ctermbg=none
-hi ObjectCtr      ctermfg=117 guifg=#87d7ff
-hi Operator       ctermfg=206 guifg=#ff5fd7
-hi constant       ctermfg=50  guifg=#00ffd7
-hi cursorlinenr   ctermfg=226 guifg=#ffff00
-hi CursorLine     term=underline ctermbg=234 guibg=#222222
-hi specialchar    ctermfg=220 guifg=#E3CF57
+hi ObjectCtr      ctermfg=117    guifg=#87d7ff
+hi Operator       ctermfg=206    guifg=#ff5fd7
+hi constant       ctermfg=50     guifg=#00ffd7
+hi cursorlinenr   ctermfg=226    guifg=#ffff00
+hi CursorLine     term=underline ctermbg=234   guibg=#222222
+hi specialchar    ctermfg=220    guifg=#E3CF57
 
-hi macro ctermfg=203
-hi label ctermfg=8
+hi macro          ctermfg=203
+hi label          ctermfg=8
 
 "*****************************************************************************************"
 "  For signify
