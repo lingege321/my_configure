@@ -8,8 +8,9 @@ hi ALEWarningSign ctermbg=none guibg=#1c1c1c ctermfg=228   guifg=#ffff87
 hi ALEErrorSign   ctermbg=none guibg=#1c1c1c ctermfg=196   guifg=#ff0000
 hi SignColumn     ctermbg=none guibg=#1c1c1c
 hi Todo           ctermfg=226 guifg=#ffff00
-hi LspWarningHighlight ctermbg=none guibg=#1c1c1c ctermfg=228   guifg=#ffff87
-hi LspErrorHighLight   ctermbg=none guibg=#1c1c1c ctermfg=196   guifg=#ff0000
+hi LspWarningHighlight ctermfg=228 ctermbg=none
+hi LspErrorHighLight   ctermfg=196 ctermbg=none
+hi LspHintText         ctermfg=228 ctermbg=none
 hi ClassMember    ctermfg=112 guifg=#87d7ff
 hi LineNr         ctermbg=none
 hi ObjectCtr      ctermfg=117 guifg=#87d7ff

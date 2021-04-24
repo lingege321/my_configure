@@ -1,11 +1,16 @@
 
 let g:lsp_log_verbose=1
 let g:lsp_log_file = expand('vim-lsp.log')
-nnoremap <leader>] :LspDefinition<CR>
-nnoremap <leader>[ :LspPeekDefinition<CR>
+"nmap <leader>] <Plug>(lsp-definition)
+"nmap <leader>[ <Plug>(lsp-peek-definition)
+"nmap sn <Plug>(lsp-next-diagnostic)
+"nmap sp <Plug>(lsp-previous-diagnostic)
+"nmap <leader>d <Plug>(lsp-next-diagnostic-nowrap)
+"let g:lsp_diagnostics_float_cursor = 1
 
 let g:lsp_document_code_action_signs_enabled=0
-let g:lsp_diagnostics_enabled = 0
+"let g:lsp_diagnostics_enabled = 0
+let g:lsp_settings_filetype_rust = ['rust-analyzer']
 
 "augroup lsp_rls
     "au User lsp_setup call lsp#register_server({
@@ -25,12 +30,12 @@ let g:lsp_diagnostics_enabled = 0
 "augroup end
 
 
-augroup lsp_rls
-    autocmd!
-    autocmd User lsp_setup call lsp#register_server({
-                \ 'name':'rls',
-                \ 'cmd': {server_info->['rls']},
-                \ 'whitelist': ['rust'],
-                \ })
-    autocmd FileType rust setlocal omnifunc=lsp#complete
-augroup end
+"augroup lsp_rls
+    "autocmd!
+    "autocmd User lsp_setup call lsp#register_server({
+                "\ 'name':'rls',
+                "\ 'cmd': {server_info->['rls']},
+                "\ 'whitelist': ['rust'],
+                "\ })
+    "autocmd FileType rust setlocal omnifunc=lsp#complete
+"augroup end

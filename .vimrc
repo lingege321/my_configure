@@ -11,7 +11,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'tpope/vim-fugitive' " gv.vim
 Plug 'junegunn/gv.vim'    " gv.vim https://github.com/junegunn/gv.vim
 Plug 'mg979/vim-visual-multi'
-Plug 'w0rp/ale'  "need nerd font/ reference: https://github.com/ryanoasis/nerd-fonts
+"Plug 'w0rp/ale'  "need nerd font/ reference: https://github.com/ryanoasis/nerd-fonts
 Plug 'scrooloose/nerdcommenter'  " auto add comment
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf.vim'
@@ -27,7 +27,7 @@ if v:version >= 704
 endif
 Plug 'yonchu/accelerated-smooth-scroll'
 Plug 'gregsexton/gitv', {'on': ['Gitv']}
-"Plug 'mattn/vim-lsp-settings'
+Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
@@ -251,32 +251,25 @@ nmap sn <Plug>(ale_next_wrap)
 nmap <Leader>s :ALEToggle<CR>
 "<Leader>d查看错误或警告的详细信息
 nmap <Leader>d :ALEDetail<CR>
-
-"ale linter
-"let g:lsp_diagnostics_signs_error = {'text': " \uf0e7"}
-"let g:lsp_diagnostics_signs_warning = {'text': " \uf0e7"} " icons require GUI
-"let g:lsp_diagnostics_signs_hint = {} " icons require GUI
-let g:lsp_settings = {'efm-langserver': {'disabled': v:false}}
-let g:lsp_semantic_enabled = 1
 let g:ale_linters = {'c': ['clang', 'gcc'], 'cpp': ['clang++', 'g++'], 'rust': ['rls']}
+
+
 "*****************************************************************************************"
-"  For clangd
+"For vim-lsp
 "*****************************************************************************************"
-"if executable('ccls')
-    "let g:ale_linters = {'c': ['ccls'], 'cpp': ['ccls'], 'rust': ['analyzer']}
-    "nnoremap g] :ALEGoToDefinition<CR>
-    "let g:ale_completion_enabled = 0
-    "imap <C-n> <Plug>(ale_complete)
-    "let g:ale_cpp_ccls_init_options = {"--log-file":"ccls_debug.log"}
-"endif
+let g:lsp_diagnostics_signs_error = {'text': "\uf1e2"}
+let g:lsp_diagnostics_signs_warning = {'text': "\uf0e7"} " icons require GUI
+let g:lsp_diagnostics_signs_hint = {'text': "\uf0eb"} " icons require GUI
+let g:lsp_semantic_enabled = 1
+nmap <leader>] <Plug>(lsp-definition)
+nmap <leader>[ <Plug>(lsp-peek-definition)
+nmap sn <Plug>(lsp-next-diagnostic)
+nmap sp <Plug>(lsp-previous-diagnostic)
+nmap <leader>d <Plug>(lsp-document-diagnostic)
+let g:lsp_diagnostics_float_cursor = 1
 
 autocmd FileType rust source ~/.vim/.vimrc_rust_rls
-if executable('clangd')
-    autocmd FileType cpp    source ~/.vim/.vimrc_clangd
-endif
-"let g:ale_linters = {'c': ['gcc'], 'cpp': [ 'g++']}
-"let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++20'
-"let g:ale_cpp_cc_options = '-Wall -O2 -std=c++20'
+autocmd FileType cpp  source ~/.vim/.vimrc_clangd
 "*****************************************************************************************"
 "For vimWiki.vim
 "*****************************************************************************************"
