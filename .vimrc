@@ -260,6 +260,10 @@ let g:ale_linters = {'c': ['clang', 'gcc'], 'cpp': ['clang++', 'g++'], 'rust': [
 let g:lsp_diagnostics_signs_error = {'text': "\uf1e2"}
 let g:lsp_diagnostics_signs_warning = {'text': "\uf0e7"} " icons require GUI
 let g:lsp_diagnostics_signs_hint = {'text': "\uf0eb"} " icons require GUI
+let g:lsp_diagnostics_signs_priority_map = {
+            \'LspError': 11,
+            \'LspWarning': 11,
+            \}
 let g:lsp_semantic_enabled = 1
 nmap <leader>] <Plug>(lsp-definition)
 nmap <leader>[ <Plug>(lsp-peek-definition)

@@ -15,6 +15,12 @@
 * rust
    * [rust-install](https://www.cloudbooklet.com/install-rust-on-ubuntu-18-04-lts/)
    * how to update version: rustup update nightly/stable
+   * just use `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh` to install the rust
+* rust-analyzer
+   * first install the rust std library: `rustup component add rust-src`
+   * `git clone https://github.com/rust-analyzer/rust-analyzer` to download the rust-analyzer
+   * `cd rust-analyzer`
+   * `cargo xtask install --server` to build a binary to $HOME/.cargo/bin
 
 * ripgrep
    * [ripgrep github](https://github.com/BurntSushi/ripgrep)
