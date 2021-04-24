@@ -9,7 +9,7 @@ let g:lsp_diagnostics_enabled = 0
 
 "augroup lsp_rls
     "au User lsp_setup call lsp#register_server({
-                "\   'name': 'Rust Language Server',
+                "\   'name': 'rust-analyzer',
                 "\   'cmd': {server_info->['rust-analyzer']},
                 "\   'whitelist': ['rust'],
                 "\   'initialization_options': {
