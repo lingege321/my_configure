@@ -256,7 +256,9 @@ nmap <Leader>d :ALEDetail<CR>
 "let g:lsp_diagnostics_signs_error = {'text': " \uf0e7"}
 "let g:lsp_diagnostics_signs_warning = {'text': " \uf0e7"} " icons require GUI
 "let g:lsp_diagnostics_signs_hint = {} " icons require GUI
-let g:ale_linters = {'c': ['clang', 'gcc'], 'cpp': ['clang++', 'g++'], 'rust': ['analyzer']}
+let g:lsp_settings = {'efm-langserver': {'disabled': v:false}}
+let g:lsp_semantic_enabled = 1
+let g:ale_linters = {'c': ['clang', 'gcc'], 'cpp': ['clang++', 'g++'], 'rust': ['rls']}
 "*****************************************************************************************"
 "  For clangd
 "*****************************************************************************************"
