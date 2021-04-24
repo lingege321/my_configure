@@ -265,7 +265,7 @@ nmap <leader>] <Plug>(lsp-definition)
 nmap <leader>[ <Plug>(lsp-peek-definition)
 nmap sn <Plug>(lsp-next-diagnostic)
 nmap sp <Plug>(lsp-previous-diagnostic)
-nmap <leader>d <Plug>(lsp-document-diagnostic)
+nmap <leader>d <Plug>(lsp-document-diagnostics)
 let g:lsp_diagnostics_float_cursor = 1
 
 autocmd FileType rust source ~/.vim/.vimrc_rust_rls
