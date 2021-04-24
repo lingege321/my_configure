@@ -1,7 +1,7 @@
 "colorscheme OceanicNext
 colorscheme codedark
 ""hi Comment cterm=NONE
-hi nontext        ctermfg=none ctermbg=none term=none
+hi nontext         ctermbg=none term=none
 hi endofbuffer       ctermbg=none  term=none
 hi normal         ctermbg=none
 hi ALEWarningSign ctermbg=none guibg=#1c1c1c ctermfg=228   guifg=#ffff87

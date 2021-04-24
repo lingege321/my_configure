@@ -1,6 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'octol/vim-cpp-enhanced-highlight'
-Plug 'rust-lang/rust.vim' " rust lang
+"Plug 'rust-lang/rust.vim' " rust lang
 Plug 'tomasiser/vim-code-dark'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline'
@@ -27,7 +27,7 @@ if v:version >= 704
 endif
 Plug 'yonchu/accelerated-smooth-scroll'
 Plug 'gregsexton/gitv', {'on': ['Gitv']}
-Plug 'mattn/vim-lsp-settings'
+"Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
@@ -256,7 +256,7 @@ nmap <Leader>d :ALEDetail<CR>
 "let g:lsp_diagnostics_signs_error = {'text': " \uf0e7"}
 "let g:lsp_diagnostics_signs_warning = {'text': " \uf0e7"} " icons require GUI
 "let g:lsp_diagnostics_signs_hint = {} " icons require GUI
-let g:ale_linters = {'c': ['clang', 'gcc'], 'cpp': ['clang++', 'g++'], 'rust': ['rls']}
+let g:ale_linters = {'c': ['clang', 'gcc'], 'cpp': ['clang++', 'g++'], 'rust': ['analyzer']}
 "*****************************************************************************************"
 "  For clangd
 "*****************************************************************************************"
