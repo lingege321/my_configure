@@ -7,11 +7,11 @@ class ${1:class}C
 	private:
 
 	public: //ctor dtor
-		$1C()                      = default;
-		$1C(const $1C&)            = default;
-		$1C($1C&&)                 = default;
-		$1C& operator=(const $1C&) = default;
-		$1C& operator=($1C&&)      = default;
+		$1C()                      = delete;
+		$1C(const $1C&)            = delete;
+		$1C($1C&&)                 = delete;
+		$1C& operator=(const $1C&) = delete;
+		$1C& operator=($1C&&)      = delete;
 		virtual ~$1C()             = default;
 	public:  // Setter
 	public:  // Getter
@@ -22,11 +22,11 @@ endsnippet
 snippet struct "struct" b
 struct ${1:struct}S
 {
-	$1S()                      = default;
-	$1S(const $1S&)            = default;
-	$1S($1S&&)                 = default;
-	$1S& operator=(const $1S&) = default;
-	$1S& operator=($1S&&)      = default;
+	$1S()                      = delete;
+	$1S(const $1S&)            = delete;
+	$1S($1S&&)                 = delete;
+	$1S& operator=(const $1S&) = delete;
+	$1S& operator=($1S&&)      = delete;
 	virtual ~$1S()             = default;
 };
 endsnippet

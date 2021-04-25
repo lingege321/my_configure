@@ -21,6 +21,7 @@ Plug 'mhinz/vim-signify'
 if v:version >= 704
    Plug 'SirVer/ultisnips'    "map functional
    Plug 'honza/vim-snippets'
+   Plug 'thomasfaingnaert/vim-lsp-ultisnips'
    Plug 'andymass/vim-matchup'
    "Plug 'myusuf3/numbers.vim'
    "Plug 'vimwiki/vimwiki'
