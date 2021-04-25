@@ -267,7 +267,6 @@ let g:lsp_diagnostics_signs_priority_map = {
             \'LspHint': 11,
             \'LspInformation': 11,
             \}
-let g:lsp_semantic_enabled = 1
 nmap <leader>] <Plug>(lsp-definition)
 nmap <leader>[ <Plug>(lsp-peek-definition)
 nmap sn <Plug>(lsp-next-diagnostic)
