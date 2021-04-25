@@ -3,7 +3,7 @@ colorscheme codedark
 ""hi Comment cterm=NONE
 hi nontext            ctermbg=none   term=none
 hi endofbuffer        ctermbg=none   term=none
-hi normal             ctermbg=none
+hi normal             ctermfg=251    ctermbg=none
 hi ALEWarningSign     ctermbg=none   guibg=#1c1c1c ctermfg=228 guifg=#ffff87
 hi ALEErrorSign       ctermbg=none   guibg=#1c1c1c ctermfg=196 guifg=#ff0000
 hi SignColumn         ctermbg=none   guibg=#1c1c1c
