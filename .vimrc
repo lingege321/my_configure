@@ -1,5 +1,5 @@
 call plug#begin('~/.vim/plugged')
-Plug 'octol/vim-cpp-enhanced-highlight'
+"Plug 'octol/vim-cpp-enhanced-highlight'
 "Plug 'rust-lang/rust.vim' " rust lang
 Plug 'tomasiser/vim-code-dark'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -260,9 +260,12 @@ let g:ale_linters = {'c': ['clang', 'gcc'], 'cpp': ['clang++', 'g++'], 'rust': [
 let g:lsp_diagnostics_signs_error = {'text': "\uf1e2"}
 let g:lsp_diagnostics_signs_warning = {'text': "\uf0e7"} " icons require GUI
 let g:lsp_diagnostics_signs_hint = {'text': "\uf0eb"} " icons require GUI
+let g:lsp_diagnostics_signs_information = {'text': "\uf7fb"} " icons require GUI
 let g:lsp_diagnostics_signs_priority_map = {
-            \'LspError': 11,
-            \'LspWarning': 11,
+            \'LspError': 12,
+            \'LspWarning': 12,
+            \'LspHint': 11,
+            \'LspInformation': 11,
             \}
 let g:lsp_semantic_enabled = 1
 nmap <leader>] <Plug>(lsp-definition)

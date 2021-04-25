@@ -21,6 +21,28 @@ augroup lsp_clangd
                 \ 'name':'clangd',
                 \ 'cmd': {server_info->['clangd', '--pretty', '--log=info', '--background-index', '--compile-commands-dir='.$PWD]},
                 \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+                \ 'semantic_highlight': {
+                \   'entity.name.function.cpp' : 'function',
+                \   'entity.name.function.method.cpp' : 'function',
+                \   'entity.name.function.method.static.cpp' : 'function',
+                \   'entity.name.function.preprocessor.cpp': 'preproc',
+                \   'entity.name.namespace.cpp': 'constant',
+                "\   'entity.name.other.dependent.cpp': 'label',
+                \   'entity.name.type.class.cpp': 'constant',
+                "\   'entity.name.type.concept.cpp',
+                "\   'entity.name.type.dependent.cpp',
+                \   'entity.name.type.enum.cpp': 'type',
+                "\   'entity.name.type.template.cpp': 'function',
+                "\   'entity.name.type.typedef.cpp',
+                "\   'meta.disabled',
+                "\   'storage.type.primitive.cpp',
+                \   'variable.other.cpp': 'cppconstant',
+                "\   'variable.other.enummember.cpp',
+                \   'variable.other.field.cpp': 'special' ,
+                \   'variable.other.field.static.cpp': 'special',
+                "\   'variable.other.local.cpp': 'identifier',
+                \   'variable.parameter.cpp': 'identifier',
+                \ }
                 \ })
     autocmd FileType c setlocal omnifunc=lsp#complete
     autocmd FileType cpp setlocal omnifunc=lsp#complete
