@@ -28,11 +28,12 @@ if v:version >= 704
 endif
 Plug 'yonchu/accelerated-smooth-scroll'
 Plug 'gregsexton/gitv', {'on': ['Gitv']}
-Plug 'mattn/vim-lsp-settings'
-Plug 'prabirshrestha/async.vim'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'prabirshrestha/asyncomplete.vim'
-Plug 'prabirshrestha/asyncomplete-lsp.vim'
+"Plug 'mattn/vim-lsp-settings'
+"Plug 'prabirshrestha/async.vim'
+"Plug 'prabirshrestha/vim-lsp'
+"Plug 'prabirshrestha/asyncomplete.vim'
+"Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 "Plug 'universal-ctags/ctags' "ctag -R *
 "Plug 'mhartington/oceanic-next'
@@ -291,6 +292,13 @@ hi VimwikiHeader6 ctermfg=6
 map // <plug>NERDCommenterToggle
 
 
+"*****************************************************************************************"
+"  For Coc
+"*****************************************************************************************"
+nmap <F12> <Plug>(coc-definition)
+nmap <F8> <Plug>(coc-diagnostic-next)
+nmap <s-F8> <Plug>(coc-diagnostic-prev)
+nmap <leader>d <Plug>(coc-diagnostic-info)
 
 
 "*****************************************************************************************"
