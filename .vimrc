@@ -19,28 +19,28 @@ Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-signify'
 "Plug 'zxqfl/tabnine-vim'
 if v:version >= 704
-   Plug 'SirVer/ultisnips'    "map functional
-   Plug 'honza/vim-snippets'
-   Plug 'thomasfaingnaert/vim-lsp-ultisnips'
+   "Plug 'SirVer/ultisnips'    "map functional
+   "Plug 'honza/vim-snippets'
+   "Plug 'thomasfaingnaert/vim-lsp-ultisnips'
    Plug 'andymass/vim-matchup'
    "Plug 'myusuf3/numbers.vim'
    "Plug 'vimwiki/vimwiki'
 endif
 Plug 'yonchu/accelerated-smooth-scroll'
 Plug 'gregsexton/gitv', {'on': ['Gitv']}
-"Plug 'mattn/vim-lsp-settings'
-"Plug 'prabirshrestha/async.vim'
-"Plug 'prabirshrestha/vim-lsp'
-"Plug 'prabirshrestha/asyncomplete.vim'
-"Plug 'prabirshrestha/asyncomplete-lsp.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'morhetz/gruvbox'
 call plug#end()
 "Plug 'universal-ctags/ctags' "ctag -R *
 "Plug 'mhartington/oceanic-next'
 "Plug 'ryanoasis/powerline-extra-symbols'
 "Plug 'majutsushi/tagbar'  need 7.3.1058 version
 "Plug 'jackguo380/vim-lsp-cxx-highlight'
-"Plug 'morhetz/gruvbox'
 "Plug 'majutsushi/tagbar' " awesome tags window
 "Plug 'sickill/vim-monokai'
 "Plug 'scrooloose/nerdtree' "nerdtree

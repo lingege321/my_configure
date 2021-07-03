@@ -12,8 +12,8 @@ export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
 export LIBGL_ALWAYS_INDIRECT=1
 
 export CPLUS_INCLUDE_PATH=$HOME/boost/include
+#export VIMRUNTIME=/home/lingege32/local/vim-8/share/vim/vim82
 
-unsetopt beep
 
 
 
