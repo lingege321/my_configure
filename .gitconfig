@@ -1,0 +1,11 @@
+[user]
+	name = lingege32
+	email = lingege32@gmail.com
+[alias]
+	ch = checkout
+	cmm = commit -m
+	cm = commit
+	br = branch
+	st = status
+	prettylog = log --graph --oneline
+	la = log --all --graph --pretty=format:'%Cgreen%ad%Creset %C(auto)%h%d %s %C(bold black)<%aN>%Creset' --date=format-local:'%Y-%m-%d %H:%M (%a)'
