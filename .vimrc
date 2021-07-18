@@ -263,15 +263,16 @@ let g:lsp_diagnostics_signs_warning = {'text': "\uf0e7"} " icons require GUI
 let g:lsp_diagnostics_signs_hint = {'text': "\uf0eb"} " icons require GUI
 let g:lsp_diagnostics_signs_information = {'text': "\uf7fb"} " icons require GUI
 let g:lsp_diagnostics_signs_priority_map = {
-            \'LspError': 12,
-            \'LspWarning': 12,
-            \'LspHint': 11,
-            \'LspInformation': 11,
-            \}
-nmap <leader>] <Plug>(lsp-definition)
-nmap <leader>[ <Plug>(lsp-peek-definition)
-nmap sn <Plug>(lsp-next-diagnostic)
-nmap sp <Plug>(lsp-previous-diagnostic)
+          \'LspError': 12,
+          \'LspWarning': 12,
+          \'LspInformation': 11,
+          \'LspHint': 11,
+          \}
+"let g:lsp_semantic_enabled = 1
+nmap <F12> <Plug>(lsp-definition)
+nmap <F11> <Plug>(lsp-peek-definition)
+nmap <F8> <Plug>(lsp-next-diagnostic)
+nmap <F9> <Plug>(lsp-previous-diagnostic)
 nmap <leader>d <Plug>(lsp-document-diagnostics)
 let g:lsp_diagnostics_float_cursor = 1
 
@@ -295,10 +296,10 @@ map // <plug>NERDCommenterToggle
 "*****************************************************************************************"
 "  For Coc
 "*****************************************************************************************"
-nmap <F12> <Plug>(coc-definition)
-nmap <F8> <Plug>(coc-diagnostic-next)
-nmap <s-F8> <Plug>(coc-diagnostic-prev)
-nmap <leader>d <Plug>(coc-diagnostic-info)
+"nmap <F12> <Plug>(coc-definition)
+"nmap <F8> <Plug>(coc-diagnostic-next)
+"nmap <s-F8> <Plug>(coc-diagnostic-prev)
+"nmap <leader>d <Plug>(coc-diagnostic-info)
 
 
 "*****************************************************************************************"
