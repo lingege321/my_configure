@@ -9,3 +9,13 @@
 	st = status
 	prettylog = log --graph --oneline
 	la = log --all --graph --pretty=format:'%Cgreen%ad%Creset %C(auto)%h%d %s %C(bold black)<%aN>%Creset' --date=format-local:'%Y-%m-%d %H:%M (%a)'
+	d = difftool
+[color]
+	ui = true
+[core]
+	editor = vim
+    pager = delta
+[diff]
+	tool = meld
+[difftool]
+	prompt = false
