@@ -9,9 +9,10 @@ export ZSH="/home/lingege32/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="intheloop"
-#ZSH_THEME="fino-time"
+ZSH_THEME="fino-time"
 #ZSH_THEME="ys"
-ZSH_THEME="af-magic"
+#ZSH_THEME="jonathan"
+#ZSH_THEME="af-magic"
 #ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
