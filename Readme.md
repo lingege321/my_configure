@@ -56,3 +56,13 @@
 
 * install gcc 10
    * [how to install](https://www.ultralinux.org/post/how-to-install-gcc-compiler-on-ubuntu-18-04/)
+
+* install fish shell
+   * [GitHub](https://github.com/fish-shell/fish-shell)
+   * [Oh-my-fish](https://github.com/oh-my-fish/oh-my-fish)
+   * Theme:
+      * [GitHub](https://github.com/oh-my-fish/oh-my-fish/blob/master/docs/Themes.md)
+      * Bira
+      * emoji-powerline
+
+
