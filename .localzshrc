@@ -1,6 +1,12 @@
-source ~/.fzf.zsh
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse -m --border --ansi'
-export FZF_DEFAULT_COMMAND="rg --files -g!'*tags.vi'"
+#source ~/.fzf.zsh
+#export FZF_DEFAULT_OPTS='--height 40% --layout=reverse -m --border --ansi'
+#export FZF_DEFAULT_COMMAND="rg --files -g!'*tags.vi'"
+#
+
+export SKIM_DEFAULT_COMMAND="fd --type f || find ."
+export SKIM_DEFAULT_OPTIONS="--height 40% --layout=reverse -m --border"
+
+
 zstyle ':completion:*' matcher-list ''
 
 
@@ -17,5 +23,3 @@ export CPLUS_INCLUDE_PATH=$HOME/boost/include
 
 
 
-cd
-#eval "$(starship init zsh)"
