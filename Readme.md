@@ -30,11 +30,19 @@
    * [lsd](https://github.com/Peltoche/lsd)
    * lsd
    * use `cargo install lsd`
+* zellij
+   * [zellij](https://github.com/zellij-org/zellij)
+   * Zellij is a workspace aimed at developers, ops-oriented people and anyone who loves the terminal. At its core, it is a terminal multiplexer (similar to tmux and screen), but this is merely its infrastructure layer.
+   * use `cargo install zellij`
 
-* dust
+* dust & dua
    * [dust](https://github.com/bootandy/dust)
+   * [dua](https://github.com/bootandy/dust)
    * dust
-   * use cargo install du-dust
+       * use cargo install du-dust
+   * cargo install dua-cli
+       dua
+
 
 * ytop
    * [ytop](https://github.com/cjbassi/ytop)
