@@ -1,5 +1,11 @@
 # my configure
 
+## .imwheelrc
+* [Description](https://ubuntu1804.blogspot.com/2018/12/linux.html)
+* a file to control the speed of wheel in Linux
+
+# software
+
 * docker
    * [docker on wsl2](https://www.pigo.idv.tw/archives/3359)
 
