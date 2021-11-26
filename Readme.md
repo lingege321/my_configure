@@ -42,7 +42,11 @@
        * use cargo install du-dust
    * cargo install dua-cli
        dua
+* delta
+   * [Github](https://github.com/dandavison/delta) 
 
+* skim
+   * [Github](https://github.com/lotabout/skim)
 
 * ytop
    * [ytop](https://github.com/cjbassi/ytop)
@@ -65,4 +69,7 @@
       * Bira
       * emoji-powerline
 
+* Vim 8
+   * How to install with python interface:
+   * [URL](https://www.itread01.com/hklxhkpq.html)
 
