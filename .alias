@@ -25,6 +25,7 @@ alias lt="ls --tree"
 alias rd="readlink -f"
 
 
+alias clk="tty-clock -c -s"
 
 
 
