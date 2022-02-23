@@ -1,0 +1,89 @@
+# Inserts a blank line between shell prompts                                                                                                                                                                         add_newline = true
+
+format = """
+┌─[░▒▓](fg:238 )\
+$time\
+$username\
+$hostname\
+$directory\
+[ ]()\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+$env_var\
+$custom\
+$jobs\
+$status\
+$line_break\
+$shell\
+$character"""
+# Replace the "❯" symbol in the prompt with "➜"
+[character]                            # The name of the module we are configuring is "character"
+error_symbol = "[└─ ](fg:white)[\uf014 ](bold red)"
+success_symbol = "[└─ ](fg:white)[\uf302 ](bold green)"
+
+[fill]
+symbol = "-"
+style = "bold green"
+
+[time]
+disabled = false
+style = "bg:238 fg:250"
+format = "[\uf64f %W-%D at %P]($style)[ \ue0b5](fg:245 bg:238)"
+#format = "[\uf274 %Y-%W-%D \\(%d\\) at %P]($style)[ \ue0b5](fg:245 bg:238)"
+
+[username]
+style_user = "bold bg:238 fg:228"
+format = "[ \uf007 $user ]($style)[\ue0b5](fg:245 bg:238)"
+show_always = true
+
+[hostname]
+ssh_only = false
+style = "bold bg:238 fg:green"
+format = "[ \uf6c3 $hostname ]($style)[\ue0b5](fg:245 bg:238)"
+
+[directory]
+style = "bold bg:238 fg:cyan"
+read_only = " \uf023"
+read_only_style = "fg:red bg:238"
+truncation_length = 3
+truncation_symbol = ".../"
+format = "[ \uf413 $path]($style)[$read_only]($read_only_style)[\ue0b4](fg:238 bg:black)"
+
+
+[status]
+disabled = false
+pipestatus = true
+symbol = "\uf165 "
+
+[memory_usage]
+disabled = true
+threshold = -1
+symbol = " "
+style = "bold dimmed green"
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[rust]
+symbol = "\ue7a8 "
+
+[python]
+disabled = true
+
+[shell]
+style = "cyan bold"
+disabled = true
+
+#[custom.p4]
+#command = "p4 opened | wc -l" # shows output of command
+#shell = ["tcsh", "-f"]
+#format = "p4<[$output]($style)> "
+#when = '/bin/zsh -f ~/script/in_valid_p4_client.zsh'
+
+#[cmd_duration]
+#min_time = 60000
+#format = "took [$duration ](bold yellow)"
