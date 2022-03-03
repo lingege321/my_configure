@@ -27,7 +27,8 @@ if v:version >= 704
    "Plug 'vimwiki/vimwiki'
 endif
 Plug 'yonchu/accelerated-smooth-scroll'
-Plug 'gregsexton/gitv', {'on': ['Gitv']}
+Plug 'wellle/context.vim'
+"Plug 'gregsexton/gitv', {'on': ['Gitv']}
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
