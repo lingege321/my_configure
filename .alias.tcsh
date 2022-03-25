@@ -1,0 +1,8 @@
+alias ls 'lsd'
+alias ll 'lsd -l'
+alias la 'lsd -a'
+alias lt 'lsd --tree'
+alias tm 'tmux -2'
+alias vim 'vim -X'
+alias cdw 'cd ${HOME}/workspace'
+alias vmDisplay 'setenv DISPLAY 10.192.137.21:250'

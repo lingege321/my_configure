@@ -30,3 +30,5 @@ alias clk="tty-clock -c -s"
 
 
 alias fvim='vim `fzf`'
+alias vmDisplay='export DISPLAY=10.192.137.21:250'
+alias tm='tmux -2'

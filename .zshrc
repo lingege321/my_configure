@@ -17,7 +17,7 @@ export ZSH="${HOME}/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="ys"
 #ZSH_THEME="fino-time"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+#ZSH_THEME="powerlevel10k/powerlevel10k"
 #ZSH_THEME="jonathan"
 #ZSH_THEME="af-magic"
 #ZSH_THEME="rkj-repos"
