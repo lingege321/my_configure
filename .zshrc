@@ -120,5 +120,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ${HOME}/.localzshrc
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# synopsys setting
+SYNOPSYS_ZSHRC=${HOME}/.synopsyszshrc
+if [[ -f "$SYNOPSYS_ZSHRC" ]]; then
+    source $SYNOPSYS_ZSHRC
+fi
+
