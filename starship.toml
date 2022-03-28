@@ -33,7 +33,7 @@ disabled = false
 style = "bg:238 fg:250"
 
 #zshell
-format = "[\uf64f %D at %T ]($style)[ \ue0b5](fg:245 bg:238)"
+format = "[\uf64f %D at %* ]($style)[ \ue0b5](fg:245 bg:238)"
 
 # cshell
 #format = "[\uf64f %W-%D at %P]($style)[ \ue0b5](fg:245 bg:238)"
