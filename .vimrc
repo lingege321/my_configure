@@ -2,14 +2,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'octol/vim-cpp-enhanced-highlight'
 "Plug 'rust-lang/rust.vim' " rust lang
 Plug 'tomasiser/vim-code-dark'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'bronson/vim-trailing-whitespace' "highlight the whitespace at trail :FixWhiteSpace to remove the white space
+"Plug 'bronson/vim-trailing-whitespace' "highlight the whitespace at trail :FixWhiteSpace to remove the white space
 Plug 'easymotion/vim-easymotion'    "quick jump  syntax \w \b \jklh \s
-Plug 'junegunn/vim-easy-align'
-Plug 'tpope/vim-fugitive' " gv.vim
-Plug 'junegunn/gv.vim'    " gv.vim https://github.com/junegunn/gv.vim
+"Plug 'junegunn/vim-easy-align'
+"Plug 'tpope/vim-fugitive' " gv.vim
+"Plug 'junegunn/gv.vim'    " gv.vim https://github.com/junegunn/gv.vim
 Plug 'mg979/vim-visual-multi'
 "Plug 'w0rp/ale'  "need nerd font/ reference: https://github.com/ryanoasis/nerd-fonts
 Plug 'scrooloose/nerdcommenter'  " auto add comment
@@ -26,8 +26,8 @@ if v:version >= 704
    "Plug 'myusuf3/numbers.vim'
    "Plug 'vimwiki/vimwiki'
 endif
-Plug 'yonchu/accelerated-smooth-scroll'
-Plug 'wellle/context.vim'
+"Plug 'yonchu/accelerated-smooth-scroll'
+"Plug 'wellle/context.vim'
 "Plug 'gregsexton/gitv', {'on': ['Gitv']}
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/async.vim'
