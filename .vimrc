@@ -166,8 +166,6 @@ inoremap <C-h> <Left>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
-vnoremap //    I//<Esc>
-nnoremap be    bvey0/<C-r>0<CR>
 nnoremap bn    :bn<CR>
 nnoremap bp    :bp<CR>
 "*****************************************************************************************"

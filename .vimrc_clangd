@@ -21,7 +21,7 @@ augroup lsp_clangd
     autocmd!
     autocmd User lsp_setup call lsp#register_server({
                 \ 'name':'clangd',
-                \ 'cmd': {server_info->['/depot/glibc/glibc-2.20/lib/ld-linux-x86-64.so.2', '/remote/us01home50/chielin/bin/clangd', '--pretty', '--log=info', '--background-index', '--resource-dir=/depot/tools/clang/clang710_gcc730/linux64/lib/clang/7.1.0', '--query-driver=/depot/qsc/QSCT/GCC/bin/g++']},
+                \ 'cmd': {server_info->['clangd', '--pretty', '--log=info', '--background-index', '--resource-dir=/depot/tools/clang/clang710_gcc730/linux64/lib/clang/7.1.0', '--query-driver=/depot/qsc/QSCT/GCC/bin/g++']},
                 \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
                 \ })
     autocmd FileType c setlocal omnifunc=lsp#complete
