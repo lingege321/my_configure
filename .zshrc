@@ -1,8 +1,8 @@
-function preexec() {
+function preexec1() {
   timer=$(($(date +%s%0N)/1000000))
 }
 
-function precmd() {
+function precmd1() {
   if [ $timer ]; then
     now=$(($(date +%s%0N)/1000000))
     elapsed=$(($now-$timer))

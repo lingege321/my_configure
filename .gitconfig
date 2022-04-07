@@ -15,7 +15,7 @@
 	ui = true
 [core]
 	editor = vim
-    pager = delta
+    pager = delta --diff-so-fancy -n --keep-plus-minus-markers --paging always
 [diff]
 	tool = meld
 [difftool]
