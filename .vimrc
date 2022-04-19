@@ -325,7 +325,7 @@ function! s:p(bang, ...)
   endif
   return {}
 endfunction
-command! -bang -nargs=* RG call fzf#vim#grep("rg -g !'*tags.vi' --column --line-number --no-heading --color=always --smart-case -- ".shellescape(<q-args>), 1, s:p(<bang>0), <bang>0)',
+command! -bang -nargs=* RG call fzf#vim#grep("rg -g !'*tags.vi' -g !'vim-lsp.log' --column --line-number --no-heading --color=always --smart-case -- ".shellescape(<q-args>), 1, s:p(<bang>0), <bang>0)',
 
 source $HOME/.vim/.hlcolorVScode
 "source $HOME/.vim/.hlcolorOcean
