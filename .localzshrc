@@ -23,3 +23,8 @@ export CPLUS_INCLUDE_PATH=$HOME/boost/include
 
 
 eval "$(starship init zsh)"
+
+#see detail at: https://www.johnpapa.net/node-and-npm-without-sudo/
+NPM_PACKAGES=/u/chielin/.npm-packages
+NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+PATH="$NPM_PACKAGES/bin:$PATH"
