@@ -8,13 +8,14 @@
 	br = branch
 	st = status
 	prettylog = log --graph --oneline
-	la = log --all --graph --pretty=format:'%Cgreen%ad%Creset %C(auto)%h%d %s %C(bold black)<%aN>%Creset' --date=format-local:'%Y-%m-%d %H:%M (%a)'
+	;la = log --all --graph --pretty=format:'%Cgreen%ad%Creset %C(auto)%h%d %s %C(bold black)<%aN>%Creset' --date=format-local:'%Y-%m-%d %H:%M (%a)'
+	la = log --all --graph --pretty=format:'%Cgreen%ad%Creset %C(auto)%h%d %s %C(bold black)<%aN>%Creset'
 	d = difftool
 [color]
 	ui = true
 [core]
 	editor = vim
-    pager = delta
+    pager = delta --diff-so-fancy -n --keep-plus-minus-markers --paging always
 [diff]
 	tool = meld
 [difftool]

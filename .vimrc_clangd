@@ -30,40 +30,18 @@ augroup lsp_clangd
 augroup end
 
 
-"augroup lsp_clangd
-    "autocmd!
-    "autocmd User lsp_setup call lsp#register_server({
-                "\ 'name':'clangd',
-                "\ 'cmd': {server_info->['clangd', '--pretty', '--log=info', '--background-index', '--compile-commands-dir='.$PWD]},
-                "\ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
-                "\ 'semantic_highlight': {
-                "\   'entity.name.function.cpp' : 'function',
-                "\   'entity.name.function.method.cpp' : 'function',
-                "\   'entity.name.function.method.static.cpp' : 'function',
-                "\   'entity.name.function.preprocessor.cpp': 'preproc',
-                "\   'entity.name.namespace.cpp': 'constant',
-                ""\   'entity.name.other.dependent.cpp': 'label',
-                "\   'entity.name.type.class.cpp': 'constant',
-                ""\   'entity.name.type.concept.cpp',
-                ""\   'entity.name.type.dependent.cpp',
-                "\   'entity.name.type.enum.cpp': 'type',
-                ""\   'entity.name.type.template.cpp': 'function',
-                ""\   'entity.name.type.typedef.cpp',
-                ""\   'meta.disabled' : 'label',
-                ""\   'storage.type.primitive.cpp',
-                "\   'variable.other.cpp': 'identifier',
-                "\   'variable.other.enummember.cpp': 'identifier',
-                "\   'variable.other.field.cpp': 'special' ,
-                "\   'variable.other.field.static.cpp': 'special',
-                ""\   'variable.other.local.cpp': 'identifier',
-                "\   'variable.parameter.cpp': 'identifier',
-                "\ }
-                "\ })
-    "autocmd FileType c setlocal omnifunc=lsp#complete
-    "autocmd FileType cpp setlocal omnifunc=lsp#complete
-    "autocmd FileType objc setlocal omnifunc=lsp#complete
-    "autocmd FileType objcpp setlocal omnifunc=lsp#complete
-"augroup end
+augroup lsp_clangd
+    autocmd!
+    autocmd User lsp_setup call lsp#register_server({
+                \ 'name':'clangd',
+                \ 'cmd': {server_info->['clangd', '--header-insertion=never', '--pretty', '--log=info', '--background-index', '--resource-dir=/depot/tools/clang/clang710_gcc730/linux64/lib/clang/7.1.0', '--query-driver=/depot/qsc/QSCT/GCC/bin/g++', '-index-file=clangd.dex']},
+                \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
+                \ })
+    autocmd FileType c setlocal omnifunc=lsp#complete
+    autocmd FileType cpp setlocal omnifunc=lsp#complete
+    autocmd FileType objc setlocal omnifunc=lsp#complete
+    autocmd FileType objcpp setlocal omnifunc=lsp#complete
+augroup end
 
 
 let g:lsp_cxx_hl_log_file = 'vim-lsp-cxx-hl.log'

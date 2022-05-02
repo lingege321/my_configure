@@ -2,14 +2,14 @@ call plug#begin('~/.vim/plugged')
 Plug 'octol/vim-cpp-enhanced-highlight'
 "Plug 'rust-lang/rust.vim' " rust lang
 Plug 'tomasiser/vim-code-dark'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+"Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'bronson/vim-trailing-whitespace' "highlight the whitespace at trail :FixWhiteSpace to remove the white space
+"Plug 'bronson/vim-trailing-whitespace' "highlight the whitespace at trail :FixWhiteSpace to remove the white space
 Plug 'easymotion/vim-easymotion'    "quick jump  syntax \w \b \jklh \s
-Plug 'junegunn/vim-easy-align'
-Plug 'tpope/vim-fugitive' " gv.vim
-Plug 'junegunn/gv.vim'    " gv.vim https://github.com/junegunn/gv.vim
+"Plug 'junegunn/vim-easy-align'
+"Plug 'tpope/vim-fugitive' " gv.vim
+"Plug 'junegunn/gv.vim'    " gv.vim https://github.com/junegunn/gv.vim
 Plug 'mg979/vim-visual-multi'
 "Plug 'w0rp/ale'  "need nerd font/ reference: https://github.com/ryanoasis/nerd-fonts
 Plug 'scrooloose/nerdcommenter'  " auto add comment
@@ -17,6 +17,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-signify'
+Plug 'ngemily/vim-vp4'
 "Plug 'zxqfl/tabnine-vim'
 if v:version >= 704
    "Plug 'SirVer/ultisnips'    "map functional
@@ -26,8 +27,9 @@ if v:version >= 704
    "Plug 'myusuf3/numbers.vim'
    "Plug 'vimwiki/vimwiki'
 endif
-Plug 'yonchu/accelerated-smooth-scroll'
-Plug 'gregsexton/gitv', {'on': ['Gitv']}
+"Plug 'yonchu/accelerated-smooth-scroll'
+"Plug 'wellle/context.vim'
+"Plug 'gregsexton/gitv', {'on': ['Gitv']}
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
@@ -164,8 +166,6 @@ inoremap <C-h> <Left>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
 inoremap <C-l> <Right>
-vnoremap //    I//<Esc>
-nnoremap be    bvey0/<C-r>0<CR>
 nnoremap bn    :bn<CR>
 nnoremap bp    :bp<CR>
 "*****************************************************************************************"
@@ -325,7 +325,7 @@ function! s:p(bang, ...)
   endif
   return {}
 endfunction
-command! -bang -nargs=* RG call fzf#vim#grep("rg -g !'*tags.vi' --column --line-number --no-heading --color=always --smart-case -- ".shellescape(<q-args>), 1, s:p(<bang>0), <bang>0)',
+command! -bang -nargs=* RG call fzf#vim#grep("rg -g !'*tags.vi' -g !'vim-lsp.log' --column --line-number --no-heading --color=always --smart-case -- ".shellescape(<q-args>), 1, s:p(<bang>0), <bang>0)',
 
 source $HOME/.vim/.hlcolorVScode
 "source $HOME/.vim/.hlcolorOcean

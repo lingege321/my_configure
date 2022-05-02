@@ -1,4 +1,4 @@
-nnoremap <TAB> gt
+"nnoremap <TAB> gt
 "vnoremap // <Plug>NERDCommenterInserter
 "nnoremap <C-d> I<DELETE><DELETE><Esc>
 inoremap {<CR> {<CR>}<Esc>ko

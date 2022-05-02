@@ -9,17 +9,22 @@ export FZF_DEFAULT_COMMAND="rg --files -g!'*tags.vi'"
 
 zstyle ':completion:*' matcher-list ''
 
+unsetopt share_history
 
-export PATH=$HOME/bin:$HOME/ccls/Release:$HOME/.cargo/bin:$PATH
+
+export PATH=$HOME/bin:$HOME/.cargo/bin:${HOME}/.fzf/bin:$PATH
 source ~/.alias
 umask 022
 
-#export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0.0
 export LIBGL_ALWAYS_INDIRECT=1
 
 export CPLUS_INCLUDE_PATH=$HOME/boost/include
-#export VIMRUNTIME=/home/lingege32/local/vim-8/share/vim/vim82
 
 
 
+eval "$(starship init zsh)"
 
+#see detail at: https://www.johnpapa.net/node-and-npm-without-sudo/
+NPM_PACKAGES=/u/chielin/.npm-packages
+NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+PATH="$NPM_PACKAGES/bin:$PATH"
