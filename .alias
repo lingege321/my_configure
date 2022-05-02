@@ -13,6 +13,7 @@ alias mk="make -j8"
 alias cls="clear"
 alias psme='ps aux|ag lingege32'
 alias vim='vim -X'
+alias mount-googledrive='google-drive-ocamlfuse ~/lingege32.ee06g.google.drive '
 
 
 
