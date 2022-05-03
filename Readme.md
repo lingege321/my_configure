@@ -70,6 +70,12 @@
 
 * install gcc 10
    * [how to install](https://www.ultralinux.org/post/how-to-install-gcc-compiler-on-ubuntu-18-04/)
+* install gdb
+   * [gdb release ftp](https://ftp.gnu.org/gnu/gdb/)
+   * wget https://ftp.gnu.org/gnu/gdb/gdb-12.1.tar.gz and tar zxvf & mkdir build & cd build
+   * ../configure --with-python=<python2 binary path> --prefix=<local build path>
+   * make -j
+   * make install
 
 * install fish shell
    * [GitHub](https://github.com/fish-shell/fish-shell)
