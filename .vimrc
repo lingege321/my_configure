@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'cespare/vim-toml', { 'branch': 'main' }
 "Plug 'rust-lang/rust.vim' " rust lang
 Plug 'tomasiser/vim-code-dark'
 "Plug 'Xuyuanp/nerdtree-git-plugin'
