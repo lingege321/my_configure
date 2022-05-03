@@ -18,6 +18,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-signify'
 Plug 'ngemily/vim-vp4'
+Plug 'mhinz/vim-hugefile'
 "Plug 'zxqfl/tabnine-vim'
 if v:version >= 704
    "Plug 'SirVer/ultisnips'    "map functional

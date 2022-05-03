@@ -1,0 +1,16 @@
+Hover:
+  ShowAKA: Yes
+
+InlayHints:
+  Enabled: Yes
+  ParameterNames: No
+  DeducedTypes: Yes
+
+CompileFlags:
+  Add: [-Wunused-function]
+  Remove: -Werror
+
+#Diagnostics:
+  #ClangTidy:
+    #Add: modernize*
+    #Remove: modernize-use-trailing-return-type

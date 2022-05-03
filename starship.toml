@@ -54,7 +54,7 @@ read_only = " \uf023"
 read_only_style = "fg:red bg:238"
 truncation_length = 3
 truncation_symbol = ".../"
-format = "[ \uf413 $path]($style)[$read_only]($read_only_style)[\ue0b4](fg:238 bg:black)"
+format = "[ \uf413 $path]($style)[$read_only]($read_only_style)[\ue0b4](fg:238)"
 
 
 [status]
