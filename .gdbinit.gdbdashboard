@@ -2313,11 +2313,21 @@ set print array off
 set print array-indexes on
 set python print-stack full
 source /u/chielin/user-define-views.gdb
+python
+import sys
+sys.path.insert(0, '/global/freeware/Linux/3.10/gcc-9.2.0/share/gcc-9.2.0/python')
+from libstdcxx.v6.printers import register_libstdcxx_printers
+register_libstdcxx_printers (None)
+end
+
 
 # Start ------------------------------------------------------------------------
 
 python Dashboard.start()
 
+alias ds = dashboard
+dashboard -layout !assembly breakpoints !expressions !history !memory !registers source stack !threads variables
+dashboard source -style height 20
 # File variables ---------------------------------------------------------------
 
 # vim: filetype=python
