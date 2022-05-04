@@ -16,25 +16,19 @@ let g:lsp_log_file = expand('vim-lsp.log')
 let g:lsp_document_code_action_signs_enabled=0
 let g:lsp_completion_documentation_delay = 0
 "let g:lsp_diagnostics_enabled = 0
+
+
+function! ClangdExeArray()
+if executable('/remote/vgrnd106/chielin/bin/zebuClangd')
+    return ['/remote/vgrnd106/chielin/bin/zebuClangd']
+else
+    return ['clangd', '--header-insertion=never', '--pretty', '--log=info', '--background-index', '--resource-dir=/depot/tools/clang/clang710_gcc730/linux64/lib/clang/7.1.0', '--query-driver=/depot/qsc/QSCT/GCC/bin/g++', '-index-file=clangd.dex']
+endfunction
 augroup lsp_clangd
     autocmd!
     autocmd User lsp_setup call lsp#register_server({
                 \ 'name':'clangd',
-                \ 'cmd': {server_info->['clangd', '--pretty', '--log=info', '--background-index', '--clang-tidy=0']},
-                \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
-                \ })
-    autocmd FileType c setlocal omnifunc=lsp#complete
-    autocmd FileType cpp setlocal omnifunc=lsp#complete
-    autocmd FileType objc setlocal omnifunc=lsp#complete
-    autocmd FileType objcpp setlocal omnifunc=lsp#complete
-augroup end
-
-
-augroup lsp_clangd
-    autocmd!
-    autocmd User lsp_setup call lsp#register_server({
-                \ 'name':'clangd',
-                \ 'cmd': {server_info->['clangd', '--header-insertion=never', '--pretty', '--log=info', '--background-index', '--resource-dir=/depot/tools/clang/clang710_gcc730/linux64/lib/clang/7.1.0', '--query-driver=/depot/qsc/QSCT/GCC/bin/g++', '-index-file=clangd.dex']},
+                \ 'cmd': {server_info->ClangdExeArray()},
                 \ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
                 \ })
     autocmd FileType c setlocal omnifunc=lsp#complete
