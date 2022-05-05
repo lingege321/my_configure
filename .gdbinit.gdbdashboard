@@ -2326,7 +2326,7 @@ end
 python Dashboard.start()
 
 alias ds = dashboard
-dashboard -layout !assembly breakpoints !expressions !history !memory !registers source stack !threads variables
+dashboard -layout !assembly breakpoints !expressions !history !memory !registers source stack !threads !variables
 dashboard source -style height 20
 # File variables ---------------------------------------------------------------
 
