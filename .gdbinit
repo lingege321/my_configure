@@ -1,9 +1,9 @@
 
+set history save
 set verbose off
 set print pretty on
 set print array off
 set print array-indexes on
-set pagination off
 
 #source /grid/cic/vficpv_t2b_001/chienhun/gdbFile/backtraceHL.py
 python
