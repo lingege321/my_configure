@@ -11,6 +11,8 @@ function precmd1() {
     unset timer
   fi
 }
+# }}} End configuration added by Zim install
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -101,7 +103,8 @@ plugins=(
 git
 zsh-completions 
 zsh-autosuggestions 
-zsh-syntax-highlighting
+#zsh-syntax-highlighting
+F-Sy-H
 )
 
 source $ZSH/oh-my-zsh.sh
