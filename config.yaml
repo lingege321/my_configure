@@ -10,7 +10,8 @@ CompileFlags:
   Add: [-Wunused-function, -Wall, -Wextra]
   Remove: -Werror
 
-#Diagnostics:
-  #ClangTidy:
+Diagnostics:
+  ClangTidy:
+    Add: performance*
     #Add: modernize*
     #Remove: modernize-use-trailing-return-type
