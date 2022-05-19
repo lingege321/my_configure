@@ -12,6 +12,6 @@ CompileFlags:
 
 Diagnostics:
   ClangTidy:
-    Add: performance*
+    Add: [performance*, modernize-deprecated*, modernize-pass-by-value, modernize-raw-string-literal, readability-redundant-control-flow]
     #Add: modernize*
     #Remove: modernize-use-trailing-return-type
