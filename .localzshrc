@@ -8,6 +8,7 @@ export FZF_DEFAULT_COMMAND="rg --files -g!'*tags.vi'"
 
 
 zstyle ':completion:*' matcher-list ''
+export ZSH_COMPDUMP="${HOME}/.cache/zsh/.zcompdump-$HOST"
 
 unsetopt share_history
 

@@ -32,11 +32,13 @@ endif
 "Plug 'yonchu/accelerated-smooth-scroll'
 "Plug 'wellle/context.vim'
 "Plug 'gregsexton/gitv', {'on': ['Gitv']}
+if !has( 'nvim' )
 Plug 'mattn/vim-lsp-settings'
 Plug 'prabirshrestha/async.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
+endif
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'morhetz/gruvbox'
 call plug#end()
@@ -73,7 +75,9 @@ call plug#end()
 
 
 
+if !has( 'nvim' )
 set signcolumn=yes
+endif
 set t_vb=
 set vb
 set nocompatible
@@ -271,11 +275,13 @@ let g:lsp_diagnostics_signs_priority_map = {
           \'LspHint': 11,
           \}
 "let g:lsp_semantic_enabled = 1
+if !has( 'nvim' )
 nmap <F12> <Plug>(lsp-definition)
 nmap <F11> <Plug>(lsp-peek-definition)
 nmap <F8> <Plug>(lsp-next-diagnostic)
 nmap <F9> <Plug>(lsp-previous-diagnostic)
 nmap <leader>d <Plug>(lsp-document-diagnostics)
+endif
 let g:lsp_diagnostics_float_cursor = 1
 
 autocmd FileType rust source ~/.vim/.vimrc_rust_rls
