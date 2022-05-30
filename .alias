@@ -35,6 +35,6 @@ alias tm='tmux -2'
 
 # perforce commands
 alias p4o='p4 opened | rg -v by'
-alias p4so="p4o | awk '{print $1}' | cut -d '#' -f 1 | xargs p4 sync"
+alias p4so="sync_tmp=\$(p4o) && echo \${sync_tmp} | awk '{print $1}' | cut -d '#' -f 1 | xargs p4 sync"
 alias fp4Revert="p4o | awk '{print $1}' | fzf -m | cut -d '#' -f 1 | xargs p4 revert "
 alias fp4Delta="p4o | awk '{print $1}' | fzf -m | cut -d '#' -f 1 | xargs p4_delta"

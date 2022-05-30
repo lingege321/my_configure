@@ -9,6 +9,10 @@ export FZF_DEFAULT_COMMAND="rg --files -g!'*tags.vi'"
 
 zstyle ':completion:*' matcher-list ''
 export ZSH_COMPDUMP="${HOME}/.cache/zsh/.zcompdump-$HOST"
+tmpdf=$(df 2> /dev/null | grep '^tmpfs' | grep dev | awk 'NR==1 {print $6}')
+if [[ -w $tmpdf ]]; then
+    export ZSH_COMPDUMP="${tmpdf}/.zcompdump-$USER-$HOST"
+fi
 
 unsetopt share_history
 
