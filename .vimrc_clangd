@@ -19,8 +19,11 @@ let g:lsp_completion_documentation_delay = 0
 
 
 function! ClangdExeArray()
+let user_clangd = $HOME."/bin/userClangd"
 if executable('/remote/vgrnd106/chielin/bin/zebuClangd')
     return ['/remote/vgrnd106/chielin/bin/zebuClangd']
+elseif executable(user_clangd)
+    return [user_clangd]
 else
     return ['clangd', '--header-insertion=never', '--pretty', '--log=info', '--background-index', '--resource-dir=/depot/tools/clang/clang710_gcc730/linux64/lib/clang/7.1.0', '--query-driver=/depot/qsc/QSCT/GCC/bin/g++', '-index-file=clangd.dex']
 endfunction
