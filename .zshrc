@@ -11,6 +11,15 @@ function precmd1() {
     unset timer
   fi
 }
+
+# find tmpdf path for .cache
+tmpdf=$(df 2> /dev/null | grep '^tmpfs' | grep dev | awk 'NR==1 {print $6}')
+export CACHE_PATH="/tmp/.cache-${USER}"
+if [[ -w $tmpdf ]]; then
+    export CACHE_PATH="${tmpdf}/.cache-${USER}"
+    mkdir -p $CACHE_PATH
+fi
+
 # Start configuration added by Zim install {{{
 #
 # User configuration sourced by interactive shells
@@ -117,6 +126,12 @@ if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
         https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
   fi
 fi
+
+mkdir -p ${CACHE_PATH}/zsh
+zstyle ':completion:*' matcher-list ''
+zstyle ':zim:completion' dumpfile ${HOME}/.cache/zsh/.zcompdump
+zstyle ':completion::complete:*' cache-path ${tmpdf}/zsh/zcompcache
+
 # Install missing modules, and update ${ZIM_HOME}/init.zsh if missing or outdated.
 if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
   source ${ZIM_HOME}/zimfw.zsh init -q
