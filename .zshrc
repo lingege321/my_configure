@@ -1,14 +1,20 @@
+debug_time=0
 function preexec1() {
-  timer=$(($(date +%s%0N)/1000000))
+  if [[ $debug_time == 1 ]]; then
+      echo "enter $1"
+      timer=$(($(date +%s%0N)/1000000))
+  fi
 }
 
 function precmd1() {
-  if [ $timer ]; then
-    now=$(($(date +%s%0N)/1000000))
-    elapsed=$(($now-$timer))
+  if [[ $debug_time == 1 ]]; then
+      if [ $timer ]; then
+        now=$(($(date +%s%0N)/1000000))
+        elapsed=$(($now-$timer))
 
-    echo "${elapsed}"
-    unset timer
+        echo "${elapsed}"
+        unset timer
+      fi
   fi
 }
 
@@ -123,12 +129,16 @@ zstyle ':completion:*' matcher-list ''
 zstyle ':zim:completion' dumpfile ${HOME}/.cache/zsh/.zcompdump
 zstyle ':completion::complete:*' cache-path ${tmpdf}/zsh/zcompcache
 
+preexec1 zimfw.zsh
 # Install missing modules, and update ${ZIM_HOME}/init.zsh if missing or outdated.
 if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
   source ${ZIM_HOME}/zimfw.zsh init -q
 fi
+precmd1
+preexec1 init.zsh
 # Initialize modules.
 source ${ZIM_HOME}/init.zsh
+precmd1
 
 # ------------------------------
 # Post-init module configuration
@@ -270,7 +280,9 @@ unset key
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+preexec1 .localzshrc
 source ${HOME}/.localzshrc
+precmd1
 
 # synopsys setting
 SYNOPSYS_ZSHRC=${HOME}/.synopsyszshrc
