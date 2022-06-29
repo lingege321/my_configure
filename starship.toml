@@ -21,8 +21,8 @@ $shell\
 $character"""
 # Replace the "❯" symbol in the prompt with "➜"
 [character]                            # The name of the module we are configuring is "character"
-error_symbol = "[└─ ](fg:white)[\uf014 ](bold red)"
-success_symbol = "[└─ ](fg:white)[\uf302 ](bold green)"
+error_symbol = "[└─ ](fg:none)[\uf014 ](bold red)"
+success_symbol = "[└─ ](fg:none)[\uf302 ](bold green)"
 
 [fill]
 symbol = "-"

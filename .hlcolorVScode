@@ -18,7 +18,7 @@ hi ObjectCtr          ctermfg=117    guifg=#87d7ff
 hi Operator           ctermfg=206    guifg=#ff5fd7
 hi constant           ctermfg=79     guifg=#00ffd7
 hi cursorlinenr       ctermfg=226    guifg=#ffff00
-hi CursorLine         term=underline ctermbg=234   guibg=#222222
+hi CursorLine         term=underline ctermbg=235   guibg=#222222
 hi specialchar        ctermfg=220    guifg=#E3CF57
 
 hi rustmacro          ctermfg=203
