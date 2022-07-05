@@ -31,12 +31,9 @@ style = "bold green"
 [time]
 disabled = false
 style = "bg:238 fg:250"
+format = "[\uf64f $time ]($style)[ \ue0b5](fg:245 bg:238)"
+time_format = "%F at %T"
 
-#zshell
-format = "[\uf64f %D at %* ]($style)[ \ue0b5](fg:245 bg:238)"
-
-# cshell
-#format = "[\uf64f %W-%D at %P]($style)[ \ue0b5](fg:245 bg:238)"
 
 [username]
 style_user = "bold bg:238 fg:228"
