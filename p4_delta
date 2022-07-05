@@ -1,0 +1,6 @@
+#! /bin/csh -f
+
+setenv P4DIFF "diff -u -p "
+setenv DELTA_PAGER "less -r"
+
+p4 diff $argv | /u/chielin/.cargo/bin/delta --diff-so-fancy -n --keep-plus-minus-markers --paging always
