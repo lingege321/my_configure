@@ -370,6 +370,8 @@ bind C-h select-pane -L
 bind C-j select-pane -D
 bind C-k select-pane -U
 bind C-l select-pane -R
+if-shell '[ $(echo "$(tmux -V | cut -c 6-8) >= 3.2" | bc) -eq 1 ]' \
+'bind C-s display-popup -E "tmux list-sessions | sed -E \"s/:.*$//\" | /bin/grep -v \"^$(tmux display-message -p \"#S\")$\"| fzf --reverse | xargs tmux switch-client -t"'
 bind -r p previous-window
 bind -r n next-window
 bind-key l last-window
