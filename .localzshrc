@@ -29,3 +29,5 @@ eval "$(starship init zsh)"
 NPM_PACKAGES=/u/chielin/.npm-packages
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 PATH="$NPM_PACKAGES/bin:$PATH"
+
+[ -x $(which cfonts) ] && cfonts "Welcome, $(whoami)" -a center -g blue,green -e cli -i -f huge
