@@ -30,4 +30,4 @@ NPM_PACKAGES=/u/chielin/.npm-packages
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 PATH="$NPM_PACKAGES/bin:$PATH"
 
-
+[ -x $(which cfonts) ] && cfonts "Welcome|$(whoami)" -a center -g '#f61cb9','#07d569','#1c92f6' -t
