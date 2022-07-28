@@ -33,13 +33,13 @@ endif
 "Plug 'wellle/context.vim'
 "Plug 'gregsexton/gitv', {'on': ['Gitv']}
 if !has( 'nvim' )
-"Plug 'mattn/vim-lsp-settings'
-"Plug 'prabirshrestha/async.vim'
-"Plug 'prabirshrestha/vim-lsp'
-"Plug 'prabirshrestha/asyncomplete.vim'
-"Plug 'prabirshrestha/asyncomplete-lsp.vim'
+Plug 'mattn/vim-lsp-settings'
+Plug 'prabirshrestha/async.vim'
+Plug 'prabirshrestha/vim-lsp'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
 endif
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'morhetz/gruvbox'
 call plug#end()
 "Plug 'universal-ctags/ctags' "ctag -R *
@@ -276,12 +276,12 @@ let g:lsp_diagnostics_signs_priority_map = {
           \}
 "let g:lsp_semantic_enabled = 1
 if !has( 'nvim' )
-"nmap <F12> <Plug>(lsp-definition)
-"nmap <F11> <Plug>(lsp-peek-definition)
-"nmap <F10> <Plug>(lsp-references)
-"nmap <F8> <Plug>(lsp-next-diagnostic)
-"nmap <F9> <Plug>(lsp-previous-diagnostic)
-"nmap <leader>d <Plug>(lsp-document-diagnostics)
+nmap <F12> <Plug>(lsp-definition)
+nmap <F11> <Plug>(lsp-peek-definition)
+nmap <F10> <Plug>(lsp-references)
+nmap <F8> <Plug>(lsp-next-diagnostic)
+nmap <F9> <Plug>(lsp-previous-diagnostic)
+nmap <leader>d <Plug>(lsp-document-diagnostics)
 endif
 let g:lsp_diagnostics_float_cursor = 1
 
@@ -315,11 +315,11 @@ let g:lsp_diagnostics_float_cursor = 1
 "*****************************************************************************************"
 "For coc-nvim-lsp
 "*****************************************************************************************"
-nmap <F12> <Plug>(coc-definition)
-nmap <F11> <Plug>(coc-references)
-nmap <F8> <Plug>(coc-diagnostic-next)
-nmap <F9> <Plug>(coc-diagnostic-prev)
-nmap <leader>d <Plug>(coc-diagnostic-info)
+"nmap <F12> <Plug>(coc-definition)
+"nmap <F11> <Plug>(coc-references)
+"nmap <F8> <Plug>(coc-diagnostic-next)
+"nmap <F9> <Plug>(coc-diagnostic-prev)
+"nmap <leader>d <Plug>(coc-diagnostic-info)
 
 autocmd FileType rust source ~/.vim/.vimrc_rust_rls
 autocmd FileType cpp  source ~/.vim/.vimrc_clangd
