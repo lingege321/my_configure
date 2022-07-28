@@ -278,16 +278,48 @@ let g:lsp_diagnostics_signs_priority_map = {
 if !has( 'nvim' )
 "nmap <F12> <Plug>(lsp-definition)
 "nmap <F11> <Plug>(lsp-peek-definition)
+"nmap <F10> <Plug>(lsp-references)
 "nmap <F8> <Plug>(lsp-next-diagnostic)
 "nmap <F9> <Plug>(lsp-previous-diagnostic)
 "nmap <leader>d <Plug>(lsp-document-diagnostics)
+endif
+let g:lsp_diagnostics_float_cursor = 1
+
+
+"*****************************************************************************************"
+"For coc-nvim
+"*****************************************************************************************"
+  "let g:coc_global_extensions = [
+        "\ 'coc-clangd',
+        "\ 'coc-diagnostic',
+        "\ 'coc-dictionary',
+        "\ 'coc-eslint',
+        "\ 'coc-highlight',
+        "\ 'coc-jedi',
+        "\ 'coc-json',
+        "\ 'coc-lists',
+        "\ 'coc-marketplace',
+        "\ 'coc-pyright',
+        "\ 'coc-python',
+        "\ 'coc-rust-analyzer',
+        "\ 'coc-sh',
+        "\ 'coc-snippets',
+        "\ 'coc-tag',
+        "\ 'coc-terminal',
+        "\ 'coc-toml',
+        "\ 'coc-tsserver',
+        "\ 'coc-vimlsp',
+        "\ 'coc-word',
+        "\ ]
+
+"*****************************************************************************************"
+"For coc-nvim-lsp
+"*****************************************************************************************"
 nmap <F12> <Plug>(coc-definition)
 nmap <F11> <Plug>(coc-references)
 nmap <F8> <Plug>(coc-diagnostic-next)
 nmap <F9> <Plug>(coc-diagnostic-prev)
 nmap <leader>d <Plug>(coc-diagnostic-info)
-endif
-let g:lsp_diagnostics_float_cursor = 1
 
 autocmd FileType rust source ~/.vim/.vimrc_rust_rls
 autocmd FileType cpp  source ~/.vim/.vimrc_clangd
