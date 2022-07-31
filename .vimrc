@@ -315,10 +315,13 @@ let g:lsp_diagnostics_float_cursor = 1
 "*****************************************************************************************"
 "For coc-nvim-lsp
 "*****************************************************************************************"
-nmap <F12> <Plug>(coc-definition)
-nmap <F11> <Plug>(coc-references)
-nmap <F8> <Plug>(coc-diagnostic-next)
-nmap <F9> <Plug>(coc-diagnostic-prev)
+nmap gd <Plug>(coc-definition)
+nmap gr <Plug>(coc-references)
+nmap gs :CocList -I symbols<CR>
+nmap ]d <Plug>(coc-diagnostic-next)
+nmap [d <Plug>(coc-diagnostic-prev)
+nmap ]e <Plug>(coc-diagnostic-next-error)
+nmap [e <Plug>(coc-diagnostic-prev-error)
 nmap <leader>d <Plug>(coc-diagnostic-info)
 
 autocmd FileType rust source ~/.vim/.vimrc_rust_rls
