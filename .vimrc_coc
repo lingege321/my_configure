@@ -6,6 +6,11 @@ call plug#end()
 "*****************************************************************************************"
 "For coc-nvim
 "*****************************************************************************************"
+  let g:coc_global_extensions = [
+        \ 'coc-clangd',
+        \ 'coc-diagnostic',
+        \ 'coc-highlight',
+        \ ]
   "let g:coc_global_extensions = [
         "\ 'coc-clangd',
         "\ 'coc-diagnostic',
