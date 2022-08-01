@@ -1,0 +1,67 @@
+
+call plug#begin('~/.vim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
+
+"*****************************************************************************************"
+"For coc-nvim
+"*****************************************************************************************"
+  "let g:coc_global_extensions = [
+        "\ 'coc-clangd',
+        "\ 'coc-diagnostic',
+        "\ 'coc-dictionary',
+        "\ 'coc-eslint',
+        "\ 'coc-highlight',
+        "\ 'coc-jedi',
+        "\ 'coc-json',
+        "\ 'coc-lists',
+        "\ 'coc-marketplace',
+        "\ 'coc-pyright',
+        "\ 'coc-python',
+        "\ 'coc-rust-analyzer',
+        "\ 'coc-sh',
+        "\ 'coc-snippets',
+        "\ 'coc-tag',
+        "\ 'coc-terminal',
+        "\ 'coc-toml',
+        "\ 'coc-tsserver',
+        "\ 'coc-vimlsp',
+        "\ 'coc-word',
+        "\ ]
+"*****************************************************************************************"
+"For coc-nvim-lsp
+"*****************************************************************************************"
+nmap gd <Plug>(coc-definition)
+nmap gr <Plug>(coc-references)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap ]d <Plug>(coc-diagnostic-next)
+nmap [d <Plug>(coc-diagnostic-prev)
+nmap ]e <Plug>(coc-diagnostic-next-error)
+nmap [e <Plug>(coc-diagnostic-prev-error)
+nnoremap <silent> K :call ShowDocumentation()<CR>
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
+
+nmap <silent> cal <plug>(coc-codeaction-line)
+nmap <silent> cac <plug>(coc-codeaction-cursor)
+
+" Formatting selected code
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+" Mappings for CoCList
+" Show all diagnostics.
+nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+" Manage extensions.
+nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
+" Show commands.
+nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
+" Find symbol of current document.
+nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+" Search workspace symbols.
+nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>

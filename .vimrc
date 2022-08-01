@@ -39,7 +39,6 @@ if !has( 'nvim' )
 "Plug 'prabirshrestha/asyncomplete.vim'
 "Plug 'prabirshrestha/asyncomplete-lsp.vim'
 endif
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'morhetz/gruvbox'
 call plug#end()
 "Plug 'universal-ctags/ctags' "ctag -R *
@@ -286,43 +285,7 @@ endif
 let g:lsp_diagnostics_float_cursor = 1
 
 
-"*****************************************************************************************"
-"For coc-nvim
-"*****************************************************************************************"
-  "let g:coc_global_extensions = [
-        "\ 'coc-clangd',
-        "\ 'coc-diagnostic',
-        "\ 'coc-dictionary',
-        "\ 'coc-eslint',
-        "\ 'coc-highlight',
-        "\ 'coc-jedi',
-        "\ 'coc-json',
-        "\ 'coc-lists',
-        "\ 'coc-marketplace',
-        "\ 'coc-pyright',
-        "\ 'coc-python',
-        "\ 'coc-rust-analyzer',
-        "\ 'coc-sh',
-        "\ 'coc-snippets',
-        "\ 'coc-tag',
-        "\ 'coc-terminal',
-        "\ 'coc-toml',
-        "\ 'coc-tsserver',
-        "\ 'coc-vimlsp',
-        "\ 'coc-word',
-        "\ ]
-
-"*****************************************************************************************"
-"For coc-nvim-lsp
-"*****************************************************************************************"
-nmap gd <Plug>(coc-definition)
-nmap gr <Plug>(coc-references)
-nmap gs :CocList -I symbols<CR>
-nmap ]d <Plug>(coc-diagnostic-next)
-nmap [d <Plug>(coc-diagnostic-prev)
-nmap ]e <Plug>(coc-diagnostic-next-error)
-nmap [e <Plug>(coc-diagnostic-prev-error)
-nmap <leader>d <Plug>(coc-diagnostic-info)
+source ~/.vim/.vimrc_coc
 
 autocmd FileType rust source ~/.vim/.vimrc_rust_rls
 autocmd FileType cpp  source ~/.vim/.vimrc_clangd
