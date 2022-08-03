@@ -20,6 +20,7 @@ Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-signify'
 Plug 'ngemily/vim-vp4'
 Plug 'mhinz/vim-hugefile'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "Plug 'zxqfl/tabnine-vim'
 if v:version >= 704
    "Plug 'SirVer/ultisnips'    "map functional
@@ -77,6 +78,7 @@ call plug#end()
 if !has( 'nvim' )
 set signcolumn=yes
 endif
+set conceallevel=0
 set t_vb=
 set vb
 set nocompatible

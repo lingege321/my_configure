@@ -1,8 +1,3 @@
-
-call plug#begin('~/.vim/plugged')
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-call plug#end()
-
 "*****************************************************************************************"
 "For coc-nvim
 "*****************************************************************************************"
@@ -10,6 +5,8 @@ call plug#end()
         \ 'coc-clangd',
         \ 'coc-diagnostic',
         \ 'coc-highlight',
+        \ 'coc-lists',
+        \ 'coc-marketplace',
         \ ]
   "let g:coc_global_extensions = [
         "\ 'coc-clangd',
@@ -37,6 +34,7 @@ call plug#end()
 "For coc-nvim-lsp
 "*****************************************************************************************"
 nmap gd <Plug>(coc-definition)
+nmap gD :call CocActionAsync('jumpDefinition', v:false)<CR>
 nmap gr <Plug>(coc-references)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
@@ -61,12 +59,12 @@ xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
 " Mappings for CoCList
 " Show all diagnostics.
-nnoremap <silent><nowait> <space>a  :<C-u>CocList diagnostics<cr>
+nnoremap <silent><nowait> <space>a  :<C-u>CocList --auto-preview diagnostics<cr>
 " Manage extensions.
 nnoremap <silent><nowait> <space>e  :<C-u>CocList extensions<cr>
 " Show commands.
 nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
-nnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr>
+nnoremap <silent><nowait> <space>o  :<C-u>CocList --auto-preview outline<cr>
 " Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList -I symbols<cr>
+nnoremap <silent><nowait> <space>s  :<C-u>CocList --auto-preview -I symbols<cr>

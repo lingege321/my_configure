@@ -280,13 +280,14 @@ unset key
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-preexec1 .localzshrc
-source ${HOME}/.localzshrc
-precmd1
 
 # synopsys setting
 SYNOPSYS_ZSHRC=${HOME}/.synopsyszshrc
 if [[ -f "$SYNOPSYS_ZSHRC" ]]; then
     source $SYNOPSYS_ZSHRC
 fi
+
+preexec1 .localzshrc
+source ${HOME}/.localzshrc
+precmd1
 
