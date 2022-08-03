@@ -57,6 +57,14 @@ nmap <silent> cac <plug>(coc-codeaction-cursor)
 " Formatting selected code
 xmap <leader>f  <Plug>(coc-format-selected)
 nmap <leader>f  <Plug>(coc-format-selected)
+
+
+" use following to change default options in CocConfig
+" list.source.symbols.defaultOptions": ["--auto-preview", "--interactive"],
+" list.source.outline.defaultOptions": ["--auto-preview"],
+" list.source.diagnostics.defaultOptions": ["--auto-preview"]
+"
+
 " Mappings for CoCList
 " Show all diagnostics.
 nnoremap <silent><nowait> <space>a  :<C-u>CocList --auto-preview diagnostics<cr>
@@ -67,4 +75,17 @@ nnoremap <silent><nowait> <space>c  :<C-u>CocList commands<cr>
 " Find symbol of current document.
 nnoremap <silent><nowait> <space>o  :<C-u>CocList --auto-preview outline<cr>
 " Search workspace symbols.
-nnoremap <silent><nowait> <space>s  :<C-u>CocList --auto-preview -I symbols<cr>
+nnoremap <silent><nowait> <space>s  :<C-u>CocList --auto-preview --interactive symbols<cr>
+
+"" Manage extensions.
+"nnoremap <silent><nowait> <space>e      :<C-u>CocFzfList extensions<cr>
+"" Show all diagnostics.
+"nnoremap <silent><nowait><space>a       :<C-u>CocFzfList diagnostics<CR>
+"" Show commands.
+"nnoremap <silent><nowait><space>c       :<C-u>CocFzfList commands<CR>
+"" Find symbol of current document.
+"nnoremap <silent><nowait><space>o       :<C-u>CocFzfList outline<CR>
+"" Search workspace symbols.
+"nnoremap <silent><nowait><space>s       :<C-u>CocFzfList symbols<CR>
+"let g:coc_fzf_preview = ''
+"let g:coc_fzf_opts = []]
