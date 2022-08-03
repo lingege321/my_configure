@@ -36,9 +36,13 @@ alias datename='date | sed "s/\( \|:\)/_/g"'
 
 # perforce commands
 alias p4o='p4 opened | rg -v by'
-alias p4so="sync_tmp=\$(p4o) && echo \${sync_tmp} | awk '{print $1}' | cut -d '#' -f 1 | xargs p4 sync"
-alias fp4Revert="p4o | awk '{print $1}' | fzf -m | cut -d '#' -f 1 | xargs p4 revert "
-alias fp4Delta="p4o | awk '{print $1}' | fzf -m | cut -d '#' -f 1 | xargs p4_delta"
+alias p4ome='p4 opened | rg -v by'
+alias p4so="sync_tmp=\$(p4o) && echo \${sync_tmp} | awk '{print \$1}' | cut -d '#' -f 1 | xargs p4 sync"
+alias fp4o="p4o | awk '{print \$1}' | fzf -m |  cut -d '#' -f 1 "
+alias fp4Revert="fp4o | xargs p4 revert"
+alias fp4Delta="fp4o | xargs p4_delta"
+alias fp4ToLocal="fp4o | xargs p4 where | awk '{print \$3}'"
+
 function fp4Reopen() {
     if [[ $1 != "" ]] ; then
         p4o | awk '{print $1}' | fzf -m | cut -d '#' -f 1 | xargs p4 reopen -c $1
