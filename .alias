@@ -48,6 +48,7 @@ function fp4WhereOpen() {
         echo $tmp | xargs p4 where | awk '{print $3}'
     fi
 }
+alias vimOpened="vim \$(fp4WhereOpen)"
 
 function fp4Reopen() {
     if [[ $1 != "" ]] ; then
