@@ -15,12 +15,14 @@ Plug 'mg979/vim-visual-multi'
 "Plug 'w0rp/ale'  "need nerd font/ reference: https://github.com/ryanoasis/nerd-fonts
 Plug 'scrooloose/nerdcommenter'  " auto add comment
 Plug 'Yggdroot/indentLine'
-Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-signify'
 Plug 'ngemily/vim-vp4'
 Plug 'mhinz/vim-hugefile'
+Plug 'junegunn/fzf', {'dir': '~/.fzf','do': './install --all'}
+Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'antoinemadec/coc-fzf'
 "Plug 'zxqfl/tabnine-vim'
 if v:version >= 704
    "Plug 'SirVer/ultisnips'    "map functional
