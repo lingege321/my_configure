@@ -77,9 +77,12 @@ call plug#end()
 
 
 
-if !has( 'nvim' )
-set signcolumn=yes
+if has( 'nvim' )
+    set nu
+else
+    set nonu
 endif
+set signcolumn=yes
 set conceallevel=0
 set t_vb=
 set vb
@@ -87,7 +90,6 @@ set nocompatible
 filetype plugin indent on
 set wildmode=list:longest
 set encoding=utf-8
-set nonu
 syntax on
 set mouse=a
 set scrolloff=4
