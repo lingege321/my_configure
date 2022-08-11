@@ -78,7 +78,7 @@ nmap <leader>f  <Plug>(coc-format-selected)
 "nnoremap <silent><nowait> <space>s  :<C-u>CocList --auto-preview --interactive symbols<cr>
 
 " Manage extensions.
-nnoremap <silent><nowait> <space>e      :<C-u>CocFzfList extensions<cr>
+nnoremap <silent><nowait><space>e      :<C-u>CocFzfList extensions<cr>
 " Show all diagnostics.
 nnoremap <silent><nowait><space>a       :<C-u>CocFzfList diagnostics<CR>
 " Show commands.

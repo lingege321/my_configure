@@ -49,6 +49,8 @@ function fp4WhereOpen() {
     fi
 }
 alias vimOpened="vim \$(fp4WhereOpen)"
+alias nvimOpened="nvim \$(fp4WhereOpen)"
+
 
 function fp4Reopen() {
     if [[ $1 != "" ]] ; then
