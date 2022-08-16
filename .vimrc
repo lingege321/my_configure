@@ -13,7 +13,7 @@ Plug 'easymotion/vim-easymotion'    "quick jump  syntax \w \b \jklh \s
 "Plug 'junegunn/gv.vim'    " gv.vim https://github.com/junegunn/gv.vim
 Plug 'mg979/vim-visual-multi'
 "Plug 'w0rp/ale'  "need nerd font/ reference: https://github.com/ryanoasis/nerd-fonts
-Plug 'scrooloose/nerdcommenter'  " auto add comment
+Plug 'preservim/nerdcommenter'  " auto add comment
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-surround'
 Plug 'mhinz/vim-signify'
