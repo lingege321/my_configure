@@ -1,4 +1,4 @@
-vim.cmd('source /remote/us01home50/chielin/.vimrc')
+vim.cmd('source ~/.vimrc')
 
 
 --local use = require('packer').use
