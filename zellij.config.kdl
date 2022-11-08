@@ -139,7 +139,7 @@ keybinds {
         bind "Alt -" { Resize "Decrease"; }
     }
     shared_except "normal" "locked" {
-        bind "Enter" "Space" "Esc" "q" { SwitchToMode "Normal"; }
+        bind "Enter" "Esc" "q" { SwitchToMode "Normal"; }
     }
     shared_except "pane" "locked" {
         bind "Ctrl p" { SwitchToMode "Pane"; }
