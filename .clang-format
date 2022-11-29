@@ -14,5 +14,6 @@ InsertBraces: true
 
 ColumnLimit: 120
 PenaltyBreakAssignment : 100000
+PenaltyBreakComment: 0
 ...
 
