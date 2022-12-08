@@ -58,3 +58,10 @@ function fp4Reopen() {
         p4o | awk '{print $1}' | fzf -m | cut -d '#' -f 1 | xargs p4 reopen -c $1
     fi
 }
+
+functione codew() {
+    local ws=$(ls ~/vscodeWorkspace | fzf)
+        if [[ $wd != "" ]] ; then
+            code ~/vscodeWorkspace/$ws
+        fi
+}
