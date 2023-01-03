@@ -66,9 +66,27 @@ function fp4Reopen() {
     fi
 }
 
-functione codew() {
+function codew() {
     local ws=$(ls ~/vscodeWorkspace | fzf)
         if [[ $ws != "" ]] ; then
             code ~/vscodeWorkspace/$ws
         fi
+}
+function all_pd() {
+    local p=$1
+    while [[ $p != "/" ]]
+    do
+        echo $p
+        p=$(dirname $p)
+    done
+}
+function pd() {
+    local p=$(pwd $1)
+    all_pd $p | fzf
+}
+function cdpd() {
+    local d=$(pd -P)
+    if [[ $d != "" ]] ; then
+        cd $d
+    fi
 }
