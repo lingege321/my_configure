@@ -74,15 +74,17 @@ function codew() {
 }
 function all_pd() {
     local p=$1
+    local i=0
     while [[ $p != "/" ]]
     do
-        echo $p
+        echo "$i    $p"
         p=$(dirname $p)
+        i=$((i+1))
     done
 }
 function pd() {
     local p=$(pwd $1)
-    all_pd $p | fzf
+    all_pd $p | fzf | awk '{print $2}'
 }
 function cdpd() {
     local d=$(pd -P)
