@@ -43,8 +43,11 @@ alias p4so="sync_tmp=\$(p4o) && echo \${sync_tmp} | awk '{print \$1}' | cut -d '
 alias fp4o="p4o | awk '{print \$1}' | fzf -m |  cut -d '#' -f 1 "
 alias fp4Revert="fp4o | xargs p4 revert"
 alias fp4Delta="fp4o | xargs p4_delta"
+function d() {
+    echo $(dirs -v | fzf | awk '{print $2}')
+}
 function cdd() {
-    local tmp=$(dirs -v | fzf | awk '{print $2}')
+    local tmp=$(d)
     if [[ $tmp != "" ]] ; then
         cd $tmp
     fi
