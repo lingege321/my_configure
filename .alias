@@ -49,7 +49,7 @@ function d() {
 function cdd() {
     local tmp=$(d)
     if [[ $tmp != "" ]] ; then
-        cd $tmp
+        eval cd "${tmp/#~/$HOME}"
     fi
 
 }
