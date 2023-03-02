@@ -95,3 +95,20 @@ function cdpd() {
         cd $d
     fi
 }
+function tar_cp() {
+    local p=$(pwd -P)
+    local src=$1
+    local tgt=$2
+    if [[ $src == "" ]]; then
+        echo "no src folder"
+        exit(1)
+    fi
+    if [[ $tgt == "" ]]; then
+        local f=$(basename $src)
+        tgt="${p}/${f}"
+    fi
+    mkdir -p $tgt
+    cd $src
+    tar cf - . | (cd $tgt && tar xvf -)
+    cd $p
+}
