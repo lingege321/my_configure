@@ -101,7 +101,7 @@ function tar_cp() {
     local tgt=$2
     if [[ $src == "" ]]; then
         echo "no src folder"
-        exit(1)
+        exit 1
     fi
     if [[ $tgt == "" ]]; then
         local f=$(basename $src)
