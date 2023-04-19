@@ -18,7 +18,9 @@ Diagnostics:
       modernize-use-override,
       modernize-raw-string-literal,
       google-explicit-constructor,
-      readability-redundant-control-flow]
+      readability-simplify-boolean-expr,
+      '*redundant*',
+      '*unused*']
     # Add: ['*']
     #Add: modernize*
     #Remove: modernize-use-trailing-return-type
