@@ -7,10 +7,11 @@ InlayHints:
   DeducedTypes: Yes
 
 CompileFlags:
-  Add: [-Wunused-function, -Wall, -Wextra, -Wshadow, -Wpedantic, -Werror=unused-variable]
+  Add: [-Wunused-function, -Wall, -Wextra, -Wshadow, -Wpedantic, -Werror=unused-variable, -Wexceptions]
   Remove: -Werror
 
 Diagnostics:
+  UnusedIncludes: Strict
   ClangTidy:
     Add: [performance*,
       modernize-deprecated*,
@@ -19,6 +20,7 @@ Diagnostics:
       modernize-raw-string-literal,
       google-explicit-constructor,
       readability-simplify-boolean-expr,
+      bugprone-exception-escape,
       '*redundant*',
       '*unused*']
     # Add: ['*']
