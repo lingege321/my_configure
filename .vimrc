@@ -293,8 +293,8 @@ let g:lsp_diagnostics_float_cursor = 1
 
 source ~/.vim/.vimrc_coc
 
-autocmd FileType rust source ~/.vim/.vimrc_rust_rls
-autocmd FileType cpp  source ~/.vim/.vimrc_clangd
+"autocmd FileType rust source ~/.vim/.vimrc_rust_rls
+"autocmd FileType cpp  source ~/.vim/.vimrc_clangd
 "*****************************************************************************************"
 "For vimWiki.vim
 "*****************************************************************************************"

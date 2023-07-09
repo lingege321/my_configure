@@ -17,6 +17,7 @@ Diagnostics:
       modernize-deprecated*,
       modernize-pass-by-value,
       modernize-use-override,
+      modernize-loop-convert,
       modernize-raw-string-literal,
       google-explicit-constructor,
       readability-simplify-boolean-expr,
