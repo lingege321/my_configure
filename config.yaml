@@ -7,7 +7,7 @@ InlayHints:
   DeducedTypes: Yes
 
 CompileFlags:
-  Add: [-Wunused-function, -Wall, -Wextra, -Wshadow, -Wpedantic, -Werror=unused-variable, -Wexceptions]
+  Add: [-Wunused-function, -Wall, -Wextra, -Wshadow, -Wpedantic, -Werror=unused-variable, -Wexceptions, -Wimplicit-fallthrough]
   Remove: -Werror
 
 Diagnostics:
