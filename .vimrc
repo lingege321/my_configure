@@ -82,6 +82,11 @@ if has( 'nvim' )
 else
     set nonu
 endif
+if &diff
+    set cursorline
+else
+    set nocursorline
+endif
 set signcolumn=yes
 set conceallevel=0
 set t_vb=
@@ -93,7 +98,6 @@ set encoding=utf-8
 syntax on
 set mouse=a
 set scrolloff=4
-set cursorline
 set formatoptions+=r   "註解的下一行 "不要"自動註解
 set ruler
 set cindent
