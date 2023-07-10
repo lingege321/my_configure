@@ -82,11 +82,7 @@ if has( 'nvim' )
 else
     set nonu
 endif
-if &diff
-    set nocursorline
-else
-    set cursorline
-endif
+set cursorline
 set signcolumn=yes
 set conceallevel=0
 set t_vb=
