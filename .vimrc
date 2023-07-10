@@ -83,9 +83,9 @@ else
     set nonu
 endif
 if &diff
-    set cursorline
-else
     set nocursorline
+else
+    set cursorline
 endif
 set signcolumn=yes
 set conceallevel=0
