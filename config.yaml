@@ -16,6 +16,7 @@ CompileFlags:
       -Wpedantic,
       -Werror=unused-variable,
       -Wexceptions,
+      -Wno-switch-enum,
       -Wimplicit-fallthrough,
     ]
   Remove: -Werror
