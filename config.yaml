@@ -7,23 +7,37 @@ InlayHints:
   DeducedTypes: Yes
 
 CompileFlags:
-  Add: [-Wunused-function, -Wall, -Wextra, -Wshadow, -Wpedantic, -Werror=unused-variable, -Wexceptions, -Wimplicit-fallthrough, -Wswitch-enum]
+  Add:
+    [
+      -Wunused-function,
+      -Wall,
+      -Wextra,
+      -Wshadow,
+      -Wpedantic,
+      -Werror=unused-variable,
+      -Wexceptions,
+      -Wimplicit-fallthrough,
+      -Wswitch-enum,
+    ]
   Remove: -Werror
 
 Diagnostics:
   UnusedIncludes: Strict
   ClangTidy:
-    Add: [performance*,
-      modernize-deprecated*,
-      modernize-pass-by-value,
-      modernize-use-override,
-      modernize-loop-convert,
-      modernize-raw-string-literal,
-      google-explicit-constructor,
-      readability-simplify-boolean-expr,
-      bugprone-exception-escape,
-      '*redundant*',
-      '*unused*']
+    Add: [
+        performance*,
+        modernize*,
+        # modernize-deprecated*,
+        # modernize-pass-by-value,
+        # modernize-use-override,
+        # modernize-loop-convert,
+        # modernize-raw-string-literal,
+        google-explicit-constructor,
+        readability-simplify-boolean-expr,
+        bugprone-exception-escape,
+        "*redundant*",
+        "*unused*",
+      ]
     # Add: ['*']
     #Add: modernize*
-    #Remove: modernize-use-trailing-return-type
+    Remove: [modernize-use-trailing-return-type]
