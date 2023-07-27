@@ -33,7 +33,9 @@ Diagnostics:
         # modernize-loop-convert,
         # modernize-raw-string-literal,
         google-explicit-constructor,
-        readability-simplify-boolean-expr,
+        # readability-simplify-boolean-expr,
+        # readability-make-member-function-const,
+        readability*,
         bugprone-exception-escape,
         "*redundant*",
         "*unused*",
@@ -41,3 +43,6 @@ Diagnostics:
     # Add: ['*']
     #Add: modernize*
     Remove: [modernize-use-trailing-return-type, modernize-use-using]
+    CheckOptions:
+      readability-function-cognitive-complexity.Threshold: 100
+      readability-identifier-length.MinimumVariableNameLength: 1
