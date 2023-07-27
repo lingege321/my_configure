@@ -42,7 +42,6 @@ Diagnostics:
       ]
     # Add: ['*']
     #Add: modernize*
-    Remove: [modernize-use-trailing-return-type, modernize-use-using]
+    Remove: [modernize-use-trailing-return-type, modernize-use-using, readability-identifier-length]
     CheckOptions:
       readability-function-cognitive-complexity.Threshold: 100
-      readability-identifier-length.MinimumVariableNameLength: 1
