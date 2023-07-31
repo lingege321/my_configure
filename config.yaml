@@ -54,6 +54,7 @@ Diagnostics:
         readability-qualified-auto,
         readability-magic-numbers,
         readability-isolate-declaration,
+        readability-redundant-access-specifiers,
       ]
     CheckOptions:
       readability-function-cognitive-complexity.Threshold: 100
