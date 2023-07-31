@@ -25,6 +25,8 @@ Diagnostics:
   UnusedIncludes: Strict
   ClangTidy:
     Add: [
+        clang-diagnostic-*,
+        clang-analyzer-*,
         performance*,
         modernize*,
         # modernize-deprecated*,
@@ -42,6 +44,16 @@ Diagnostics:
       ]
     # Add: ['*']
     #Add: modernize*
-    Remove: [modernize-use-trailing-return-type, modernize-use-using, readability-identifier-length]
+    Remove:
+      [
+        modernize-use-trailing-return-type,
+        modernize-use-using,
+        readability-identifier-length,
+        readability-implicit-bool-conversion,
+        readability-suspicious-call-argument,
+        readability-qualified-auto,
+        readability-magic-numbers,
+        readability-isolate-declaration,
+      ]
     CheckOptions:
       readability-function-cognitive-complexity.Threshold: 100
