@@ -33,7 +33,7 @@ alias clk="tty-clock -c -s"
 alias fvim='vim `fzf`'
 alias tm='tmux -2'
 alias zj='zellij'
-alias datename='date | sed "s/\( \|:\)/_/g"'
+alias datename="date '+%m_%d_%Y_%H_%M_%S_%a_%Z'"
 
 # perforce commands
 alias p4o='p4 opened | rg -v by'
