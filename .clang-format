@@ -12,6 +12,8 @@ IndentWidth: 4
 AccessModifierOffset: -2
 InsertBraces: true
 
+SeparateDefinitionBlocks : Always
+
 ColumnLimit: 120
 PenaltyBreakAssignment : 100000
 PenaltyBreakComment: 0
