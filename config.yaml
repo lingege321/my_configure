@@ -43,7 +43,6 @@ Diagnostics:
         "*unused*",
       ]
     # Add: ['*']
-    #Add: modernize*
     Remove:
       [
         modernize-use-trailing-return-type,
