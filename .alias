@@ -32,6 +32,7 @@ alias clk="tty-clock -c -s"
 
 alias fvim='vim `fzf`'
 alias tm='tmux -2'
+alias tarzstd="tar -I 'zstd -T0'"
 alias zj='zellij'
 alias datename="date '+%m_%d_%Y_%H_%M_%S_%a_%Z'"
 
