@@ -1,0 +1,24 @@
+Checks: '
+        clang-diagnostic-*,
+        clang-analyzer-*,
+        performance*,
+        modernize*,
+        google-explicit-constructor,
+        readability*,
+        bugprone-exception-escape,
+        *redundant*,
+        *unused*,
+
+        -modernize-use-trailing-return-type,
+        -modernize-use-using,
+        -readability-identifier-length,
+        -readability-implicit-bool-conversion,
+        -readability-suspicious-call-argument,
+        -readability-qualified-auto,
+        -readability-magic-numbers,
+        -readability-isolate-declaration,
+        -readability-redundant-access-specifiers
+    '
+CheckOptions:
+- key: readability-function-cognitive-complexity.Threshold
+  value: 100
