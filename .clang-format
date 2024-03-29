@@ -17,5 +17,7 @@ SeparateDefinitionBlocks : Always
 ColumnLimit: 120
 PenaltyBreakAssignment : 100000
 PenaltyBreakComment: 0
+RemoveSemicolon : true
+SkipMacroDefinitionBody : true
 ...
 
