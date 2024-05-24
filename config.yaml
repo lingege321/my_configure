@@ -5,6 +5,9 @@ InlayHints:
   Enabled: Yes
   ParameterNames: No
   DeducedTypes: Yes
+  TypeNameLimit: 0
+  BlockEnd: Yes
+  Designators: Yes
 
 CompileFlags:
   Add:
