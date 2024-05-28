@@ -66,7 +66,7 @@ alias nvimOpened="nvim \$(fp4WhereOpen)"
 
 function fp4Reopen() {
     if [[ $1 != "" ]] ; then
-        p4o | awk '{print $1}' | fzf -m | cut -d '#' -f 1 | xargs p4 reopen -c $1
+        p4o | rg -v $1 | awk '{print $1}' | fzf -m | cut -d '#' -f 1 | xargs p4 reopen -c $1
     fi
 }
 
