@@ -1,0 +1,3368 @@
+{
+    // window title settings
+    "window.title": "${dirty}${activeEditorMedium}${separator}${rootName}${separator}${rootPath}${separator}${appName}",
+    // remote.ssh settings
+    // "remote.SSH.path": "C:\\Users\\chienhun\\Desktop\\OpenSSH-Win64\\ssh.exe",
+    "remote.SSH.remotePlatform": {
+        "10.207.89.167": "linux",
+        "140.113.225.204": "linux",
+        "10.192.137.21": "linux",
+        "10.15.117.5": "linux",
+        "10.192.9.218": "linux",
+        "10.195.2.65": "linux",
+        "odcphy-vg-1119": "linux",
+        "us01odcvde15450": "linux",
+        "odcphy-vg-1128": "linux",
+        "odcphy-vg-1121": "linux",
+        "odcphy-vg-1129": "linux",
+        "odcphy-vg-1182": "linux",
+        "us01odcvde39954": "linux",
+        "odcphy-vg-1170": "linux",
+        "odcphy-vg-1094": "linux",
+        "odclegacy0141": "linux",
+        "odcphy-vg-1157": "linux",
+        "odcphy-vg-1072": "linux",
+        "aurah104": "linux",
+        "odcphy-vg-1071": "linux",
+        "EEG-odcphy-vg-1018": "linux",
+        "odcphy-vg-1072-2": "linux",
+        "us01-centos8streams-003": "linux",
+        "eeg-3880-001-almalinux": "linux"
+    },
+    // quickSuggestions 
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true,
+    },
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    // "editor.fontFamily": "gomono nerd font",
+    // "editor.fontFamily": "heavydata nf",
+    // "editor.fontFamily": "terminessTTF nf",
+    // "editor.fontFamily": "firacode nerd font",
+    "editor.fontFamily": "hack nerd font mono",
+    // "editor.fontFamily": "IntelOne mono",
+    // "editor.fontFamily": "cousine nerd font mono",
+    // "editor.fontFamily": "jetbrainsmono Nerd font",
+    // "editor.fontFamily": "Cascadia mono",
+    // "editor.fontFamily": "daddytimemono nerd font",
+    // "editor.fontFamily": "caskaydiacove nerd font",
+    // ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz
+    "editor.fontSize": 14,
+    // "editor.fontLigatures": true,
+    "extensions.ignoreRecommendations": true,
+    "editor.largeFileOptimizations": false,
+    // "editor.glyphMargin": false,
+    // "editor.folding": false,
+    // files exclude for search
+    "files.exclude": {
+        "**/.cache": true,
+        "**/cscope.*": true,
+        "**/tags": true,
+        "**/vim-lsp.log": true,
+        "**/compile_commands.json*": true,
+        "**/*log": true,
+        "**/synmake*": true,
+        "**/*.cds": true,
+        "**/*.zti": true,
+        "CSHRC": true,
+    },
+    // terminal settings
+    "terminal.integrated.minimumContrastRatio": 1,
+    "terminal.integrated.gpuAcceleration": "canvas",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.fontFamily": "jetbrainsmono Nerd font",
+    "terminal.integrated.fontSize": 14,
+    "terminal.integrated.copyOnSelection": true,
+    "files.watcherExclude": {
+        "**/.cache": true,
+        "**/cscope.*": true,
+        "**/tags": true,
+        "**/vim-lsp.log": true,
+        "**/compile_commands.json*": true,
+        "**/*log": true,
+        "**/synmake*": true,
+        "**/*.cds": true,
+        "**/*.zti": true,
+        "CSHRC": true,
+    },
+    // The configureation to ignore the strikethrough from the clangd
+    // "editor.showDeprecated": false, 
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSurroundingLines": 5,
+    "search.followSymlinks": false,
+    "scm.alwaysShowRepositories": true,
+    "scm.alwaysShowActions": true,
+    "editor.wordWrapColumn": 100,
+    "workbench.iconTheme": "vscode-great-icons",
+    // 關閉平滑滾動
+    "editor.smoothScrolling": false,
+    // 關閉光標平滑滾動
+    "editor.cursorSmoothCaretAnimation": "off",
+    "editor.accessibilitySupport": "off",
+    "terminal.integrated.tabs.enabled": true,
+    "workbench.view.alwaysShowHeaderActions": true,
+    "terminal.integrated.cursorStyle": "line",
+    // workbench
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.colorCustomizations": {
+        "editor.findMatchBorder": "#e9ec0f",
+        "editorLineNumber.foreground": "#999999",
+        "editorLineNumber.activeForeground": "#e9ec0f",
+        "perforceDecoration.editForeground": "#ccce64",
+        "tab.inactiveModifiedBorder": "#ff0000",
+        "tab.activeBorder": "#e9ec0f",
+        "tab.activeBorderTop": "#e9ec0f",
+        "[One Dark Pro Darker]": {
+            "editorInlayHint.foreground": "#b2b383",
+            "editorInlayHint.background": "#23272e",
+        },
+        "[Default Dark+]": {
+            "editorInlayHint.foreground": "#6a8e99",
+            "editorInlayHint.background": "#1e1e1e",
+        },
+        "[Night Owl (No Italics)]": {
+            "editorInlayHint.foreground": "#668676",
+            "editorInlayHint.background": "#011627"
+        }
+    },
+    // semantic highlight and editor syntax highlight setting
+    "editor.semanticHighlighting.enabled": true,
+    "editor.semanticTokenColorCustomizations": {
+        "[Default Dark+]": {
+            // https://github.com/microsoft/vscode/blob/main/extensions/theme-defaults/themes/dark_plus.json
+            "enabled": true, // enable for all themes
+            "rules": {
+                "property": {
+                    "foreground": "#e2b863",
+                },
+                "variable": {
+                    "foreground": "#c6c6c6",
+                },
+                "namespace": {
+                    "foreground": "#fd8e34",
+                },
+                "parameter": {
+                    "fontStyle": "italic",
+                },
+                "parameter.readonly:cpp": {
+                    "fontStyle": "italic underline",
+                },
+                "*.readonly:cpp": {
+                    "fontStyle": "underline",
+                },
+                "parameter.mutable:rust": {
+                    "fontStyle": "italic underline",
+                },
+                // "macro:rust": {
+                //     "foreground": "#ff5c46",
+                //     // "bold": true
+                // },
+                // "macroBang:rust": {
+                //     "foreground": "#ff5c46",
+                // },
+            }
+        },
+        "[Night Owl (No Italics)]": {
+            // Underline means const value/function in cpp
+            //             but mutable value/function in rust
+            // method function is italic
+            "enabled": true,
+            "rules": {
+                "method": {
+                    "fontStyle": "italic"
+                },
+                "*.readonly:cpp": {
+                    "fontStyle": "underline"
+                },
+                "method.readonly:cpp": {
+                    "fontStyle": "italic underline"
+                },
+                "*.mutable:rust": {
+                    "fontStyle": "underline"
+                },
+                "method.mutable:rust": {
+                    "fontStyle": "italic underline"
+                },
+                "struct": "#c5e478",
+                "variable": "#ccc3c7",
+                "parameter": "#c9c46a",
+                "namespace": "#fe8019",
+                "property": "#9fdbd0",
+            }
+        },
+        "[One Dark Pro Darker]": {
+            "enabled": true, // enable for all themes
+            // Underline means const value/function in cpp
+            //             but mutable value/function in rust
+            // method function is italic
+            "rules": {
+                "parameter": {
+                    "foreground": "#aad2df",
+                    "fontStyle": "",
+                },
+                "property": "#8ed1b7",
+                "variable": "#ccc3c7",
+                "namespace": "#fe8019",
+                "macro:rust": "#ff5c46",
+                "macroBang:rust": "#ff5c46",
+                "method": {
+                    "fontStyle": "italic"
+                },
+                "*.readonly:cpp": {
+                    "fontStyle": "underline"
+                },
+                "method.readonly:cpp": {
+                    "fontStyle": "italic underline"
+                },
+                "*.mutable:rust": {
+                    "fontStyle": "underline"
+                },
+                "method.mutable:rust": {
+                    "fontStyle": "italic underline"
+                },
+                "*.deprecated": {
+                    "fontStyle": "strikethrough"
+                }
+            }
+        },
+        "[One Dark Pro]": {
+            // https://github.com/akamud/vscode-theme-onedark/blob/master/themes/OneDark.json
+            "enabled": true, // enable for all themes
+            "rules": {
+                "property": {
+                    "foreground": "#64d3bd",
+                },
+                "variable": {
+                    "foreground": "#c7c5c5",
+                },
+                "parameter": {
+                    "fontStyle": "italic",
+                    "foreground": "#add7f0"
+                },
+                "namespace": {
+                    "foreground": "#fe8019",
+                },
+                "macro:rust": {
+                    "foreground": "#ff5c46",
+                },
+                "macroBang:rust": {
+                    "foreground": "#ff5c46",
+                },
+            }
+        },
+    },
+    "editor.tokenColorCustomizations": {
+        "[One Dark Pro]": {
+            "comments": "#5C6370"
+        },
+        "[One Dark Pro Darker]": {
+            "keywords": {
+                // "foreground": "#ff57b1"
+                // "foreground": "#ff4dac"
+            },
+        },
+        "[Default Dark+]": {
+            "comments": {
+                "fontStyle": "italic",
+            },
+        }
+    },
+    "oneDarkPro.editorTheme": "One Dark Pro Darker",
+    "vsicons.dontShowNewVersionMessage": true,
+    "vsicons.presets.hideExplorerArrows": true,
+    "git.confirmSync": false,
+    "git.autofetch": true,
+    // Perforce Setting
+    "perforce.realpath": true,
+    "perforce.activationMode": "always",
+    "perforce.explorer.showSyncCommands": false,
+    "comments.openView": "file",
+    "errorLens.fontStyleItalic": true,
+    "errorLens.fontFamily": "hack nerd font mono",
+    "errorLens.gutterIconsEnabled": true,
+    "window.commandCenter": true,
+    
+    // rust-analyzer configuration
+    "workbench.colorTheme": "One Dark Pro Darker",
+    "redhat.telemetry.enabled": false,
+    "editor.wordWrap": "on",
+    "yaml.schemas": {
+        "file:///u/chielin/.vscode-server/extensions/atlassian.atlascode-3.0.10/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "atlascode.jira.enabled": true,
+    "atlascode.bitbucket.enabled": false,
+    "atlascode.jira.jqlList": [
+        {
+            "id": "ec0bf537-9f44-43f8-afc5-a7bbb2b5f91c",
+            "enabled": true,
+            "name": "My jira.synopsys.com Issues",
+            "query": "assignee = currentUser() AND resolution = Unresolved ORDER BY lastViewed DESC",
+            "siteId": "jira.synopsys.com",
+            "monitor": true
+        },
+        {
+            "id": "ab28b7b3-0e29-4567-b16e-beac82a37646",
+            "siteId": "jira.synopsys.com",
+            "name": "all my watch and unresolved",
+            "query": "watcher = currentUser() AND resolution = Unresolved ORDER BY priority DESC, updated DESC",
+            "enabled": true,
+            "monitor": true
+        },
+        {
+            "id": "7d83c967-79df-4aa6-a479-532492343a62",
+            "siteId": "jira.synopsys.com",
+            "name": "Russell's",
+            "query": "assignee = chiechen AND resolution = Unresolved ORDER BY updated DESC",
+            "enabled": true,
+            "monitor": true
+        },
+        {
+            "id": "1dd8c33f-283e-409a-b396-b3dae0b0ed1d",
+            "siteId": "jira.synopsys.com",
+            "name": "YueCheng's",
+            "query": "assignee = yuecheng AND resolution = Unresolved ORDER BY updated DESC",
+            "enabled": true,
+            "monitor": true
+        },
+        {
+            "id": "ee389db2-213a-410e-9861-ba0fff20ffab",
+            "siteId": "jira.synopsys.com",
+            "name": "ChingWei's",
+            "query": "assignee = chiyang AND resolution = Unresolved ORDER BY updated DESC",
+            "enabled": true,
+            "monitor": true
+        },
+        {
+            "id": "4ea67f59-04c4-412d-a89b-1bd19a8b4647",
+            "siteId": "jira.synopsys.com",
+            "name": "ChihChia's",
+            "query": "assignee = chihchia AND resolution = Unresolved ORDER BY updated DESC",
+            "enabled": true,
+            "monitor": true
+        }
+    ],
+    "atlascode.jira.lastCreateSiteAndProject": {
+        "siteId": "jira.synopsys.com",
+        "projectKey": ""
+    },
+    "editor.guides.bracketPairs": true,
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "XXX",
+        "[ ]",
+        "[x]",
+        "TODO-Hydra",
+        "TODO-Chielin",
+        "TODO-SLT"
+    ],
+    "todo-tree.highlights.backgroundColourScheme": [
+        "red",
+        "orange",
+        "yellow",
+        "green",
+        "blue",
+        "indigo",
+        "violet",
+        "yellow",
+        "yellow",
+        "yellow"
+    ],
+    "todo-tree.highlights.customHighlight": {
+    
+        "TODO": {
+            "icon": "check",
+            // "type": "line",
+            "foreground": "#ffff00",
+            "background": "#868686",
+        },
+        "TODO-Hydra" : {
+            "icon": "infinity",
+            // "type": "line",
+            "foreground": "#00eeff",
+            "background": "#868686",
+        },
+        "TODO-Chielin" : {
+            "icon": "infinity",
+            // "type": "line",
+            "foreground": "#00eeff",
+            "background": "#868686",
+        },
+        "TODO-SLT" : {
+            "icon": "infinity",
+            // "type": "line",
+            "foreground": "#00eeff",
+            "background": "#868686",
+        }
+    },
+    "editor.stickyScroll.maxLineCount": 10,
+    "editor.stickyScroll.enabled": true,
+    "errorLens.excludeBySource": [
+        "clang-tidy(performance-for-range-copy)"
+    ],
+    "diffEditor.experimental.showMoves": true,
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "errorLens.enabledDiagnosticLevels": [
+        "error",
+        "warning",
+        "info",
+        "hint"
+    ],
+    "workbench.editor.pinnedTabsOnSeparateRow": true,
+    "perforce.fileShelveMode": "keep both",
+    "perforce.resolve.p4editor": "/remote/vgrnd106/chielin/bin/p4_resolve.sh",
+    "editor.codeActionWidget.includeNearbyQuickFixes": true,
+    "workbench.productIconTheme": "macos-modern",
+    "workbench.tree.enableStickyScroll": true,
+    "VSCodeCounter.languages": {
+        "cpp": {
+            "aliases": [
+                "C++",
+                "Cpp",
+                "cpp"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".cpp",
+                ".cc",
+                ".cxx",
+                ".c++",
+                ".hpp",
+                ".hh",
+                ".hxx",
+                ".h++",
+                ".h",
+                ".ii",
+                ".ino",
+                ".inl",
+                ".ipp",
+                ".ixx",
+                ".tpp",
+                ".txx",
+                ".hpp.in",
+                ".h.in"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [
+                [
+                    "R(\"",
+                    "\")"
+                ]
+            ],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "/*",
+                    "*/"
+                ]
+            ]
+        },
+        "javascriptreact": {
+            "aliases": [
+                "JavaScript JSX",
+                "JavaScript React",
+                "jsx"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".jsx"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "{/*",
+                    "*/}"
+                ],
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [
+                [
+                    "`",
+                    "`"
+                ]
+            ],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "`",
+                    "`"
+                ],
+                [
+                    "/**",
+                    " */"
+                ]
+            ]
+        },
+        "typescriptreact": {
+            "aliases": [
+                "TypeScript JSX",
+                "TypeScript React",
+                "tsx"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".tsx"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "{/*",
+                    "*/}"
+                ],
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [
+                [
+                    "`",
+                    "`"
+                ]
+            ],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "`",
+                    "`"
+                ],
+                [
+                    "/**",
+                    " */"
+                ]
+            ]
+        },
+        "bat": {
+            "aliases": [
+                "Batch",
+                "bat"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".bat",
+                ".cmd"
+            ],
+            "lineComments": [
+                "::",
+                "REM",
+                "@REM",
+                "rem",
+                "@rem"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ]
+            ]
+        },
+        "clojure": {
+            "aliases": [
+                "Clojure",
+                "clojure"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".clj",
+                ".cljs",
+                ".cljc",
+                ".cljx",
+                ".clojure",
+                ".edn"
+            ],
+            "lineComments": [
+                ";;"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ]
+            ]
+        },
+        "coffeescript": {
+            "aliases": [
+                "CoffeeScript",
+                "coffeescript",
+                "coffee"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".coffee",
+                ".cson",
+                ".iced"
+            ],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [
+                [
+                    "###",
+                    "###"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ]
+            ]
+        },
+        "jsonc": {
+            "aliases": [
+                "JSON with Comments"
+            ],
+            "filenames": [
+                "settings.json",
+                "launch.json",
+                "tasks.json",
+                "keybindings.json",
+                "extensions.json",
+                "argv.json",
+                "profiles.json",
+                "devcontainer.json",
+                ".devcontainer.json",
+                "babel.config.json",
+                ".babelrc.json",
+                ".ember-cli",
+                "typedoc.json",
+                "tsconfig.json",
+                "jsconfig.json",
+                "devcontainer-feature.json",
+                ".devcontainer-internal.json"
+            ],
+            "extensions": [
+                ".code-workspace",
+                "language-configuration.json",
+                "icon-theme.json",
+                "color-theme.json",
+                ".jsonc",
+                ".eslintrc",
+                ".eslintrc.json",
+                ".jsfmtrc",
+                ".jshintrc",
+                ".swcrc",
+                ".hintrc",
+                ".babelrc"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "`",
+                    "`"
+                ]
+            ]
+        },
+        "json": {
+            "aliases": [
+                "JSON",
+                "json"
+            ],
+            "filenames": [
+                "composer.lock",
+                ".watchmanconfig",
+                "Pipfile.lock"
+            ],
+            "extensions": [
+                ".code-profile",
+                ".json",
+                ".bowerrc",
+                ".jscsrc",
+                ".webmanifest",
+                ".js.map",
+                ".css.map",
+                ".ts.map",
+                ".har",
+                ".jslintrc",
+                ".jsonld",
+                ".geojson",
+                ".ipynb",
+                ".vuerc",
+                ".tsbuildinfo",
+                ".tour"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "`",
+                    "`"
+                ]
+            ]
+        },
+        "c": {
+            "aliases": [
+                "C",
+                "c"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".c",
+                ".i"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "/*",
+                    "*/"
+                ]
+            ]
+        },
+        "cuda-cpp": {
+            "aliases": [
+                "CUDA C++"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".cu",
+                ".cuh"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "/*",
+                    "*/"
+                ]
+            ]
+        },
+        "csharp": {
+            "aliases": [
+                "C#",
+                "csharp"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".cs",
+                ".csx",
+                ".cake"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ]
+            ]
+        },
+        "css": {
+            "aliases": [
+                "CSS",
+                "css"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".css"
+            ],
+            "lineComments": [],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ]
+            ]
+        },
+        "dart": {
+            "aliases": [
+                "Dart"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".dart"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "`",
+                    "`"
+                ],
+                [
+                    "/**",
+                    " */"
+                ]
+            ]
+        },
+        "diff": {
+            "aliases": [
+                "Diff",
+                "diff"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".diff",
+                ".patch",
+                ".rej"
+            ],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [
+                [
+                    "#",
+                    " "
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": []
+        },
+        "dockerfile": {
+            "aliases": [
+                "Docker",
+                "Dockerfile",
+                "Containerfile"
+            ],
+            "filenames": [
+                "Dockerfile",
+                "Containerfile"
+            ],
+            "extensions": [
+                ".dockerfile",
+                ".containerfile"
+            ],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ]
+            ]
+        },
+        "ignore": {
+            "aliases": [
+                "Ignore",
+                "ignore"
+            ],
+            "filenames": [
+                ".vscodeignore"
+            ],
+            "extensions": [
+                ".gitignore_global",
+                ".gitignore",
+                ".git-blame-ignore-revs",
+                ".npmignore"
+            ],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "`",
+                    "`"
+                ],
+                [
+                    "/**",
+                    " */"
+                ]
+            ]
+        },
+        "fsharp": {
+            "aliases": [
+                "F#",
+                "FSharp",
+                "fsharp"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".fs",
+                ".fsi",
+                ".fsx",
+                ".fsscript"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "(*",
+                    "*)"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ]
+            ]
+        },
+        "git-commit": {
+            "aliases": [
+                "Git Commit Message",
+                "git-commit"
+            ],
+            "filenames": [
+                "COMMIT_EDITMSG",
+                "MERGE_MSG"
+            ],
+            "extensions": [],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [
+                [
+                    "#",
+                    " "
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "`",
+                    "`"
+                ],
+                [
+                    "/**",
+                    " */"
+                ]
+            ]
+        },
+        "git-rebase": {
+            "aliases": [
+                "Git Rebase Message",
+                "git-rebase"
+            ],
+            "filenames": [
+                "git-rebase-todo"
+            ],
+            "extensions": [],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [
+                [
+                    "#",
+                    " "
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "`",
+                    "`"
+                ],
+                [
+                    "/**",
+                    " */"
+                ]
+            ]
+        },
+        "go": {
+            "aliases": [
+                "Go"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".go"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "`",
+                    "`"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ]
+            ]
+        },
+        "groovy": {
+            "aliases": [
+                "Groovy",
+                "groovy"
+            ],
+            "filenames": [
+                "Jenkinsfile"
+            ],
+            "extensions": [
+                ".groovy",
+                ".gvy",
+                ".gradle",
+                ".jenkinsfile",
+                ".nf"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ]
+            ]
+        },
+        "handlebars": {
+            "aliases": [
+                "Handlebars",
+                "handlebars"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".handlebars",
+                ".hbs",
+                ".hjs"
+            ],
+            "lineComments": [],
+            "blockComments": [
+                [
+                    "{{!--",
+                    "--}}"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ]
+            ]
+        },
+        "hlsl": {
+            "aliases": [
+                "HLSL",
+                "hlsl"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".hlsl",
+                ".hlsli",
+                ".fx",
+                ".fxh",
+                ".vsh",
+                ".psh",
+                ".cginc",
+                ".compute"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ]
+            ]
+        },
+        "html": {
+            "aliases": [
+                "HTML",
+                "htm",
+                "html",
+                "xhtml"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".html",
+                ".htm",
+                ".shtml",
+                ".xhtml",
+                ".xht",
+                ".mdoc",
+                ".jsp",
+                ".asp",
+                ".aspx",
+                ".jshtm",
+                ".volt",
+                ".ejs",
+                ".rhtml"
+            ],
+            "lineComments": [],
+            "blockComments": [
+                [
+                    "<!--",
+                    "-->"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "<!--",
+                    "-->"
+                ]
+            ]
+        },
+        "ini": {
+            "aliases": [
+                "Ini",
+                "ini"
+            ],
+            "filenames": [
+                ".flake8",
+                ".pep8",
+                ".pylintrc",
+                ".pypirc"
+            ],
+            "extensions": [
+                ".ini"
+            ],
+            "lineComments": [
+                ";"
+            ],
+            "blockComments": [
+                [
+                    ";",
+                    " "
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ]
+            ]
+        },
+        "properties": {
+            "aliases": [
+                "Properties",
+                "properties"
+            ],
+            "filenames": [
+                "gitconfig",
+                ".env"
+            ],
+            "extensions": [
+                ".conf",
+                ".properties",
+                ".cfg",
+                ".directory",
+                ".gitattributes",
+                ".gitconfig",
+                ".gitmodules",
+                ".editorconfig",
+                ".repo",
+                ".npmrc"
+            ],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [
+                [
+                    "#",
+                    " "
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ]
+            ]
+        },
+        "java": {
+            "aliases": [
+                "Java",
+                "java"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".java",
+                ".jav",
+                ".class"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "/**",
+                    " */"
+                ],
+                [
+                    "/*",
+                    " */"
+                ],
+                [
+                    "\"\"\"",
+                    "\"\"\";"
+                ]
+            ]
+        },
+        "javascript": {
+            "aliases": [
+                "JavaScript",
+                "javascript",
+                "js"
+            ],
+            "filenames": [
+                "jakefile"
+            ],
+            "extensions": [
+                ".js",
+                ".es6",
+                ".mjs",
+                ".cjs",
+                ".pac"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "`",
+                    "`"
+                ],
+                [
+                    "/**",
+                    " */"
+                ]
+            ]
+        },
+        "jsx-tags": {
+            "aliases": [],
+            "filenames": [],
+            "extensions": [],
+            "lineComments": [],
+            "blockComments": [
+                [
+                    "{/*",
+                    "*/}"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "/**",
+                    " */"
+                ]
+            ]
+        },
+        "jsonl": {
+            "aliases": [
+                "JSON Lines"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".jsonl"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "`",
+                    "`"
+                ]
+            ]
+        },
+        "snippets": {
+            "aliases": [
+                "Code Snippets"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".code-snippets"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "`",
+                    "`"
+                ]
+            ]
+        },
+        "julia": {
+            "aliases": [
+                "Julia",
+                "julia"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".jl"
+            ],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [
+                [
+                    "#=",
+                    "=#"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "`",
+                    "`"
+                ],
+                [
+                    "\"",
+                    "\""
+                ]
+            ]
+        },
+        "juliamarkdown": {
+            "aliases": [
+                "Julia Markdown",
+                "juliamarkdown"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".jmd"
+            ],
+            "lineComments": [],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": []
+        },
+        "tex": {
+            "aliases": [
+                "TeX",
+                "tex"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".sty",
+                ".cls",
+                ".bbx",
+                ".cbx"
+            ],
+            "lineComments": [
+                "%"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\\left(",
+                    "\\right)"
+                ],
+                [
+                    "\\left[",
+                    "\\right]"
+                ],
+                [
+                    "\\left\\{",
+                    "\\right\\}"
+                ],
+                [
+                    "\\bigl(",
+                    "\\bigr)"
+                ],
+                [
+                    "\\bigl[",
+                    "\\bigr]"
+                ],
+                [
+                    "\\bigl\\{",
+                    "\\bigr\\}"
+                ],
+                [
+                    "\\Bigl(",
+                    "\\Bigr)"
+                ],
+                [
+                    "\\Bigl[",
+                    "\\Bigr]"
+                ],
+                [
+                    "\\Bigl\\{",
+                    "\\Bigr\\}"
+                ],
+                [
+                    "\\biggl(",
+                    "\\biggr)"
+                ],
+                [
+                    "\\biggl[",
+                    "\\biggr]"
+                ],
+                [
+                    "\\biggl\\{",
+                    "\\biggr\\}"
+                ],
+                [
+                    "\\Biggl(",
+                    "\\Biggr)"
+                ],
+                [
+                    "\\Biggl[",
+                    "\\Biggr]"
+                ],
+                [
+                    "\\Biggl\\{",
+                    "\\Biggr\\}"
+                ],
+                [
+                    "\\(",
+                    "\\)"
+                ],
+                [
+                    "\\[",
+                    "\\]"
+                ],
+                [
+                    "\\{",
+                    "\\}"
+                ],
+                [
+                    "`",
+                    "'"
+                ]
+            ]
+        },
+        "latex": {
+            "aliases": [
+                "LaTeX",
+                "latex"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".tex",
+                ".ltx",
+                ".ctx"
+            ],
+            "lineComments": [
+                "%"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\\left(",
+                    "\\right)"
+                ],
+                [
+                    "\\left[",
+                    "\\right]"
+                ],
+                [
+                    "\\left\\{",
+                    "\\right\\}"
+                ],
+                [
+                    "\\bigl(",
+                    "\\bigr)"
+                ],
+                [
+                    "\\bigl[",
+                    "\\bigr]"
+                ],
+                [
+                    "\\bigl\\{",
+                    "\\bigr\\}"
+                ],
+                [
+                    "\\Bigl(",
+                    "\\Bigr)"
+                ],
+                [
+                    "\\Bigl[",
+                    "\\Bigr]"
+                ],
+                [
+                    "\\Bigl\\{",
+                    "\\Bigr\\}"
+                ],
+                [
+                    "\\biggl(",
+                    "\\biggr)"
+                ],
+                [
+                    "\\biggl[",
+                    "\\biggr]"
+                ],
+                [
+                    "\\biggl\\{",
+                    "\\biggr\\}"
+                ],
+                [
+                    "\\Biggl(",
+                    "\\Biggr)"
+                ],
+                [
+                    "\\Biggl[",
+                    "\\Biggr]"
+                ],
+                [
+                    "\\Biggl\\{",
+                    "\\Biggr\\}"
+                ],
+                [
+                    "\\(",
+                    "\\)"
+                ],
+                [
+                    "\\[",
+                    "\\]"
+                ],
+                [
+                    "\\{",
+                    "\\}"
+                ],
+                [
+                    "`",
+                    "'"
+                ]
+            ]
+        },
+        "bibtex": {
+            "aliases": [
+                "BibTeX",
+                "bibtex"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".bib"
+            ],
+            "lineComments": [],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": []
+        },
+        "cpp_embedded_latex": {
+            "aliases": [],
+            "filenames": [],
+            "extensions": [],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ]
+            ]
+        },
+        "markdown_latex_combined": {
+            "aliases": [],
+            "filenames": [],
+            "extensions": [],
+            "lineComments": [],
+            "blockComments": [
+                [
+                    "<!--",
+                    "-->"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\\left(",
+                    "\\right)"
+                ],
+                [
+                    "\\left[",
+                    "\\right]"
+                ],
+                [
+                    "\\left\\{",
+                    "\\right\\}"
+                ],
+                [
+                    "\\bigl(",
+                    "\\bigr)"
+                ],
+                [
+                    "\\bigl[",
+                    "\\bigr]"
+                ],
+                [
+                    "\\bigl\\{",
+                    "\\bigr\\}"
+                ],
+                [
+                    "\\Bigl(",
+                    "\\Bigr)"
+                ],
+                [
+                    "\\Bigl[",
+                    "\\Bigr]"
+                ],
+                [
+                    "\\Bigl\\{",
+                    "\\Bigr\\}"
+                ],
+                [
+                    "\\biggl(",
+                    "\\biggr)"
+                ],
+                [
+                    "\\biggl[",
+                    "\\biggr]"
+                ],
+                [
+                    "\\biggl\\{",
+                    "\\biggr\\}"
+                ],
+                [
+                    "\\Biggl(",
+                    "\\Biggr)"
+                ],
+                [
+                    "\\Biggl[",
+                    "\\Biggr]"
+                ],
+                [
+                    "\\Biggl\\{",
+                    "\\Biggr\\}"
+                ],
+                [
+                    "\\(",
+                    "\\)"
+                ],
+                [
+                    "\\[",
+                    "\\]"
+                ],
+                [
+                    "\\{",
+                    "\\}"
+                ],
+                [
+                    "`",
+                    "'"
+                ]
+            ]
+        },
+        "less": {
+            "aliases": [
+                "Less",
+                "less"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".less"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ]
+            ]
+        },
+        "log": {
+            "aliases": [
+                "Log",
+                "Log File",
+                "log"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".log",
+                "*.log.?"
+            ],
+            "lineComments": [],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": []
+        },
+        "lua": {
+            "aliases": [
+                "Lua",
+                "lua"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".lua"
+            ],
+            "lineComments": [
+                "--"
+            ],
+            "blockComments": [
+                [
+                    "--[[",
+                    "]]"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ]
+            ]
+        },
+        "makefile": {
+            "aliases": [
+                "Makefile",
+                "makefile"
+            ],
+            "filenames": [
+                "Makefile",
+                "makefile",
+                "GNUmakefile",
+                "OCamlMakefile"
+            ],
+            "extensions": [
+                ".mak",
+                ".mk"
+            ],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ]
+            ]
+        },
+        "markdown": {
+            "aliases": [
+                "Markdown",
+                "markdown"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".md",
+                ".mkd",
+                ".mdwn",
+                ".mdown",
+                ".markdown",
+                ".markdn",
+                ".mdtxt",
+                ".mdtext",
+                ".workbook"
+            ],
+            "lineComments": [],
+            "blockComments": [
+                [
+                    "<!--",
+                    "-->"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "<",
+                    ">"
+                ]
+            ]
+        },
+        "markdown-math": {
+            "aliases": [],
+            "filenames": [],
+            "extensions": [],
+            "lineComments": [],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": []
+        },
+        "wat": {
+            "aliases": [
+                "WebAssembly Text Format"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".wat",
+                ".wasm"
+            ],
+            "lineComments": [],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": []
+        },
+        "objective-c": {
+            "aliases": [
+                "Objective-C"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".m"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ]
+            ]
+        },
+        "objective-cpp": {
+            "aliases": [
+                "Objective-C++"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".mm"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ]
+            ]
+        },
+        "perl": {
+            "aliases": [
+                "Perl",
+                "perl"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".pl",
+                ".pm",
+                ".pod",
+                ".t",
+                ".PL",
+                ".psgi"
+            ],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "`",
+                    "`"
+                ]
+            ]
+        },
+        "raku": {
+            "aliases": [
+                "Raku",
+                "Perl6",
+                "perl6"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".raku",
+                ".rakumod",
+                ".rakutest",
+                ".rakudoc",
+                ".nqp",
+                ".p6",
+                ".pl6",
+                ".pm6"
+            ],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "`",
+                    "`"
+                ]
+            ]
+        },
+        "php": {
+            "aliases": [
+                "PHP",
+                "php"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".php",
+                ".php4",
+                ".php5",
+                ".phtml",
+                ".ctp"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "/**",
+                    " */"
+                ]
+            ]
+        },
+        "powershell": {
+            "aliases": [
+                "PowerShell",
+                "powershell",
+                "ps",
+                "ps1"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".ps1",
+                ".psm1",
+                ".psd1",
+                ".pssc",
+                ".psrc"
+            ],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [
+                [
+                    "<#",
+                    "#>"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "@'",
+                    "\n'@"
+                ],
+                [
+                    "@\"",
+                    "\n\"@"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "<#",
+                    "#>"
+                ]
+            ]
+        },
+        "jade": {
+            "aliases": [
+                "Pug",
+                "Jade",
+                "jade"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".pug",
+                ".jade"
+            ],
+            "lineComments": [
+                "//-"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ]
+            ]
+        },
+        "python": {
+            "aliases": [
+                "Python",
+                "py"
+            ],
+            "filenames": [
+                "SConstruct",
+                "SConscript"
+            ],
+            "extensions": [
+                ".py",
+                ".rpy",
+                ".pyw",
+                ".cpy",
+                ".gyp",
+                ".gypi",
+                ".pyi",
+                ".ipy",
+                ".pyt"
+            ],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [
+                [
+                    "\"\"\"",
+                    "\"\"\""
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "r\"",
+                    "\""
+                ],
+                [
+                    "R\"",
+                    "\""
+                ],
+                [
+                    "u\"",
+                    "\""
+                ],
+                [
+                    "U\"",
+                    "\""
+                ],
+                [
+                    "f\"",
+                    "\""
+                ],
+                [
+                    "F\"",
+                    "\""
+                ],
+                [
+                    "b\"",
+                    "\""
+                ],
+                [
+                    "B\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "r'",
+                    "'"
+                ],
+                [
+                    "R'",
+                    "'"
+                ],
+                [
+                    "u'",
+                    "'"
+                ],
+                [
+                    "U'",
+                    "'"
+                ],
+                [
+                    "f'",
+                    "'"
+                ],
+                [
+                    "F'",
+                    "'"
+                ],
+                [
+                    "b'",
+                    "'"
+                ],
+                [
+                    "B'",
+                    "'"
+                ],
+                [
+                    "`",
+                    "`"
+                ]
+            ]
+        },
+        "r": {
+            "aliases": [
+                "R",
+                "r"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".r",
+                ".rhistory",
+                ".rprofile",
+                ".rt"
+            ],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "`",
+                    "`"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "%",
+                    "%"
+                ]
+            ]
+        },
+        "razor": {
+            "aliases": [
+                "Razor",
+                "razor"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".cshtml",
+                ".razor"
+            ],
+            "lineComments": [],
+            "blockComments": [
+                [
+                    "<!--",
+                    "-->"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ]
+            ]
+        },
+        "restructuredtext": {
+            "aliases": [
+                "reStructuredText"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".rst"
+            ],
+            "lineComments": [
+                ".."
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "<",
+                    ">"
+                ],
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "`",
+                    "`"
+                ],
+                [
+                    "\"",
+                    "\""
+                ]
+            ]
+        },
+        "ruby": {
+            "aliases": [
+                "Ruby",
+                "rb"
+            ],
+            "filenames": [
+                "rakefile",
+                "gemfile",
+                "guardfile",
+                "podfile",
+                "capfile",
+                "cheffile",
+                "hobofile",
+                "vagrantfile",
+                "appraisals",
+                "rantfile",
+                "berksfile",
+                "berksfile.lock",
+                "thorfile",
+                "puppetfile",
+                "dangerfile",
+                "brewfile",
+                "fastfile",
+                "appfile",
+                "deliverfile",
+                "matchfile",
+                "scanfile",
+                "snapfile",
+                "gymfile"
+            ],
+            "extensions": [
+                ".rb",
+                ".rbx",
+                ".rjs",
+                ".gemspec",
+                ".rake",
+                ".ru",
+                ".erb",
+                ".podspec",
+                ".rbi"
+            ],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [
+                [
+                    "=begin",
+                    "=end"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "`",
+                    "`"
+                ]
+            ]
+        },
+        "rust": {
+            "aliases": [
+                "Rust",
+                "rust",
+                "rs"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".rs"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "/*",
+                    " */"
+                ],
+                [
+                    "`",
+                    "`"
+                ]
+            ]
+        },
+        "scss": {
+            "aliases": [
+                "SCSS",
+                "scss"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".scss"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ]
+            ]
+        },
+        "search-result": {
+            "aliases": [
+                "Search Result"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".code-search"
+            ],
+            "lineComments": [],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": []
+        },
+        "shaderlab": {
+            "aliases": [
+                "ShaderLab",
+                "shaderlab"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".shader"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ]
+            ]
+        },
+        "shellscript": {
+            "aliases": [
+                "Shell Script",
+                "shellscript",
+                "bash",
+                "fish",
+                "sh",
+                "zsh",
+                "ksh",
+                "csh"
+            ],
+            "filenames": [
+                "APKBUILD",
+                "PKGBUILD",
+                ".envrc",
+                ".hushlogin",
+                "zshrc",
+                "zshenv",
+                "zlogin",
+                "zprofile",
+                "zlogout",
+                "bashrc_Apple_Terminal",
+                "zshrc_Apple_Terminal"
+            ],
+            "extensions": [
+                ".sh",
+                ".bash",
+                ".bashrc",
+                ".bash_aliases",
+                ".bash_profile",
+                ".bash_login",
+                ".ebuild",
+                ".profile",
+                ".bash_logout",
+                ".xprofile",
+                ".xsession",
+                ".xsessionrc",
+                ".Xsession",
+                ".zsh",
+                ".zshrc",
+                ".zprofile",
+                ".zlogin",
+                ".zlogout",
+                ".zshenv",
+                ".zsh-theme",
+                ".fish",
+                ".ksh",
+                ".csh",
+                ".cshrc",
+                ".tcshrc",
+                ".yashrc",
+                ".yash_profile"
+            ],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "`",
+                    "`"
+                ]
+            ]
+        },
+        "sql": {
+            "aliases": [
+                "SQL"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".sql",
+                ".dsql"
+            ],
+            "lineComments": [
+                "--"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "N'",
+                    "'"
+                ],
+                [
+                    "'",
+                    "'"
+                ]
+            ]
+        },
+        "swift": {
+            "aliases": [
+                "Swift",
+                "swift"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".swift"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "`",
+                    "`"
+                ]
+            ]
+        },
+        "typescript": {
+            "aliases": [
+                "TypeScript",
+                "ts",
+                "typescript"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".ts",
+                ".cts",
+                ".mts"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "`",
+                    "`"
+                ],
+                [
+                    "/**",
+                    " */"
+                ]
+            ]
+        },
+        "vb": {
+            "aliases": [
+                "Visual Basic",
+                "vb"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".vb",
+                ".brs",
+                ".vbs",
+                ".bas",
+                ".vba"
+            ],
+            "lineComments": [
+                "'"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ]
+            ]
+        },
+        "xml": {
+            "aliases": [
+                "XML",
+                "xml"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".xml",
+                ".xsd",
+                ".ascx",
+                ".atom",
+                ".axml",
+                ".axaml",
+                ".bpmn",
+                ".cpt",
+                ".csl",
+                ".csproj",
+                ".csproj.user",
+                ".dita",
+                ".ditamap",
+                ".dtd",
+                ".ent",
+                ".mod",
+                ".dtml",
+                ".fsproj",
+                ".fxml",
+                ".iml",
+                ".isml",
+                ".jmx",
+                ".launch",
+                ".menu",
+                ".mxml",
+                ".nuspec",
+                ".opml",
+                ".owl",
+                ".proj",
+                ".props",
+                ".pt",
+                ".publishsettings",
+                ".pubxml",
+                ".pubxml.user",
+                ".rbxlx",
+                ".rbxmx",
+                ".rdf",
+                ".rng",
+                ".rss",
+                ".shproj",
+                ".storyboard",
+                ".svg",
+                ".targets",
+                ".tld",
+                ".tmx",
+                ".vbproj",
+                ".vbproj.user",
+                ".vcxproj",
+                ".vcxproj.filters",
+                ".wsdl",
+                ".wxi",
+                ".wxl",
+                ".wxs",
+                ".xaml",
+                ".xbl",
+                ".xib",
+                ".xlf",
+                ".xliff",
+                ".xpdl",
+                ".xul",
+                ".xoml"
+            ],
+            "lineComments": [],
+            "blockComments": [
+                [
+                    "<!--",
+                    "-->"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "<!--",
+                    "-->"
+                ]
+            ]
+        },
+        "xsl": {
+            "aliases": [
+                "XSL",
+                "xsl"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".xsl",
+                ".xslt"
+            ],
+            "lineComments": [],
+            "blockComments": [
+                [
+                    "<!--",
+                    "-->"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": []
+        },
+        "dockercompose": {
+            "aliases": [
+                "Compose",
+                "compose"
+            ],
+            "filenames": [],
+            "extensions": [],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ]
+            ]
+        },
+        "yaml": {
+            "aliases": [
+                "YAML",
+                "yaml"
+            ],
+            "filenames": [
+                ".condarc",
+                ".clang-format",
+                "_clang-format"
+            ],
+            "extensions": [
+                ".yml",
+                ".eyaml",
+                ".eyml",
+                ".yaml",
+                ".cff",
+                ".yaml-tmlanguage",
+                ".yaml-tmpreferences",
+                ".yaml-tmtheme"
+            ],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "`",
+                    "`"
+                ]
+            ]
+        },
+        "tcl": {
+            "aliases": [
+                "Tcl",
+                "tcl"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".tcl"
+            ],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ]
+            ]
+        },
+        "mermaid": {
+            "aliases": [],
+            "filenames": [],
+            "extensions": [
+                ".mmd"
+            ],
+            "lineComments": [],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": []
+        },
+        "code-referencing": {
+            "aliases": [],
+            "filenames": [],
+            "extensions": [],
+            "lineComments": [],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": []
+        },
+        "valgrind": {
+            "aliases": [
+                "Valgrind",
+                "valgrind"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".valgrind"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ]
+            ]
+        },
+        "toml": {
+            "aliases": [
+                "TOML"
+            ],
+            "filenames": [
+                "pyproject.toml",
+                ".isort",
+                "Pipfile",
+                "poetry.lock",
+                "Cargo.lock"
+            ],
+            "extensions": [
+                ".toml"
+            ],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ]
+            ]
+        },
+        "jinja": {
+            "aliases": [
+                "Jinja"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".j2",
+                ".jinja2"
+            ],
+            "lineComments": [],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": []
+        },
+        "pip-requirements": {
+            "aliases": [
+                "pip requirements",
+                "requirements.txt"
+            ],
+            "filenames": [
+                "constraints.txt",
+                "requirements.in",
+                "requirements.txt"
+            ],
+            "extensions": [],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": []
+        },
+        "raw": {
+            "aliases": [],
+            "filenames": [],
+            "extensions": [],
+            "lineComments": [],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": []
+        },
+        "ssh_config": {
+            "aliases": [
+                "SSH Config",
+                "ssh_config"
+            ],
+            "filenames": [
+                "ssh.config"
+            ],
+            "extensions": [],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ]
+            ]
+        },
+        "java-properties": {
+            "aliases": [
+                "Java Properties"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".properties"
+            ],
+            "lineComments": [
+                "#"
+            ],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "'",
+                    "'"
+                ]
+            ]
+        },
+        "gradle-kotlin-dsl": {
+            "aliases": [
+                "Gradle Kotlin DSL"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".gradle.kts"
+            ],
+            "lineComments": [
+                "//"
+            ],
+            "blockComments": [
+                [
+                    "/*",
+                    "*/"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": [
+                [
+                    "'",
+                    "'"
+                ],
+                [
+                    "\"",
+                    "\""
+                ],
+                [
+                    "/*",
+                    " */"
+                ]
+            ]
+        },
+        "ra_syntax_tree": {
+            "aliases": [],
+            "filenames": [],
+            "extensions": [
+                ".rast"
+            ],
+            "lineComments": [],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": []
+        },
+        "rustdoc": {
+            "aliases": [],
+            "filenames": [],
+            "extensions": [
+                ".rustdoc"
+            ],
+            "lineComments": [],
+            "blockComments": [
+                [
+                    "<!--",
+                    "-->"
+                ]
+            ],
+            "blockStrings": [],
+            "lineStrings": []
+        },
+        "lldb.disassembly": {
+            "aliases": [
+                "Disassembly"
+            ],
+            "filenames": [],
+            "extensions": [
+                ".disasm"
+            ],
+            "lineComments": [],
+            "blockComments": [],
+            "blockStrings": [],
+            "lineStrings": []
+        }
+    },
+    "markdown-preview-enhanced.codeBlockTheme": "github.css",
+    "vscode-pets.throwBallWithMouse": true,
+    "terminal.integrated.experimentalInlineChat": true,
+    "security.workspace.trust.untrustedFiles": "open",
+    "github.copilot.editor.enableAutoCompletions": true,
+}

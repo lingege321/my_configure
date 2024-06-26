@@ -71,7 +71,7 @@ function fp4Reopen() {
 }
 
 function codew() {
-    local ws=$(ls ~/vscodeWorkspace | fzf)
+    local ws=$(/bin/ls ~/vscodeWorkspace | fzf)
         if [[ $ws != "" ]] ; then
             code ~/vscodeWorkspace/$ws
         fi
