@@ -18,6 +18,7 @@ alias mount-googledrive='google-drive-ocamlfuse ~/lingege32.ee06g.google.drive '
 
 
 
+alias ls="eza --icons=always -g --time-style='+%Y-%m-%d %a %H:%M:%S'"
 alias ls="lsd "
 alias la="ls -a"
 alias ll="ls -l"
