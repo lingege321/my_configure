@@ -17,7 +17,7 @@ alias mount-googledrive='google-drive-ocamlfuse ~/lingege32.ee06g.google.drive '
 
 
 
-export EZA_COLORS="da=38;5;36:uu=38;5;230:uR=39;5;244:un=38;5;244:gu=38;5;187:gR=39;5;244:gn=38;5;244"
+export EZA_COLORS="da=38;5;36:uu=38;5;230:uR=39;5;244:un=38;5;244:gu=38;5;187:gR=39;5;244:gn=38;5;244:nb=38;5;113:nk=38;5;228:nm=38;5;215:ng=4;38;5;208:nt=4;38;5;9"
 alias ls="eza --icons=always -g --time-style='+%Y-%m-%d %a %H:%M:%S'"
 #alias ls="lsd "
 alias la="ls -a"
