@@ -378,6 +378,7 @@ if-shell -b '[ $(echo "$(tmux -V | cut -c 6-8) >= 3.2" | bc) -eq 1 ]' "unbind C-
 bind -r p previous-window
 bind -r n next-window
 bind-key l last-window
+bind C-Y set-window-option synchronize-panes
 set -g status-position bottom
 
 # default shell
