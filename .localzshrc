@@ -18,8 +18,8 @@ umask 022
 export LIBGL_ALWAYS_INDIRECT=1
 
 export CPLUS_INCLUDE_PATH=$HOME/.local/include
-export LD_LIBRARY_PATH=$HOME/.local/lib:$HOME/.local/lib64:$LD_LIBRARY_PATH:/lib64
-export LIBRARY_PATH=$HOME/.local/lib:$HOME/.local/lib64:$LIBRARY_PATH:/lib64
+export LD_LIBRARY_PATH=$HOME/.local/lib:$HOME/.local/lib64:$LD_LIBRARY_PATH
+export LIBRARY_PATH=$HOME/.local/lib:$HOME/.local/lib64:$LIBRARY_PATH
 
 # firefox runtime directory
 export XDG_RUNTIME_DIR=${HOME}/.cache/firefox/run
@@ -31,5 +31,8 @@ eval "$(starship init zsh)"
 NPM_PACKAGES=/u/chielin/.npm-packages
 NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 PATH="$NPM_PACKAGES/bin:$PATH"
+
+
+dedup_all_env
 
 [ -x $(which cfonts) ] && cfonts "Welcome|$(whoami)" -a center -g '#f61cb9','#07d569','#1c92f6' -t

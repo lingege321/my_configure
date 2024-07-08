@@ -114,3 +114,19 @@ function tar_cp() {
     tar cf - . | (cd $tgt && tar xvf -)
     cd $p
 }
+
+# remove the duplicate PATH
+function _dedup_env() {
+    local arg=$1
+    export $arg=$(printf "%s" $(printenv $arg) | awk -v RS=':' '!a[$1]++ { if (NR > 1) printf RS; printf $1}')
+}
+
+function dedup_all_env(){
+    _dedup_env PATH
+    _dedup_env LD_LIBRARY_PATH
+    _dedup_env LIBRARY_PATH
+    _dedup_env MANPATH
+    _dedup_env _LMFILES_
+    _dedup_env INFOPATH
+    _dedup_env C_INCLUDE_PATH
+}
