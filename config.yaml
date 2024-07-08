@@ -21,6 +21,7 @@ CompileFlags:
       -Wexceptions,
       -Wno-switch-enum,
       -Wimplicit-fallthrough,
+      --gcc-toolchain=/depot/qsc/QSCW/GCC,
     ]
   Remove: -Werror
 
