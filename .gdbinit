@@ -8,7 +8,7 @@ set print array-indexes on
 #source /grid/cic/vficpv_t2b_001/chienhun/gdbFile/backtraceHL.py
 python
 import sys
-sys.path.insert(0, '/global/freeware/Linux/3.10/gcc-9.2.0/share/gcc-9.2.0/python')
+sys.path.insert(0, '/depot/qsc/QSCW/GCC/share/gcc-12.3.0/python')
 from libstdcxx.v6.printers import register_libstdcxx_printers
 register_libstdcxx_printers (None)
 end

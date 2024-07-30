@@ -1,13 +1,13 @@
 Hover:
-  ShowAKA: Yes
+  ShowAKA: true
 
 InlayHints:
-  Enabled: Yes
-  ParameterNames: No
-  DeducedTypes: Yes
+  Enabled: true
+  ParameterNames: false
+  DeducedTypes: true
   TypeNameLimit: 0
-  BlockEnd: Yes
-  Designators: Yes
+  BlockEnd: true
+  Designators: true
 
 CompileFlags:
   Add:
