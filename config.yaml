@@ -12,6 +12,7 @@ InlayHints:
 CompileFlags:
   Add:
     [
+      -I/remote/vgrnd106/chielin/local/range-v3/range-v3-0.12.0/include,
       -Wunused-function,
       -Wall,
       -Wextra,
@@ -60,4 +61,4 @@ Diagnostics:
         readability-redundant-access-specifiers,
       ]
     CheckOptions:
-      readability-function-cognitive-complexity.Threshold: 100
+      readability-function-cognitive-complexity.Threshold: 25
