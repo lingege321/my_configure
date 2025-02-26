@@ -55,10 +55,13 @@ Diagnostics:
         readability-identifier-length,
         readability-implicit-bool-conversion,
         readability-suspicious-call-argument,
-        readability-qualified-auto,
         readability-magic-numbers,
         readability-isolate-declaration,
         readability-redundant-access-specifiers,
+        readability-avoid-unconditional-preprocessor-if,
       ]
     CheckOptions:
-      readability-function-cognitive-complexity.Threshold: 25
+      readability-function-cognitive-complexity.Threshold: 25,
+      readability-function-cognitive-complexity.IgnoreMacros: true,
+      readability-qualified-auto.AddConstToQualified: false
+

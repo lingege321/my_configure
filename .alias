@@ -72,10 +72,32 @@ function fp4Reopen() {
 }
 
 function codew() {
-    local ws=$(/bin/ls ~/vscodeWorkspace | fzf)
-        if [[ $ws != "" ]] ; then
-            code ~/vscodeWorkspace/$ws
+    local tmpFile=/tmp/codew.$$.txt
+    touch $tmpFile
+    echo "Name Path" >> $tmpFile
+    for ws in $(/bin/ls -l ${HOME}/vscodeWorkspace/ | grep ${USER} | awk '{print $9}') ; do
+        echo "${ws} ${HOME}/vscodeWorkspace/${ws}" >> $tmpFile
+    done
+
+    for ws in $(p4 clients -u ${USER} | awk '{print $2","$5}') ; do
+        local client=$(echo $ws | cut -d ',' -f 1 )
+        local p=$(echo $ws | cut -d ',' -f 2 )
+        if [[ -d $p ]] ; then
+            echo "${client} ${p}" >> $tmpFile
         fi
+
+        if [[ -d ${p}/zebu ]] ; then
+            echo "${client}_zebu ${p}/zebu" >> $tmpFile
+        fi
+    done
+
+    local tgt=$(cat $tmpFile |column -t| fzf --header-lines=1 | awk '{print $2}')
+
+    code ${tgt}
+    
+
+    rm $tmpFile
+    
 }
 function all_pd() {
     local p=$1
