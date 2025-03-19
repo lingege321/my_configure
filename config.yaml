@@ -5,14 +5,15 @@ InlayHints:
   Enabled: true
   ParameterNames: false
   DeducedTypes: true
-  TypeNameLimit: 0
+  TypeNameLimit: 1000
   BlockEnd: true
+  DefaultArguments: false
   Designators: true
 
 CompileFlags:
   Add:
     [
-      -I/remote/vgrnd106/chielin/local/range-v3/range-v3-0.12.0/include,
+      -I/remote/vgrnd106/chielin/local/range-v3/range-v3/0.12.0/include,
       -Wunused-function,
       -Wall,
       -Wextra,
