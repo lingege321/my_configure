@@ -47,7 +47,7 @@ format = "[ \uf108 $hostname ]($style)[\ue0b5](fg:245 bg:238)"
 
 [directory]
 style = "bold bg:238 fg:cyan"
-read_only = " \uf023"
+read_only = " \uf023 "
 read_only_style = "fg:red bg:238"
 truncation_length = 3
 truncation_symbol = ".../"

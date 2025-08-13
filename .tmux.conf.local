@@ -385,4 +385,6 @@ set -g status-position bottom
 #set-option -g default-shell /depot/zsh/zsh-5.8/bin/zsh
 set-option -g default-shell /remote/vgrnd106/chielin/bin/zsh
 
-
+# avoid 11;rgb:d1d1/f4f4/d6d6 in tmux
+set -sg escape-time 500 # or set to some value larger than 10
+set -g focus-events off
