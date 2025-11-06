@@ -28,6 +28,10 @@ alias lt="ls --tree"
 alias rd="readlink -f"
 
 
+which cursor
+if [[ $? == 0 ]]; then
+    alias code="cursor"
+fi
 alias clk="tty-clock -c -s"
 
 
