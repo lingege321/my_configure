@@ -28,7 +28,7 @@ alias lt="ls --tree"
 alias rd="readlink -f"
 
 
-which cursor
+which cursor > /dev/null 2>&1
 if [[ $? == 0 ]]; then
     alias code="cursor"
 fi
