@@ -1,0 +1,379 @@
+# Cursor AI Rules for Zebu Multi-Agent Project
+
+## Project Context
+This is a timing analysis project (Zebu) written in C/C++. The codebase involves complex graph algorithms, timing analysis, and performance-critical operations.
+
+---
+
+## Multi-Agent Mode Configuration
+
+### Enable Parallel Agent Execution
+When working on complex tasks, utilize Cursor 2.0's multi-agent capabilities:
+- Run up to 8 agents in parallel for independent tasks
+- Each agent operates in isolated Git worktrees
+- Agents follow roles defined in AGENTS.md
+
+### Agent Role Selection
+When prompted for a task, automatically select the appropriate agent based on the domain:
+
+**Architecture & Core Logic** → Agent 1
+- Files: `sw_cc/ktim/ktim_tgraph.cc`, core implementation files
+- Use Claude Sonnet 4.5 or Composer for complex reasoning
+
+**API & Interface Design** → Agent 2
+- Files: `*.hh`, `*.h` header files
+- Use Claude Sonnet 4.5 for design expertise
+
+**Testing & Validation** → Agent 3
+- Files: `test_*.cc`, `*_test.cc`, testing frameworks
+- Use Composer for fast test generation
+
+**Performance & Optimization** → Agent 4
+- Focus: Algorithm optimization, profiling, memory management
+- Use Claude Sonnet 4.5 for deep optimization insights
+
+**Documentation** → Agent 5
+- Files: `*.md`, `README.*`, code comments
+- Use GPT-5 or Composer for clear technical writing
+
+**Security & Validation** → Agent 6
+- Focus: Input validation, error handling, security checks
+- Use Claude Sonnet 4.5 for security expertise
+
+---
+
+## File Domain Boundaries
+
+### Core Implementation Domain
+```
+sw_cc/ktim/*.cc
+sw_cc/ktim/*.cxx
+```
+**Primary Agent:** Agent 1
+**Review Required:** Agent 4 (performance)
+
+### Interface Domain
+```
+sw_cc/ktim/*.hh
+sw_cc/ktim/*.h
+include/*.h
+```
+**Primary Agent:** Agent 2
+**Review Required:** Agent 1 (architecture)
+
+### Testing Domain
+```
+tests/**/*
+test_*.cc
+*_test.cc
+```
+**Primary Agent:** Agent 3
+**No Cross-Contamination:** Tests should not modify production code
+
+### Documentation Domain
+```
+*.md
+docs/**/*
+README.*
+```
+**Primary Agent:** Agent 5
+**Keep Synchronized:** Must reflect current code state
+
+---
+
+## Code Style and Standards
+
+### C++ Conventions
+- Use modern C++ features (C++11/14/17) where appropriate
+- Follow existing naming conventions in the codebase
+- Prefer RAII for resource management
+- Use const correctness consistently
+- Avoid raw pointers; prefer smart pointers
+
+### Naming Conventions
+- Classes: `PascalCase` or `snake_case` (follow existing pattern)
+- Functions: `snake_case` or `camelCase` (follow existing pattern)
+- Constants: `UPPER_SNAKE_CASE`
+- Member variables: Check existing pattern (m_prefix or trailing_underscore)
+
+### Comments and Documentation
+- Use Doxygen-style comments for public APIs
+- Explain "why" not just "what"
+- Document assumptions and invariants
+- Mark TODOs with TODO(name): description
+
+---
+
+## Agent Collaboration Rules
+
+### Sequential Dependencies
+Some tasks must be done in sequence:
+1. **API Design** (Agent 2) → **Implementation** (Agent 1) → **Testing** (Agent 3)
+2. **Implementation** (Agent 1) → **Optimization** (Agent 4)
+3. **Feature Complete** → **Documentation** (Agent 5)
+
+### Parallel Opportunities
+These tasks can run in parallel:
+- Agent 1 implementing algorithm + Agent 2 designing interface
+- Agent 3 writing tests + Agent 5 drafting documentation
+- Agent 4 profiling code + Agent 6 security review
+
+### Conflict Resolution
+If multiple agents modify the same file:
+1. Use Git worktrees for isolation
+2. Coordinate at checkpoint reviews
+3. Agent 1 (Architecture) has final decision authority
+4. Merge changes incrementally, testing at each step
+
+---
+
+## Performance Requirements
+
+### Critical Performance Areas
+The timing graph code (ktim_tgraph.*) is performance-critical:
+- Optimize for large graphs (millions of nodes/edges)
+- Minimize memory allocations in hot paths
+- Profile before and after optimizations
+- Document time complexity of algorithms
+
+### Benchmarking
+Agent 4 must validate:
+- No performance regression > 5%
+- Memory usage stays within bounds
+- Scalability to large inputs
+
+---
+
+## Testing Requirements
+
+### Test Coverage
+Agent 3 ensures:
+- Minimum 80% code coverage for new code
+- Test both normal and edge cases
+- Include performance regression tests
+- Test error handling paths
+
+### Test Organization
+```
+tests/
+├── unit/          # Unit tests for individual components
+├── integration/   # Integration tests for module interactions
+├── performance/   # Performance benchmarks
+└── regression/    # Regression test suite
+```
+
+---
+
+## Security Guidelines
+
+### Input Validation (Agent 6)
+- Validate all external inputs
+- Check array bounds
+- Prevent integer overflows
+- Handle null pointers gracefully
+- Validate file operations
+
+### Error Handling
+- Use exceptions or error codes consistently
+- Provide meaningful error messages
+- Clean up resources on error paths
+- Log errors appropriately
+
+---
+
+## Git Workflow for Multi-Agent
+
+### Branch Strategy
+```
+main
+├── agent-1/feature-core-algorithm
+├── agent-2/feature-api-design
+├── agent-3/feature-testing
+└── agent-4/feature-optimization
+```
+
+### Worktree Setup
+Each agent works in separate worktree:
+```bash
+# Agent 1 worktree
+git worktree add ../zebu-agent-1 -b agent-1/feature-name
+
+# Agent 2 worktree
+git worktree add ../zebu-agent-2 -b agent-2/feature-name
+```
+
+### Integration Points
+- Daily: Sync agent branches with main
+- Feature checkpoint: Cross-agent code review
+- Pre-merge: All agents validate their domains
+
+---
+
+## Cursor-Specific Settings
+
+### Composer Usage
+Use Composer (Cursor's model) for:
+- Fast iterations on straightforward tasks
+- Test generation
+- Code refactoring
+- Documentation writing
+
+### Claude Sonnet 4.5 Usage
+Use Claude Sonnet 4.5 for:
+- Complex algorithm design
+- Architectural decisions
+- Security reviews
+- Performance optimization strategies
+
+### Parallel Model Comparison
+For critical features:
+- Run same prompt with Composer, Claude Sonnet 4.5, and GPT-5
+- Compare outputs
+- Select best approach or merge insights
+
+---
+
+## Task Decomposition Strategy
+
+### When given a complex task, decompose it:
+
+**Example: "Implement new timing path analysis"**
+
+1. **Analysis Phase** (Sequential)
+   - Agent 1: Analyze requirements
+   - Agent 2: Draft API design
+
+2. **Implementation Phase** (Parallel)
+   - Agent 1: Implement core algorithm
+   - Agent 2: Finalize API interface
+   - Agent 3: Prepare test framework
+   - Agent 5: Draft documentation outline
+
+3. **Integration Phase** (Parallel)
+   - Agent 3: Write tests
+   - Agent 4: Profile and optimize
+   - Agent 6: Security review
+
+4. **Finalization Phase** (Sequential)
+   - Agent 3: Validate all tests pass
+   - Agent 5: Complete documentation
+   - Agent 4: Confirm performance targets
+
+---
+
+## Communication Protocol
+
+### Agent Handoff
+When one agent completes work that another needs:
+```
+Agent 2 (API Design) → Agent 1 (Implementation)
+✓ API design complete in ktim_tgraph.hh
+✓ Public methods documented
+✓ Ready for implementation
+→ Agent 1: Begin implementation
+```
+
+### Status Updates
+Each agent reports:
+- Task started
+- Blockers encountered
+- Task completed
+- Artifacts produced (files modified, tests added, etc.)
+
+---
+
+## Quality Checklist
+
+Before any agent marks work complete:
+
+✅ **Code Quality**
+- [ ] Code compiles without warnings
+- [ ] Follows project style conventions
+- [ ] No obvious bugs or code smells
+- [ ] Proper error handling
+
+✅ **Testing**
+- [ ] Unit tests added/updated
+- [ ] All tests pass
+- [ ] Edge cases covered
+- [ ] Performance tests pass
+
+✅ **Documentation**
+- [ ] Public APIs documented
+- [ ] README updated if needed
+- [ ] Code comments added
+- [ ] Examples provided
+
+✅ **Performance**
+- [ ] No performance regression
+- [ ] Memory usage acceptable
+- [ ] Scalability validated
+- [ ] Profiling data reviewed
+
+✅ **Security**
+- [ ] Inputs validated
+- [ ] Bounds checked
+- [ ] Error paths tested
+- [ ] Security review passed
+
+---
+
+## Special Instructions
+
+### When modifying ktim_tgraph.hh
+- This is a large file (3203 lines)
+- Make targeted, focused changes
+- Preserve existing functionality
+- Document all modifications
+- Consider impact on dependent code
+
+### Performance-Critical Code
+For hot paths in timing analysis:
+- Profile before optimizing
+- Use appropriate data structures
+- Minimize allocations
+- Consider cache locality
+- Document time/space complexity
+
+### Legacy Code
+When working with existing code:
+- Understand before modifying
+- Maintain backward compatibility
+- Add tests for existing behavior
+- Refactor incrementally
+
+---
+
+## Example Multi-Agent Session
+
+### Task: Add new graph traversal algorithm
+
+**Phase 1: Planning (5 minutes)**
+- Agent 1: Review existing graph structure
+- Agent 2: Sketch API for new traversal method
+
+**Phase 2: Parallel Implementation (20 minutes)**
+- Agent 1: Implement traversal algorithm
+- Agent 2: Add public API to ktim_tgraph.hh
+- Agent 3: Create test cases
+- Agent 5: Draft algorithm documentation
+
+**Phase 3: Validation (10 minutes)**
+- Agent 3: Run tests
+- Agent 4: Profile performance
+- Agent 6: Check boundary conditions
+
+**Phase 4: Integration (5 minutes)**
+- Merge all changes
+- Final test suite run
+- Documentation review
+
+**Total: ~40 minutes with 6 agents vs. ~3 hours single agent**
+
+---
+
+## Version
+- Configuration version: 1.0
+- Last updated: November 6, 2025
+- Compatible with: Cursor 2.0+
+
