@@ -48,10 +48,15 @@ Description:
     <enter description here>
 ```
 2. the description should follow these guidelines:
-    1. Be concise: Aim for a brief summary that captures the essence of the change in 2-3 sentences.
-    2. Be informative: Highlight the key aspects of the change, such as:
-        - What was changed (e.g., added features, bug fixes, refactoring)
-        - Why the change was made (e.g., to improve performance, fix a bug)
-        - Any important context or implications of the change
-    3. A brief description for every file changed is necessary at most 1 sentence.
-    4. Don't response the public code.
+    * Format rules:
+        1. Use tab but not four spaces for each line.
+        2. The charater limit is 80 for each line.
+        3. Use Markdown format to write the Description.
+    * Context Guide:
+        1. Be concise: Aim for a brief summary that captures the essence of the change in 2-3 sentences.
+        2. Be informative: Highlight the key aspects of the change, such as:
+            - What was changed (e.g., added features, bug fixes, refactoring)
+            - Why the change was made (e.g., to improve performance, fix a bug)
+            - Any important context or implications of the change
+        3. A brief description for every file changed is necessary at most 1 sentence.
+        4. Don't response the public code.

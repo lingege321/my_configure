@@ -27,11 +27,6 @@ alias lla="ll -a"
 alias lt="ls --tree"
 alias rd="readlink -f"
 
-
-which cursor > /dev/null 2>&1
-if [[ $? == 0 ]]; then
-    alias code="cursor"
-fi
 alias clk="tty-clock -c -s"
 
 
