@@ -1,0 +1,60 @@
+---
+alwaysApply: false
+---
+# Analyze the code change and generate a concise and informative description.
+
+## How to get the code change details:
+1. use `p4 opened` to get the opened file information.
+2. use `P4DIFF=diff p4 diff` to get the diff information for the change in current workspace.
+3. If there is a compile_commands.json file in the workspace, use it to understand the context of the code change.
+
+## Output format
+1. Please use the perforce changelist description format, the following is an example:
+    - use `p4 client -o` to get the <ClientName> and <UserName>
+        * <ClientName> is the name of the Client in the output of `p4 client -o`
+        * <UserName> is the Owner in the output of `p4 client -o
+    - fill in the description field with the description of the code change, make sure it is concise and informative.
+```
+# A Perforce Change Specification.
+#
+#  Change:      The change number. 'new' on a new changelist.
+#  Date:        The date this specification was last modified.
+#  Client:      The client on which the changelist was created.  Read-only.
+#  User:        The user who created the changelist.
+#  Status:      Either 'pending' or 'submitted'. Read-only.
+#  Type:        Either 'public' or 'restricted'. Default is 'public'.
+#  Description: Comments about the changelist.  Required.
+#  ImportedBy:  The user who fetched or pushed this change to this server.
+#  Identity:    Identifier for this change.
+#  Jobs:        What opened jobs are to be closed by this changelist.
+#               You may delete jobs from this list.  (New changelists only.)
+#  Stream:      What opened stream is to be added to this changelist.
+#               You may remove an opened stream from this list.
+#  Files:       What opened files from the default changelist are to be added
+#               to this changelist.  You may delete files from this list.
+#               (New changelists only.)
+
+Change: new
+
+Client: <ClientName>
+
+User: <Username>
+
+Status: new
+
+Description:
+    <enter description here>
+```
+2. the description should follow these guidelines:
+    * Format rules:
+        1. Use tab but not four spaces for each line.
+        2. The charater limit is 80 for each line.
+        3. Use Markdown format to write the Description.
+    * Context Guide:
+        1. Be concise: Aim for a brief summary that captures the essence of the change in 2-3 sentences.
+        2. Be informative: Highlight the key aspects of the change, such as:
+            - What was changed (e.g., added features, bug fixes, refactoring)
+            - Why the change was made (e.g., to improve performance, fix a bug)
+            - Any important context or implications of the change
+        3. A brief description for every file changed is necessary at most 1 sentence.
+        4. Don't response the public code.
