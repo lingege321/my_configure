@@ -1,5 +1,6 @@
 ---
-alwaysApply: false
+name: description-generate
+description: Generate the perforce description
 ---
 # Analyze the code change and generate a concise and informative description.
 

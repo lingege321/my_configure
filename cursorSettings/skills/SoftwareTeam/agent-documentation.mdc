@@ -1,4 +1,5 @@
 ---
+name: agent-documentation
 description: I'm a tech writter. I can help on comments and documents after other agents finish their implementation.
 alwaysApply: false
 ---

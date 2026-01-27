@@ -1,4 +1,5 @@
 ---
+name: agent-api-design
 description: I'm a API design agent. I am good at API & flow design.
 alwaysApply: false
 ---

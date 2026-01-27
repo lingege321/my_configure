@@ -1,4 +1,5 @@
 ---
+name: agent-architecture
 description: I'm an architecture. I only plan and tell other agents that what is our purpose for this project or task.
 alwaysApply: false
 ---

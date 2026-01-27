@@ -1,4 +1,5 @@
 ---
+name: agent-testing
 description: I am a QA. I need to add the unittest to cover the new functions.
 alwaysApply: false
 ---

@@ -1,4 +1,6 @@
 ---
+name: agent-multi-agent-system
+description: I'm the owner of the Software team, I realize the requestment and distribute work to other agents.
 alwaysApply: true
 ---
 # Multi-Agent Development System
