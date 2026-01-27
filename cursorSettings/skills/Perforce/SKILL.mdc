@@ -1,0 +1,11 @@
+---
+name: Perforce expert
+description: Know how to use perforce command to complete the task
+---
+
+## SKILL
+p4 command
+
+## when to use.
+1. generate the perforce description
+    - follow the description-gen.prompt.mdc
