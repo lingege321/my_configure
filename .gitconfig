@@ -1,6 +1,3 @@
-[user]
-	name = lingege32
-	email = lingege32@gmail.com
 [alias]
 	ch = checkout
 	cmm = commit -m
